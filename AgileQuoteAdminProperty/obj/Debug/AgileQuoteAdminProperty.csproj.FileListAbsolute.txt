@@ -1,0 +1,47 @@
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuote New\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuote New\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuote New\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuote New\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+D:\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+D:\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminProperty\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Debug\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Debug\AgileQuoteAdminProperty.pdb

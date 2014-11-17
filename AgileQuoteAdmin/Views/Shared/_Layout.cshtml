@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+    <link href="~/Content/css/icons.css" rel="stylesheet" />
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#coolMenu').find('> li').hover(function () {
+                $(this).find('ul')
+                .removeClass('noJS')
+                .stop(true, true).fadeToggle();
+            });
+
+            var Menu = $('#hidMenu').val();
+            if (Menu.length > 0) {
+                $("#" + Menu).addClass("active");
+                $('#' + Menu + ' ul li').addClass('active');
+            }
+        });
+    </script>
+</head>
+<body>
+    <input type="hidden" id="hidMenu"  value="@ViewBag.Title"/>
+    <div class="g1140 clearfix">
+        <div class="row main-container">
+            <header class="c12 blue-bg">
+                <div class="c5 logo-admin">
+                    <img src="../../Images/Agile-logo.png" alt="img1" /><p><span>Agile </span>Quote</p>
+                </div>
+                <nav class="main-menu">
+                    @if (Session["UserName"] != null && Session["UserID"] != null)
+                    {
+                        <ul class="right-menu">
+                            <li class="blue-btn"><span class="glyphicons user"><i>
+                                @*<img width=20px height=20px src="@Url.Action("GetImage", "LogIn", new { id = Session["UserID"].ToString() })" />*@
+                            </i></span>Welcome @Session["UserName"].ToString()!!</li>
+                            <li>@Html.ActionLink("Log Out", "LogOut", "LogIn")</li>
+                        </ul>
+                    }
+                </nav>
+            </header>
+            <section class="c12 gray-bg sec-menu">
+                <nav class="navigation c12">
+                    <ul id="coolMenu" class="c12 left-menu nopadding">                        
+                        <li id="Registraion"><a href="@Url.Action("PartialUser", "UserRegistration")">Users</a><span></span></li>
+                        <li id="Company"><a href="@Url.Action("PartialCompany", "Company")">Company</a><span></span></li>
+                        <li id="Currency"><a href="@Url.Action("PartialCurrency", "Currency")">Currency</a><span></span></li>
+                        <li id="Role"><a href="@Url.Action("RoleListPartial", "Role")">Role</a><span></span></li>
+                        <li id="Rule"><a href="@Url.Action("Rule","Rules")">Rule</a><span></span></li>
+                        <li id="Sales"><a href="@Url.Action("SalesOrganizationPartial", "SalesOrganization")">Sales</a><span></span></li>
+                        <li id="Material"><a href="@Url.Action("MaterialGrid", "Material")">Material</a><span></span>
+                            <ul>
+                                <li><a href="@Url.Action("SugectionMaterial", "Material")">Suggestion Material</a><span></span></li>
+                                <li><a href="@Url.Action("OfferedMaterials", "Material")">Offered Material</a><span></span></li>
+                            </ul>
+                        </li>                        
+                        @*<li><a href="@Url.Action("PartialRentalSpars", "RentalSpars")" >Rental Spars</a><span></span></li>
+                        <li><a href="@Url.Action("RentalProductDataTable", "RentalProducts")" >Rental Product</a><span></span></li>*@
+                        <li id="Bundle"><a href="@Url.Action("Bundle", "Bundle")">Bundle</a><span></span></li>
+
+                    </ul>
+                </nav>
+                @* <div class="c5">
+              		<div class="search-field">
+                    	<input type="text"/>
+                    	<input type="submit" class="search_icon" value=""/>
+                    </div>
+                </div>*@
+            </section>
+
+
+
+
+            <div id="Body">
+                <section class="content-wrapper main-content clear-fix">
+                    @RenderBody()
+                </section>
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer">
+                &copy; Copyright 2013, AgileQuote, All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+    <div class="clear"></div>
+</body>
+</html>

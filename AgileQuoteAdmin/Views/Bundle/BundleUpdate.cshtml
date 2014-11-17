@@ -1,0 +1,203 @@
+﻿@model AgileQuoteAdminProperty.Property.MaterialBundleProperty
+
+@{
+    Layout =null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+ <script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.20.js" type="text/javascript"></script>
+    <script src="../../Scripts/BundleScript/Bundle.js" type="text/javascript"></script>
+    <link rel="Shortcut Icon" type="image/ico" href="" />
+    <link rel="stylesheet" type="text/css" href="../../Content/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/style.css" />
+      
+    <meta name="viewport" content="width=device-width" />
+    <title>BundleUpdate</title>
+</head>
+<body>
+<div class="g1140">
+	<div class="main-container">
+        	<header class="c12 blue-bg">
+            	<div class="c5 logo"><img src="../../Images/Agile-logo.png" alt="img1" /><p><span>Agile </span> Quote</p></div>
+                <nav class="main-menu">
+                	<ul class="right-menu">                    	
+                        <li class="blue-btn"><span class="glyphicons user"><i></i></span>Welcome Guest!</li>
+                    </ul>
+                  </nav>
+            </header>
+            <section class="c12 gray-bg">
+            <nav class="navigation c7">
+            	<ul class="left-menu">
+                	<li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Quote</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Reports</a></li>
+                </ul>
+              </nav>
+              <div class="c5">
+              		<div class="search-field">
+                    	<input type="text"/>
+                    	<input type="submit" class="search_icon" value=""/>
+                    </div>
+                </div>
+           </section>
+           <section class="c12 main-title">
+           		<div class="c6 quote">
+                	<img src="../../Images/qoute-ion.png" alt="img1" />
+                	<p> Quotes</p>
+                </div>
+            </section>
+            <section>
+          
+  @{ var qList = ViewData.Model.oBundleList.BundleList;
+            WebGrid grid = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+            grid.Bind(qList, rowCount: qList.Count());
+     
+        }
+           @using (Html.BeginForm("BundleUpdate", "Bundle", FormMethod.Post))
+           {     
+           
+            <section>
+            <div class="table_top">
+            	<div class="list_select">
+                	<span>Select:</span>
+                    <label><select></select></label>
+                    <span>0 item selected</span>
+                </div>
+                <div class="list_select_action">
+                	<span>Actions:</span>
+                    <label><select></select></label>
+                    <input type="submit" value="SUBMIT" />
+                </div>
+            </div>
+			<div class="quote_list">
+             @grid.GetHtml(
+tableStyle: "grid",
+fillEmptyRows: false,
+alternatingRowStyle: "alternativeRow",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{grid.Column(header:"Bundle",style:"MaterialCheckClass", format:@<text><input type="checkbox" value="@item.BundleID" /></text>),
+grid.Column("BundleID","BundleID",canSort:true,style:"MaterialIDclass"),
+grid.Column("BundleName","BundleName",canSort:true),
+grid.Column("BundleType","BundleType",canSort:true,style:"Displaynone"),
+grid.Column("BundleCatagory","BundleCatagory",canSort:true,style:"Displaynone"),
+grid.Column("UnitPrice","UnitPrice",canSort:true),
+grid.Column("NetPrice","NetPrice",canSort:true),
+grid.Column("Discount","Discount",canSort:true),
+//grid.Column("MaterialIsDelete","ISDELETE",canSort:true)
+grid.Column(header:"Edit",format:@<text><div class="edit" title="EDIT">
+       <a href="#"><img src="../../Images/edit.png" alt="img1" id="@item.BundleID @item.BundleCatagory"  onclick="javascript:EditFunction(this)" /></a> 
+						<a href="#"><img src="../../Images/error.png" alt="img1" id="@item.BundleID" onclick="javascript:DeleteFuction(this)"/></a></div></text>),
+@*grid.Column(header:"Delete",format:@<text><div class="delete" id="@item.BundleID" onclick="javascript:DeleteFuction(this)" title="DELETE">
+        Delete</div></text>)*@
+   
+}
+) 
+    <br />      
+       
+			</div>
+            </section>
+          
+          
+           }
+			<div class="pagination">
+				<ul>
+					<li><a href="#"><< Previous</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li>. . .</li>
+					<li>8</li>
+					<li><a href="#">Next >></a></li>
+				</ul>
+			</div>
+              <div class="submit_box">
+            	 <input type="submit" value="CREATE BUNDLE" id="BundleCreate" />
+                </div>       
+      
+			<footer>
+			<div class="footer">
+				&copy; Copyright 2013, AgileQuote, All Rights Reserved.
+			</div>
+			</footer>
+     </div>
+
+     <div class="clear"></div>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+
+
+
+<div id="MainGrid">
+<div class="Title">BUNDLE</div>
+    <div id="grid">    
+     @{ var qList = ViewData.Model.oBundleList.BundleList;
+            WebGrid grid = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+            grid.Bind(qList, rowCount: qList.Count());
+     
+        }
+          @using (Html.BeginForm("BundleUpdate", "Bundle", FormMethod.Post))
+    {          
+          <div id="webgrid">   
+@grid.GetHtml(
+tableStyle: "grid",
+fillEmptyRows: false,
+alternatingRowStyle: "alternativeRow",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{grid.Column(header:"Bundle",style:"MaterialCheckClass", format:@<text><input type="checkbox" value="@item.BundleID" /></text>),
+grid.Column("BundleID","BundleID",canSort:true,style:"MaterialIDclass"),
+grid.Column("BundleName","BundleName",canSort:true),
+grid.Column("BundleType","BundleType",canSort:true,style:"Displaynone"),
+grid.Column("BundleCatagory","BundleCatagory",canSort:true,style:"Displaynone"),
+grid.Column("UnitPrice","UnitPrice",canSort:true),
+grid.Column("NetPrice","NetPrice",canSort:true),
+grid.Column("Discount","Discount",canSort:true),
+//grid.Column("MaterialIsDelete","ISDELETE",canSort:true)
+grid.Column(header:"Edit",format:@<text><div class="edit" title="EDIT" id="@item.BundleID @item.BundleCatagory" onclick="javascript:EditFunction(this)">
+       Edit</div></text>),
+grid.Column(header:"Delete",format:@<text><div class="delete" id="@item.BundleID" onclick="javascript:DeleteFuction(this)" title="DELETE">
+        Delete</div></text>)
+   
+}
+)
+</div>
+        @Html.ValidationSummary(true)
+        <br />
+       
+         <input type="button" value="CreateBundle" id="BundleCreate" />
+    }
+
+    </div>
+    </div>*@
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@model AgileQuoteAdminProperty.Property.RoleProperty
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <title>Agile Quote</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="Shortcut Icon" type="image/ico" href=""/>
+    <link rel="stylesheet" type="text/css" href="../../Content/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/style.css" />
+    
+    <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->     
+</head>
+<body>
+<section class="c12 main-title">
+           		<div class="c6 quote">
+                	<img src="../../Images/qoute-ion.png" alt="img1" />
+                	<p>Edit Role</p>
+                    
+                     
+                </div>
+            </section>
+                    <div class="greay_box">
+                @using (Html.BeginForm("RoleEdit", "Role", FormMethod.Post))
+                {
+                    
+            <ul><li>
+            @Html.LabelFor(x => x.RoleId, new { @class = "Label" })
+            @Html.TextBoxFor(x => x.RoleId, new { @ReadOnly = "readonly", @class = "TextBox" })
+            </li>
+            <li>
+            @Html.LabelFor(x => x.RoleName, new { @class = "Label" })
+            @Html.TextBoxFor(x => x.RoleName, new { @class = "TextBox" })
+            </li>
+            <li>
+            @Html.LabelFor(x => x.Priority, new { @class = "Label" })
+            @Html.TextBoxFor(x => x.Priority, new { @class = "TextBox" })
+            </li>
+           <li>
+           @Html.LabelFor(x => x.IsVisible, new { @class = "Label" }) 
+           @Html.CheckBoxFor(x => x.IsVisible, new { @class = "TextBox" })
+           </li>
+           </ul>
+                    @Html.ValidationSummary(true)
+        <div class="submit_box">
+       <input type="submit" value="Create" class="Button" />
+        </div>
+          
+                }
+                	 </div>
+          
+       
+</body>
+</html>

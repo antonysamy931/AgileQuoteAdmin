@@ -1,0 +1,24 @@
+5/15/2014 5:37:54 PM|(AgileQuoteAdmin.dll->AgileQuoteAdmin.Controllers.UserRegistrationController->Registration)|   at System.Data.Objects.DataClasses.StructuralObject.SetValidValue(Byte[] value, Boolean isNullable, String propertyName)
+   at AgileQuoteDataLogic.Data.tbUserImage.set_ImageContent(Byte[] value) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\Data\AgeileQuoteAdminDevelopment.Designer.cs:line 2306
+   at AgileQuoteDataLogic.DataLogic.UserRegistrationDL.InsertUserRegistrationDL(UserRegistration oUserReg, Byte[] oUserImage, String name) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\DataLogic\UserRegistrationDL.cs:line 70
+   at AgileQuoteAdminBusinessLogic.BusinessLogic.UserRegistrationBL.InsertUserRegistrationBL(UserRegistration oUserReg, Byte[] oUserImage, String name) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminBusinessLogic\BusinessLogic\UserRegistrationBL.cs:line 30
+   at AgileQuoteAdminService.Service1.UserRegistrationService(UserRegistration oUserReg, Byte[] oUserImage, String name) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\Service1.svc.cs:line 872-This property cannot be set to a null value.
+5/15/2014 5:39:20 PM|(AgileQuoteAdmin.dll->AgileQuoteAdmin.Controllers.UserRegistrationController->Registration)|   at System.Data.Objects.DataClasses.StructuralObject.SetValidValue(Byte[] value, Boolean isNullable, String propertyName)
+   at AgileQuoteDataLogic.Data.tbUserImage.set_ImageContent(Byte[] value) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\Data\AgeileQuoteAdminDevelopment.Designer.cs:line 2306
+   at AgileQuoteDataLogic.DataLogic.UserRegistrationDL.InsertUserRegistrationDL(UserRegistration oUserReg, Byte[] oUserImage, String name) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\DataLogic\UserRegistrationDL.cs:line 70
+   at AgileQuoteAdminBusinessLogic.BusinessLogic.UserRegistrationBL.InsertUserRegistrationBL(UserRegistration oUserReg, Byte[] oUserImage, String name) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminBusinessLogic\BusinessLogic\UserRegistrationBL.cs:line 30
+   at AgileQuoteAdminService.Service1.UserRegistrationService(UserRegistration oUserReg, Byte[] oUserImage, String name) in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\Service1.svc.cs:line 872-This property cannot be set to a null value.
+15-May-14 7:48:58 PM|(AgileQuoteAdmin.dll->AgileQuoteAdmin.Controllers.LogInController->LogIn)|
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at AgileQuoteAdmin.AgileAdminService.IService1.CompanyNameService()
+   at AgileQuoteAdmin.AgileAdminService.Service1Client.CompanyNameService() in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\Service References\AgileAdminService\Reference.cs:line 505
+   at AgileQuoteAdmin.Controllers.LogInController.LogIn() in d:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\Controllers\LogInController.cs:line 30

@@ -1,0 +1,102 @@
+﻿@model AgileQuoteAdminProperty.Property.RentalProductsProperty
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="../../Content/RentalProducts.css" rel="stylesheet" type="text/css" />
+    <title>EditRentalProducts</title>
+</head>*@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>  
+    
+    <title>Agile Quote</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="Shortcut Icon" type="image/ico" href=""/>
+    <link rel="stylesheet" type="text/css" href="../../Content/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/style.css" />
+    </head>
+
+<body>
+<section class="c12 main-title">
+           		<div class="c6 quote">
+                	<img src="../../Images/qoute-ion.png" alt="img1" />
+                	<p>Edit RentalProducts</p>
+                    
+                     
+                </div>
+            </section>
+            <section>
+           @using (Html.BeginForm("EditRentalProducts", "RentalProducts", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+              {
+            	<div class="greay_box">
+                	<ul>
+                    	<li>
+                        	 @Html.LabelFor(x => x.RentalProductsID)
+                             @Html.TextBoxFor(x => x.RentalProductsID, new { @ReadOnly = "readonly" }) 
+                        </li>
+                        <li>
+                        	 @Html.LabelFor(x => x.RentalProductsName)
+                             @Html.TextBoxFor(x => x.RentalProductsName)
+                             @Html.ValidationMessageFor(x=>x.RentalProductsName)
+                        </li>
+						<li>
+                        	  @Html.LabelFor(x => x.Description)
+                              @Html.TextBoxFor(x => x.Description)
+                               @Html.ValidationMessageFor(x => x.Description)
+                        </li>                         
+                         <li>
+                            @Html.LabelFor(x => x.Warrenty)
+                            @Html.TextBoxFor(x => x.Warrenty)
+                             @Html.ValidationMessageFor(x => x.Warrenty)  
+                        </li>
+                        <li>
+                           @Html.LabelFor(x => x.UnitPrice)
+                           @Html.TextBoxFor(x => x.UnitPrice)
+                           @Html.ValidationMessageFor(x=>x.UnitPrice)
+                        </li>
+                        <li>
+                            @Html.LabelFor(x => x.Discount)
+                            @Html.TextBoxFor(x => x.Discount)
+                            @Html.ValidationMessageFor(x=>x.Discount)
+                        </li>
+                        <li>
+                           @Html.LabelFor(x => x.IsActive)
+                           @Html.CheckBoxFor(x => x.IsActive)
+                        </li>
+                        <li>
+                            @Html.LabelFor(x => x.IsDelete)
+                             @Html.CheckBoxFor(x => x.IsDelete)
+                        </li>     
+                        <li>
+                        <label>Image</label>
+                         <input type="file" name="image" /> 
+                        </li>                
+						                       
+                        </ul>
+                      </div>                       
+                       
+                    
+                 <div class="submit_box">
+            	<input type="submit" value="UPDATE CURRENCY" />
+                </div>               
+                }
+            
+            </section>     
+            
+			
+       
+</body>
+
+
+</html>

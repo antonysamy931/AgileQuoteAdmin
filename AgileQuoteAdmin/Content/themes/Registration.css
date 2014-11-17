@@ -1,0 +1,181 @@
+﻿@charset "utf-8";
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+/* Reset */
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var
+{
+    background: transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+/* HTML5 reset */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video
+{
+    display: block;
+}
+
+mark, rp, rt, ruby, summary, time
+{
+    display: inline;
+}
+#Main
+{
+    width: 82%;
+    border-color: Black;
+    float: left;
+}
+#Header
+{
+    width: 122%;
+    height: 50px;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 0 0 0 220px;
+    color: #3B5998;
+    float: left;
+}
+#Content
+{
+    width: 122%;
+    background-color: White;
+    float: left;
+   
+}
+
+ul, li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.clear
+{
+    clear: both;
+}
+
+body
+{    
+    
+}
+
+
+#MainDiv
+{
+    width: 100%;
+}
+
+#Body
+{
+    width: 82%;
+    float: right;
+}
+
+#Grid
+{
+    width: 122%;
+    background-color: White;
+    border-color: Black;
+    float: left;
+}
+#foo
+{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #3B5998;
+    border-color:Black;
+    border:3px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-style:solid;             
+    float: left;
+}
+.Menu-List
+{
+    font-family: Comic Sans MS;
+    color: White;
+}
+
+.Label
+{
+    width: 31%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+
+.TextBox
+{
+    float: left;
+    width: 20%;
+}
+.center
+{
+    float: left;
+    width: 90%;
+    margin: 0px auto;
+}
+.Button
+{
+    width: 70px;
+    margin: 0 0 0 250px;
+}
+#Head
+{
+    width: 18%;
+    float: left;
+    min-height: 550px;
+    background-color:#3B5998;
+}
+ul.TopLevel 
+{ 
+    background:#3B5998;
+     }
+ 
+ul.TopLevel li 
+{
+ border-bottom: #fff solid;
+ border-top: #fff solid;
+ border-width: 1px;
+}
+ul.SubLevel {
+    
+    display:none;
+    position: absolute;
+    border: none;    
+    width:150px
+}
+ 
+li:hover .SubLevel {
+    background: #3B5998;
+    border: #fff solid;
+    border-width: 1px;
+    display:inline-block;
+    position: absolute;
+    left: 18%;
+    top: 5px;
+}
+ 
+ul.SubLevel li 
+{
+    
+    border: none;
+    float:left;
+    width:150px;
+}
+
+
+

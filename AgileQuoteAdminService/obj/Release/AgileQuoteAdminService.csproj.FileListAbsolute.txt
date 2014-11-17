@@ -1,0 +1,12 @@
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\LogWriter.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Release\AgileQuoteAdminService.csprojResolveAssemblyReference.cache
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Release\AgileQuoteAdminService.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Release\AgileQuoteAdminService.pdb

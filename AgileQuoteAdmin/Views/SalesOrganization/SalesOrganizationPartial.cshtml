@@ -1,0 +1,127 @@
+﻿@model AgileQuoteAdminProperty.Property.SalesOrgranizationPropertyList
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Sales";
+    WebGrid Grid = new WebGrid();
+    var data = Model.SalesOrganizationList;
+    Grid.Bind(data);
+}
+
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../../Scripts/SalesScript/SalesOrganizationJs.js" type="text/javascript"></script>
+<link href="../../Content/themes/base/Popup.css" rel="stylesheet" type="text/css" />
+
+<script src="~/Scripts/jquery.noty.js"></script>
+<script src="~/Scripts/center.js"></script>
+<script src="~/Scripts/default.js"></script>
+<script src="~/Scripts/top.js"></script>
+
+<link href="~/Content/buttons.css" rel="stylesheet" />
+
+
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>SalesOrganization List</p>
+
+
+    </div>
+</section>
+
+<div class="quote_list">
+    @Grid.GetHtml(
+tableStyle: "grid quote-table",
+fillEmptyRows: false,
+alternatingRowStyle: "odd",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{
+ @*Grid.Column(header:"",format:@<text><input type="checkbox" value="@item.SalesOrgCode" onclick="javascript: SelectRow(this)" /></text>),*@
+ Grid.Column("SalesOrgCode","SALES CODE",canSort:false),
+ Grid.Column("SalesOrgName","SALES NAME",canSort:false),
+ Grid.Column("ReferenceCustomerCode","REFERENCE CUSTOMER CODE",canSort:false),
+ Grid.Column("IsActive","IS ACTIVE",canSort:false),
+ Grid.Column("IsDelete","IS DELETE",canSort:false),  
+ Grid.Column(header:"Actions",format:@<text><div class="edit" title="EDIT">
+     <a href="#">
+         <img src="../../Images/edit.png" alt="img1" id="@item.SalesOrgCode"  onclick="javascript:EditFunction(this)"/></a>
+     <a href="#">
+         <img src="../../Images/error.png" alt="img1" onclick="javascript:DeleteFunction(this)" id="@item.SalesOrgCode"/></a>
+ </div></text>),
+ //Grid.Column(header:"",format:@<text><div class="delete" id="@item.SalesOrgCode" onclick="javascript:DeleteFunction(this)" title="DELETE">Delete</div></text>)      
+}
+)
+</div>
+<div class="submit_box submit-box-left">
+    <input type="submit" id="NewUser" value="New Sales" onclick="javascript: NewUser(this)" />
+</div>
+
+<div class="light-popup create-company-lightbox" id="CurrencyPopUp_Create">
+    <a href="#" class="close" id="CurrencyPopUp_close_Create">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Update Sales Organization Details
+    </div>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <label>Sales Name</label>
+                <input type="text" id="SalesOrgName_Create" />
+                <span id="errorMsg_Create" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Customer Code</label>
+                <input type="text" id="ReferenceCustomerCode_Create" />
+                <span id="errorMsg1_Create" style="color: Red"></span>
+            </li>
+        </ul>
+
+        <div class="submit_box insert_company_btn">
+            <input id="InsertSales" type="button" value="Insert" />
+        </div>
+    </div>
+
+</div>
+
+<div class="light-popup update-company-lightbox" id="CurrencyPopUp">
+    <a href="#" class="close" id="CurrencyPopUp_close">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Update Sales Organization Details
+    </div>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <label>Sales Code</label>
+                <input type="text" id="SalesOrgCode" />
+
+            </li>
+            <li>
+                <label>Sales Name</label>
+                <input type="text" id="SalesOrgName" />
+                <span id="errorMsg" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Customer Code</label>
+                <input type="text" id="ReferenceCustomerCode" />
+                <span id="errorMsg1" style="color: Red"></span>
+            </li>
+
+            <li>
+                <label>Active</label>
+                <input type="checkbox" id="IsActive" />
+            </li>
+            <li>
+                <label>Delete</label>
+                <input type="checkbox" id="IsDelete" />
+            </li>
+        </ul>
+
+        <div class="submit_box upate-company-btn">
+            <input id="UpdateSales" type="button" value="Update" />
+        </div>
+    </div>
+
+</div>

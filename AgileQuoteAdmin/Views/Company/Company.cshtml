@@ -1,0 +1,36 @@
+﻿@model AgileQuoteAdminProperty.Property.CompanyProperty
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Company";
+}
+
+
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>Company Form</p>
+
+
+    </div>
+</section>
+@using (Html.BeginForm("Company", "Company", FormMethod.Post))
+{
+    <div class="greay_box">
+        <ul>
+            <li>
+                @Html.LabelFor(x => x.CompanyName)
+                @Html.TextBoxFor(x => x.CompanyName)
+                @Html.ValidationMessageFor(x => x.CompanyName)
+            </li>
+
+            @*@Html.ValidationSummary(true)*@
+        </ul>
+    </div>                      
+                                          
+    <div class="submit_box submit-box-left">
+        <input type="submit" value="Create Company" />
+    </div>               
+}
+

@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3924/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3924/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3924/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" />
+      <xsd:import schemaLocation="http://localhost:3924/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_UpdateRentalProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateBundle_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBundle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateBundle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBundleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBundle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBundle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBundle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBundleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialBundleMapping_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialBundleMapping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialBundleMapping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialBundleMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BundleEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:BundleEdit" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BundleEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BundleEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrationListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrationListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RoleNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RoleNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RentalSparsListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RentalSparsListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RentalSparsListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RentalSparsListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q1:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRoleRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRoleRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRoleRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRoleRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRoleRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoleRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRoleRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoleRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRoleService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRoleService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoleService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoleService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q2:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCurrencyRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCurrencyRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCurrencyRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCurrencyRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCurrencyRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCurrencyRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCurrencyRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCurrencyRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCurrencyService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrencyService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCurrencyService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrencyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCurrrencyService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCurrrencyService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCurrrencyService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCurrrencyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q3:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalProductsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="UpdateRentalProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRentalProducts" message="tns:IService1_UpdateRentalProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRentalProductsResponse" message="tns:IService1_UpdateRentalProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRentalProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRentalProducts" message="tns:IService1_DeleteRentalProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRentalProductsResponse" message="tns:IService1_DeleteRentalProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBundle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateBundle" message="tns:IService1_CreateBundle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateBundleResponse" message="tns:IService1_CreateBundle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBundle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateBundle" message="tns:IService1_UpdateBundle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateBundleResponse" message="tns:IService1_UpdateBundle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBundleListService" message="tns:IService1_GetBundleListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBundleListServiceResponse" message="tns:IService1_GetBundleListService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialBundleMapping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialBundleMapping" message="tns:IService1_GetMaterialBundleMapping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialBundleMappingResponse" message="tns:IService1_GetMaterialBundleMapping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BundleEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BundleEdit" message="tns:IService1_BundleEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BundleEditResponse" message="tns:IService1_BundleEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UserRegistrationService" message="tns:IService1_UserRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UserRegistrationServiceResponse" message="tns:IService1_UserRegistrationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CompanyNameService" message="tns:IService1_CompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CompanyNameServiceResponse" message="tns:IService1_CompanyNameService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegistrationListService" message="tns:IService1_RegistrationListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegistrationListServiceResponse" message="tns:IService1_RegistrationListService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RoleNameService" message="tns:IService1_RoleNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RoleNameServiceResponse" message="tns:IService1_RoleNameService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SingleRegistrationService" message="tns:IService1_SingleRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SingleRegistrationServiceResponse" message="tns:IService1_SingleRegistrationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRegistrationService" message="tns:IService1_UpdateRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRegistrationServiceResponse" message="tns:IService1_UpdateRegistrationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRegistrationService" message="tns:IService1_DeleteRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRegistrationServiceResponse" message="tns:IService1_DeleteRegistrationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetImageService" message="tns:IService1_GetImageService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetImageServiceResponse" message="tns:IService1_GetImageService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompanyNameService" message="tns:IService1_GetCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyNameServiceResponse" message="tns:IService1_GetCompanyNameService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyName" message="tns:IService1_GetSingleCompanyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyNameResponse" message="tns:IService1_GetSingleCompanyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCompanyNameService" message="tns:IService1_InsertCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertCompanyNameServiceResponse" message="tns:IService1_InsertCompanyNameService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCompanyNameService" message="tns:IService1_UpdateCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCompanyNameServiceResponse" message="tns:IService1_UpdateCompanyNameService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCompanyNameService" message="tns:IService1_DeleteCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCompanyNameServiceResponse" message="tns:IService1_DeleteCompanyNameService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckAuthentication" message="tns:IService1_CheckAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckAuthenticationResponse" message="tns:IService1_CheckAuthentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserImage" message="tns:IService1_GetUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserImageResponse" message="tns:IService1_GetUserImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserName" message="tns:IService1_GetUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserNameResponse" message="tns:IService1_GetUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRentalSparsService" message="tns:IService1_DeleteRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRentalSparsServiceResponse" message="tns:IService1_DeleteRentalSparsService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRentalSparsService" message="tns:IService1_UpdateRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRentalSparsServiceResponse" message="tns:IService1_UpdateRentalSparsService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SingleRentalSparsService" message="tns:IService1_SingleRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SingleRentalSparsServiceResponse" message="tns:IService1_SingleRentalSparsService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RentalSparsListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RentalSparsListService" message="tns:IService1_RentalSparsListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RentalSparsListServiceResponse" message="tns:IService1_RentalSparsListService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRentalSparsService" message="tns:IService1_InsertRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRentalSparsServiceResponse" message="tns:IService1_InsertRentalSparsService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleListService" message="tns:IService1_GetRoleListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleListServiceResponse" message="tns:IService1_GetRoleListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetRoleListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetRoleListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRoleRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleRoleRecordService" message="tns:IService1_GetSingleRoleRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleRoleRecordServiceResponse" message="tns:IService1_GetSingleRoleRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoleRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRoleRecordService" message="tns:IService1_InsertRoleRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRoleRecordServiceResponse" message="tns:IService1_InsertRoleRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoleService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRoleService" message="tns:IService1_UpdateRoleService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRoleServiceResponse" message="tns:IService1_UpdateRoleService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRoleService" message="tns:IService1_DeleteRoleService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRoleServiceResponse" message="tns:IService1_DeleteRoleService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCurrencyListService" message="tns:IService1_GetCurrencyListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCurrencyListServiceResponse" message="tns:IService1_GetCurrencyListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetCurrencyListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetCurrencyListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCurrencyRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleCurrencyRecordService" message="tns:IService1_GetSingleCurrencyRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleCurrencyRecordServiceResponse" message="tns:IService1_GetSingleCurrencyRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCurrencyRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCurrencyRecordService" message="tns:IService1_InsertCurrencyRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertCurrencyRecordServiceResponse" message="tns:IService1_InsertCurrencyRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrencyService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCurrencyService" message="tns:IService1_UpdateCurrencyService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCurrencyServiceResponse" message="tns:IService1_UpdateCurrencyService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCurrrencyService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCurrrencyService" message="tns:IService1_DeleteCurrrencyService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCurrrencyServiceResponse" message="tns:IService1_DeleteCurrrencyService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationListService" message="tns:IService1_GetSalesOrganizationListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationListServiceResponse" message="tns:IService1_GetSalesOrganizationListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSalesOrganizationListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationRecord" message="tns:IService1_GetSalesOrganizationRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationRecordResponse" message="tns:IService1_GetSalesOrganizationRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRecordService" message="tns:IService1_InsertRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRecordServiceResponse" message="tns:IService1_InsertRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRecordService" message="tns:IService1_UpdateRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRecordServiceResponse" message="tns:IService1_UpdateRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRecordService" message="tns:IService1_DeleteRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRecordServiceResponse" message="tns:IService1_DeleteRecordService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialListService" message="tns:IService1_GetMaterialListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialListServiceResponse" message="tns:IService1_GetMaterialListService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialListByID" message="tns:IService1_GetMaterialListByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialListByIDResponse" message="tns:IService1_GetMaterialListByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertMaterial" message="tns:IService1_InsertMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertMaterialResponse" message="tns:IService1_InsertMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateMaterial" message="tns:IService1_UpdateMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateMaterialResponse" message="tns:IService1_UpdateMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMaterial" message="tns:IService1_DeleteMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMaterialResponse" message="tns:IService1_DeleteMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListService" message="tns:IService1_GetRentalProductsListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListServiceResponse" message="tns:IService1_GetRentalProductsListService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListByID" message="tns:IService1_GetRentalProductsListByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListByIDResponse" message="tns:IService1_GetRentalProductsListByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRentalProducts" message="tns:IService1_InsertRentalProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRentalProductsResponse" message="tns:IService1_InsertRentalProducts_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateRentalProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRentalProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRentalProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRentalProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBundle">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateBundle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBundle">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateBundle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBundleListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialBundleMapping">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialBundleMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BundleEdit">
+      <soap:operation soapAction="http://tempuri.org/IService1/BundleEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UserRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/CompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/RegistrationListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/RoleNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/SingleRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetImageService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleCompanyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <soap:operation soapAction="http://tempuri.org/IService1/CheckAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/SingleRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RentalSparsListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/RentalSparsListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRoleRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleRoleRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoleRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRoleRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoleService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRoleService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRoleService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCurrencyListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCurrencyRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleCurrencyRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCurrencyRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCurrencyRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrencyService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCurrencyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCurrrencyService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCurrrencyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSalesOrganizationListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSalesOrganizationRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialListByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRentalProductsListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRentalProductsListByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRentalProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:3924/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

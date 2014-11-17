@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgileQuoteDevelopmentModelStoreContainer" CdmEntityContainer="AgileQuoteDevelopmentEntities">
+    <EntitySetMapping Name="tbBundles">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbBundle">
+        <MappingFragment StoreEntitySet="tbBundle">
+          <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBundleMaterialMappings">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbBundleMaterialMapping">
+        <MappingFragment StoreEntitySet="tbBundleMaterialMapping">
+          <ScalarProperty Name="BundleMaterialMapID" ColumnName="BundleMaterialMapID" />
+          <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBundleTypes">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbBundleType">
+        <MappingFragment StoreEntitySet="tbBundleType">
+          <ScalarProperty Name="BundleTypeID" ColumnName="BundleTypeID" />
+          <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCategories">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbCategory">
+        <MappingFragment StoreEntitySet="tbCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCurrencies">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbCurrency">
+        <MappingFragment StoreEntitySet="tbCurrency">
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbMaterials">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbMaterial">
+        <MappingFragment StoreEntitySet="tbMaterial">
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSalesOrganizations">
+      <EntityTypeMapping TypeName="AgileQuoteDevelopmentModel.tbSalesOrganization">
+        <MappingFragment StoreEntitySet="tbSalesOrganization">
+          <ScalarProperty Name="SalesOrganizationCode" ColumnName="SalesOrganizationCode" />
+          <ScalarProperty Name="SalesOrganizationName" ColumnName="SalesOrganizationName" />
+          <ScalarProperty Name="ReferenceCustomerCode" ColumnName="ReferenceCustomerCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CurrencySelect" FunctionName="AgileQuoteDevelopmentModel.Store.CurrencySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AgileQuoteDevelopmentModel.CurrencySelect_Result">
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,540 @@
+﻿@model AgileQuoteAdminProperty.Property.RulesProperty
+@using AgileQuoteAdminProperty.Property
+@{
+    ViewBag.Title = "Rule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    RulesDropdownProperty oDrop = new RulesDropdownProperty();
+}
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+
+<script src="~/Scripts/jquery.noty.js"></script>
+<script src="~/Scripts/center.js"></script>
+<script src="~/Scripts/default.js"></script>
+<script src="~/Scripts/top.js"></script>
+
+<link href="~/Content/buttons.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="../../Content/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../Content/grid.css" />
+<link rel="stylesheet" type="text/css" href="../../Content/icons.css" />
+<link rel="stylesheet" type="text/css" href="../../Content/style.css" />
+<link rel="Stylesheet" type="text/css" href="../../Content/themes/base/Popup.css" />
+
+<script type="text/javascript">
+    var roleArray = new Array();
+    var notyAlert = null;
+
+    $(document).ready(function () {
+        LoadRule();
+
+        $('#CreateRule').click(function () {
+            var minAmount = $('#minimumAmount').val();
+            var maxAmount = $('#maximumAmount').val();
+            var minDiscount = $('#minimumDiscount').val();
+            var maxDiscount = $('#maximumDiscount').val();
+
+            if (maxAmount !== '' && minAmount !== '' && maxDiscount !== '' && minDiscount !== '') {
+                if (maxAmount > minAmount && maxDiscount > minDiscount) {
+                    if (roleArray.length > 0) {
+                        $.ajax({
+                            url: '/Rules/InsertRule?minAmount=' + minAmount + '&maxAmount=' + maxAmount + '&minDiscount=' + minDiscount + '&maxDiscount=' + maxDiscount + '&Roles=' + roleArray,
+                            type: 'post',
+                            dataType: 'json',
+                            success: function (data) {
+                                if (data.Redirect) {
+                                    window.location.replace(redirectAction);
+                                }
+                                else {
+                                    if (data.Result === 'Success') {
+                                        roleArray = [];
+                                        $('#minimumAmount').prop('selectedIndex', 0);
+                                        $('#maximumAmount').prop('selectedIndex', 0);
+                                        $('#minimumDiscount').prop('selectedIndex', 0);
+                                        $('#maximumDiscount').prop('selectedIndex', 0);
+
+                                        $('#rolesNameList input').removeAttr('checked');
+                                        LoadRule();
+                                    }
+                                    else {
+                                        $.noty.closeAll();
+                                        notyAlert = noty({
+                                            text: data.Result,
+                                            type: 'error',
+                                            buttons: [{
+                                                addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                                    $noty.close();
+                                                }
+                                            }]
+                                        });
+                                    }
+                                }
+                            },
+                            error: function (e) {
+                            },
+                            async: false
+                        });                        
+                    }
+                    else {
+                        $.noty.closeAll();
+                        notyAlert = noty({
+                            text: "No role name assign for this rule.",
+                            type: 'error',
+                            buttons: [{
+                                addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                    $noty.close();
+                                }
+                            }]
+                        });                        
+                    }
+                }
+                else {
+                    $.noty.closeAll();
+                    notyAlert = noty({
+                        text: "Minimum amount must less then maximum amount.",
+                        type: 'error',
+                        buttons: [{
+                            addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                $noty.close();
+                            }
+                        }]
+                    });                    
+                }
+            }
+            else {
+                $.noty.closeAll();
+                notyAlert = noty({
+                    text: "Select amount and discount for rule creation.",
+                    type: 'error',
+                    buttons: [{
+                        addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                            $noty.close();
+                        }
+                    }]
+                });                
+            }
+
+        });
+
+        $('#rolesNameList input').click(function () {
+            var RoleId = $(this).attr('id');
+            if ($(this).prop('checked') === true) {
+                roleArray.push(RoleId);
+            }
+            else {
+                if ($.inArray(RoleId, roleArray) > -1) {
+                    removeA(roleArray, RoleId);
+                }
+            }
+        });
+
+        $('#RulePopUp_close').click(function () {
+            $('#RulePopUp').fadeOut(300);
+            $('#mask').fadeOut(300);
+        });
+
+        $('#UpdateButton').click(function () {
+            var RuleId = $('#_ruleId').val();
+            var minAmount = $('#_minimumAmount').val();
+            var maxAmount = $('#_maximumAmount').val();
+            var minDiscount = $('#_minimumDiscount').val();
+            var maxDiscount = $('#_maximumDiscount').val();
+            var isActive = false;
+            var isDelete = false;
+
+            if ($('#_isActive').prop('checked') === true) {
+                isActive = true;
+            }
+
+            if ($('#_isDelete').prop('checked') === true) {
+                isDelete = true;
+            }
+            if (maxAmount !== '' && minAmount !== '' && maxDiscount !== '' && minDiscount !== '') {
+                if (maxAmount > minAmount && maxDiscount > minDiscount) {
+                    if (roleArray.length > 0) {
+                        $.ajax({
+                            url: '/Rules/UpdateRule?RuleId=' + RuleId + '&minAmount=' + minAmount + '&maxAmount=' + maxAmount + '&minDiscount=' + minDiscount + '&maxDiscount=' + maxDiscount + '&Roles=' + roleArray + '&IsActive=' + isActive + '&IsDelete=' + isDelete,
+                            type: 'post',
+                            dataType: 'json',
+                            success: function (data) {
+                                if (data.Redirect) {
+                                    window.location.replace(data.redirectAction);
+                                }
+                                else {
+                                    if (data.Result === 'Success') {
+                                        LoadRule();
+                                    }
+                                    else {
+                                        $.noty.closeAll();
+                                        notyAlert = noty({
+                                            text: data.Result,
+                                            type: 'error',
+                                            buttons: [{
+                                                addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                                    $noty.close();
+                                                }
+                                            }]
+                                        });                                        
+                                    }
+                                }
+                            },
+                            error: function (e) {
+                            },
+                            async: false
+                        });
+                    }
+                    else {
+                        $.noty.closeAll();
+                        notyAlert = noty({
+                            text: "No role name assign for this rule.",
+                            type: 'error',
+                            buttons: [{
+                                addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                    $noty.close();
+                                }
+                            }]
+                        });                        
+                    }
+                }
+                else {
+                    $.noty.closeAll();
+                    notyAlert = noty({
+                        text: "Minimum amount must less then maximum amount.",
+                        type: 'error',
+                        buttons: [{
+                            addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                $noty.close();
+                            }
+                        }]
+                    });
+                }
+            }
+            else {
+                $.noty.closeAll();
+                notyAlert = noty({
+                    text: "Select amount and discount for rule creation.",
+                    type: 'error',
+                    buttons: [{
+                        addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                            $noty.close();
+                        }
+                    }]
+                });
+            }
+        });
+
+        $('#_RoleNameList input').click(function () {
+
+            var RoleId = $(this).attr('id');
+            RoleId = RoleId.substr(1);
+
+            if ($(this).prop('checked') === true) {
+                if (!$.inArray(RoleId, roleArray) > -1) {
+                    roleArray.push(RoleId);
+                }
+            }
+            else {
+                roleArray = removeValue(roleArray, RoleId);
+            }
+        });
+
+    });
+
+    function Getarray() {
+
+    }
+
+    function removeValue(arr, removeItem) {
+        arr = jQuery.grep(arr, function (value) {
+            return value != removeItem;
+        });
+        return arr;
+    }
+
+    function removeDuplicatesInPlace(arr) {
+        var i, j, cur, found;
+        for (i = arr.length - 1; i >= 0; i--) {
+            cur = arr[i];
+            found = false;
+            for (j = i - 1; !found && j >= 0; j--) {
+                if (cur === arr[j]) {
+                    if (i !== j) {
+                        arr.splice(i, 1);
+                    }
+                    found = true;
+                }
+            }
+        }
+        return arr;
+    };
+
+    function LoadRule() {
+        $('table').css('width', '100%');
+
+        $('#RuleDataTable').dataTable({
+            "aaData": [
+            /* Reduced data set */
+            ["Trident", "Internet Explorer 4.0", "Win 95+", 4, "X"],
+            ["Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"],
+            ["Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"],
+            ["Trident", "Internet Explorer 6.0", "Win 98+", 6, "A"],
+            ["Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"],
+            ["Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A"],
+            ["Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"],
+            ["Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"],
+            ["Webkit", "Safari 1.2", "OSX.3", 125.5, "A"],
+            ["Webkit", "Safari 1.3", "OSX.3", 312.8, "A"],
+            ["Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"],
+            ["Webkit", "Safari 3.0", "OSX.4+", 522.1, "A"]
+            ],
+            "bServerSide": true,
+            "sAjaxSource": "/Rules/GetRuleList",
+            "bProcessing": true,
+            "sPaginationType": "full_numbers",
+            //"iDisplayLength": 1,
+            "bDestroy": true,
+            "aoColumns": [
+                        { "sTitle": "Rule Id", "sName": "RuleId" },
+                        { "sTitle": "Maximum Amount", "sName": "MaximumAmount" },
+                        { "sTitle": "Minimum Amount", "sName": "MinimumAmount" },
+                        { "sTitle": "Maximum Discount", "sName": "MaximumDiscount" },
+                        { "sTitle": "Minimum Discount", "sName": "MinimumDiscount" },
+                        { "sTitle": "Role", "sName": "RolesName" },
+                        {
+                            "sTitle": "",
+                            "sName": "RuleId",
+                            "bSearchable": false,
+                            "bSortable": false,
+                            "fnRender": function (obj) {
+                                return '<a href="#" id=' + obj.aData[0] + ' onclick="javascript:RuleEditFunction(this)"><img src="/Content/images/edit.png" alt="EDIT" title="Edit" /></a>'
+                            }
+                        },
+                        {
+                            "sTitle": "",
+                            "sName": "RuleId",
+                            "bSearchable": false,
+                            "bSortable": false,
+                            "fnRender": function (obj) {
+                                return '<div class="delete" title="Delete" id=' + obj.aData[0] + ' onclick="javascript:RuleDeleteFunction(this)"><img src="/Content/images/error.png" alt="img1" /></div>'
+                            }
+                        }
+            ]
+        });
+    }
+
+    function RuleEditFunction(data) {
+        $.ajax(
+            {
+                url: '/Rules/GetSingleRule?RuleId=' + data.id,
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.Redirect) {
+                        window.location.replace(redirectAction);
+                    }
+                    else {
+                        $('#_ruleId').val(data.Result.RuleId);
+                        $('#_minimumAmount').val(data.Result.MinimumAmount);
+                        $('#_maximumAmount').val(data.Result.MaximumAmount);
+                        $('#_minimumDiscount').val(data.Result.MinimumDiscount);
+                        $('#_maximumDiscount').val(data.Result.MaximumDiscount);
+                        if (data.Result.IsActive) {
+                            $('#_isActive').prop('checked', true);
+                        }
+                        else {
+                            $('#_isActive').prop('checked', false);
+                        }
+
+                        if (data.Result.IsDelete) {
+                            $('#_isDelete').prop('checked', true);
+                        }
+                        else {
+                            $('#_isDelete').prop('checked', false);
+                        }
+
+                        for (var i = 0; i < data.Result.RoleIdList.length; i++) {
+                            roleArray.push(data.Result.RoleIdList[i]);
+                            $('#_RoleNameList').find('#_' + data.Result.RoleIdList[i]).prop('checked', true);
+                        }
+
+                        var popMargTop = ($('#RulePopUp').height() + 24) / 2;
+                        var popMargLeft = ($('#RulePopUp').width() + 24) / 2;
+
+                        $('#RulePopUp').css({
+                            'margin-top': -popMargTop,
+                            'margin-left': -popMargLeft
+                        });
+
+                        // Add the mask to body
+                        $('body').append('<div id="mask"></div>');
+                        $('#mask').fadeIn(300);
+
+                        //Fade in the Popup
+                        $('#RulePopUp').fadeIn(300);
+                    }
+                },
+                error: function (e) {
+                },
+                async: false
+            }
+            );
+    }
+
+    function RuleDeleteFunction(data) {
+        $.ajax(
+            {
+                url: '/Rules/DeleteRule?RuleId=' + data.id,
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.Redirect) {
+                        window.location.replace(redirectAction);
+                    }
+                    else {
+                        LoadRule();
+                    }
+                },
+                error: function (e) {
+                },
+                async: false
+            }
+            );
+    }
+
+    function removeA(arr) {
+        var what, a = arguments, L = a.length, ax;
+        while (L > 1 && arr.length) {
+            what = a[--L];
+            while ((ax = arr.indexOf(what)) !== -1) {
+                arr.splice(ax, 1);
+            }
+        }
+        return arr;
+    }
+
+</script>
+
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>
+            Role List
+        </p>
+    </div>
+</section>
+<div class="table_top">
+    <div class="list_select">
+        <span>Select:</span>
+        <label>
+            <select>
+            </select></label>
+        <span>0 item selected</span>
+    </div>
+    <div class="list_select_action">
+        <span>Actions:</span>
+        <label>
+            <select>
+            </select></label>
+        <input type="submit" value="SUBMIT" />
+    </div>
+</div>
+
+<div>
+    <ul>
+        <li>
+            <p>Rule Engine</p>
+        </li>
+        <li>
+            <label>Minimum Amount</label>
+            @Html.DropDownList("minimumAmount", new SelectList(oDrop.MinimumAmountValue), "--Select Minimum Amount--", new { @id = "minimumAmount" })
+        </li>
+        <li>
+            <label>Maximum Amount</label>
+            @Html.DropDownList("maximumAmount", new SelectList(oDrop.MaximumAmountValue), "--Select Maximum Amount--", new { @id = "maximumAmount" })
+        </li>
+        <li>
+            <label>Minimum Discount</label>
+            @Html.DropDownList("minimumDiscount", new SelectList(oDrop.MinimumDiscountValue), "--Select Minimum Discount--", new { @id = "minimumDiscount" })
+        </li>
+        <li>
+            <label>Maximum Discount</label>
+            @Html.DropDownList("maximumDiscount", new SelectList(oDrop.MaximumDiscountValue), "--Select Maximum Discount--", new { @id = "maximumDiscount" })
+
+        </li>
+        <li>
+            <label>Role name list</label>
+            <ul id="rolesNameList">
+                @foreach (var item in Model.Roles)
+                {
+                    <li>
+                        <input type="checkbox" id="@item.RoleId" value="@item.RoleName" />@item.RoleName
+                    </li>
+                }
+
+            </ul>
+        </li>
+    </ul>
+
+    <div class="submit_box">
+        <input type="button" id="CreateRule" value="Create Rule" />
+    </div>
+
+    <div>
+        <div class="quote_list">
+            <table id="RuleDataTable"></table>
+        </div>
+    </div>
+</div>
+<div class="light-popup" id="RulePopUp">
+    <a href="#" class="close" id="RulePopUp_close">
+        <img src="" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <p>Rule Engine</p>
+                <input type="hidden" id="_ruleId" />
+            </li>
+            <li>
+                <label>Minimum Amount</label>
+                @Html.DropDownList("minimumAmount", new SelectList(oDrop.MinimumAmountValue), "--Select Minimum Amount--", new { @id = "_minimumAmount" })
+            </li>
+            <li>
+                <label>Maximum Amount</label>
+                @Html.DropDownList("maximumAmount", new SelectList(oDrop.MaximumAmountValue), "--Select Maximum Amount--", new { @id = "_maximumAmount" })
+            </li>
+            <li>
+                <label>Minimum Discount</label>
+                @Html.DropDownList("minimumDiscount", new SelectList(oDrop.MinimumDiscountValue), "--Select Minimum Discount--", new { @id = "_minimumDiscount" })
+            </li>
+            <li>
+                <label>Maximum Discount</label>
+                @Html.DropDownList("maximumDiscount", new SelectList(oDrop.MaximumDiscountValue), "--Select Maximum Discount--", new { @id = "_maximumDiscount" })
+
+            </li>
+            <li>
+                <label>Role name list</label>
+                <ul id="_RoleNameList">
+                    @foreach (var item in Model.Roles)
+                    {
+                        <li>
+                            <input type="checkbox" id="_@item.RoleId" value="@item.RoleId"  />@item.RoleName
+                        </li>
+                    }
+
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="_isActive" />Active</li>
+                    <li>
+                        <input type="checkbox" id="_isDelete" />Delete</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="submit_box">
+            <input type="button" value="Update" class="Button" id="UpdateButton" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+﻿@model AgileQuoteAdminProperty.Property.MaterialBundleProperty
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/BundleScript/Bundle.js" type="text/javascript"></script>
+    <link href="../../Content/themes/base/Accordion.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Bundle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/themes/base/Popup.css" />    
+    <meta name="viewport" content="width=device-width" />
+    <title>BundleUpdate</title>
+</head>
+<body>
+    <div id="Main">
+    <div id="Content">
+    <div class="Title">BUNDLE EDIT</div>
+    <div>
+        <div class="center">
+        @Html.LabelFor(x => x.oBundle.BundleID,new { @class = "Label" })
+        @Html.TextBoxFor(x => x.oBundle.BundleID, new { @id = "BundleID", @class = "TextBox" })
+        @Html.ValidationMessageFor(x => x.oBundle.BundleID)
+        </div>
+        <div class="center">
+        @Html.LabelFor(x => x.oBundle.BundleName,new { @class = "Label" })
+        @Html.TextBoxFor(x => x.oBundle.BundleName, new { @id = "BundleName", @class = "TextBox" })
+        @Html.ValidationMessageFor(x => x.oBundle.BundleName)
+        </div>
+        <div class="center">
+        @Html.LabelFor(x => x.oBundle.BundleType,new { @class = "Label" })
+        @Html.TextBoxFor(x => x.oBundle.BundleType, new { @id = "BundleType", @class = "TextBox" })
+        @Html.ValidationMessageFor(x => x.oBundle.BundleType)
+        </div>
+        <div class="center">
+        @Html.LabelFor(x => x.oBundle.BundleCatagory,new { @class = "Label" })
+        @Html.TextBoxFor(x => x.oBundle.BundleCatagory, new { @id = "BundleCatagory", @class = "TextBox" })
+        @Html.ValidationMessageFor(x => x.oBundle.BundleCatagory)
+         </div>
+         <div class="center">
+        @Html.LabelFor(x => x.oBundle.UnitPrice,new { @class = "Label" })
+        @Html.TextBoxFor(x => x.oBundle.UnitPrice, new { @id = "UnitPrice", @class = "TextBox" })
+        @Html.ValidationMessageFor(x => x.oBundle.UnitPrice)
+        </div>
+        <div class="center">
+        @Html.LabelFor(x => x.oBundle.Discount, new { @class = "Label" })
+        @Html.TextBoxFor(x => x.oBundle.Discount, new { @id = "Discount", @class = "TextBox" })
+        @Html.ValidationMessageFor(x => x.oBundle.Discount)
+        </div>
+    </div>
+    <div>
+    @Model.oBundle.BundleCatagory;
+   
+        @{ var qList1 = ViewData.Model.oMaterialList.MaterialList;
+           WebGrid grid1 = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+           grid1.Bind(qList1, rowCount: qList1.Count());
+     
+        }
+      @{ var qList = ViewData.Model.oMaterialList.UpdatedMaterialList;
+            WebGrid grid = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+            grid.Bind(qList, rowCount: qList.Count());
+     
+        }
+
+        <div id="webgrid">
+            @grid.GetHtml(
+tableStyle: "grid",
+fillEmptyRows: false,
+alternatingRowStyle: "alternativeRow",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{
+     //grid.Column(header:"MATERIAL",style:"MaterialCheckClass", format:@<text><input type="checkbox" value="@item.MaterialID" /></text>),
+grid.Column("MaterialId","MATERIAL ID",canSort:true,style:"MaterialIDclass"),
+grid.Column("MaterialCode","MATERIAL CODE",canSort:true),
+grid.Column("MaterialName","MATERIAL NAME",canSort:true),
+grid.Column("MaterialAmount","MATERIAL AMOUNT",canSort:true),
+grid.Column("MaterialDiscount","DISCOUNT",canSort:true),
+
+   grid.Column(header:"Edit",style:"Hide",format:@<text><div class="edit" title="EDIT" id="@item.MaterialID" onclick="javascript:EditFunction(grid)">
+       Edit</div></text>),
+    grid.Column(header:"Delete",style:"Hide",format:@<text><div class="delete" id="@item.MaterialID" onclick="javascript:DeleteFuction(this)" title="DELETE">
+        Delete</div></text>)
+   
+}
+
+)
+</div>
+
+
+        <div class="light-popup">
+            <div id="webgrid1">
+                @grid1.GetHtml(
+tableStyle: "grid",
+fillEmptyRows: false,
+alternatingRowStyle: "alternativeRow",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{
+     grid1.Column(header:"MATERIAL",style:"MaterialCheckClass", format:@<text><input type="checkbox"  value="@item.MaterialID"  @(Model.oMaterialID.MaterialID.Any(x=>x==Convert.ToString(item.MaterialID)) ? "checked=\"checked\"" : "")  /></text>),
+grid1.Column("MaterialId","MATERIAL ID",canSort:true,style:"MaterialIDclass"),
+grid1.Column("MaterialCode","MATERIAL CODE",canSort:true),
+grid1.Column("MaterialName","MATERIAL NAME",canSort:true),
+grid1.Column("MaterialAmount","MATERIAL AMOUNT",canSort:true),
+grid1.Column("MaterialDiscount","DISCOUNT",canSort:true),
+//grid.Column("MaterialIsActive","ISACTIVE",canSort:true),
+//grid.Column("MaterialIsDelete","ISDELETE",canSort:true)
+   grid1.Column(header:"Edit",format:@<text><div class="edit" title="EDIT" id="@item.MaterialID" onclick="javascript:EditFunction(grid)">
+       Edit</div></text>),
+    grid1.Column(header:"Delete",format:@<text><div class="delete" id="@item.MaterialID" onclick="javascript:DeleteFuction(this)" title="DELETE">
+        Delete</div></text>)
+   
+}
+
+)
+            </div>
+            </div>
+            @Html.ValidationSummary(true)
+            <br />
+            <input type="button" value="Update" id="UpdateBundle" />
+            
+        </div>
+          <input type="button" value="Add" id="AddBundle" />
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ChangepondProductModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ChangepondProductModelStoreContainer">
+          <EntitySet Name="Currency" EntityType="ChangepondProductModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Currency_value" EntityType="ChangepondProductModel.Store.Currency_value" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Material" EntityType="ChangepondProductModel.Store.Material" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MaterialCategory_mapping" EntityType="ChangepondProductModel.Store.MaterialCategory_mapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="ChangepondProductModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product_category" EntityType="ChangepondProductModel.Store.Product_category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product_type" EntityType="ChangepondProductModel.Store.Product_type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductMaterial_Mapping" EntityType="ChangepondProductModel.Store.ProductMaterial_Mapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="ChangepondProductModel.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SalesOrganization" EntityType="ChangepondProductModel.Store.SalesOrganization" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Territory" EntityType="ChangepondProductModel.Store.Territory" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Currency_value_Currency" Association="ChangepondProductModel.Store.FK_Currency_value_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="Currency_value" EntitySet="Currency_value" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MaterialCategory_mapping_Material" Association="ChangepondProductModel.Store.FK_MaterialCategory_mapping_Material">
+            <End Role="Material" EntitySet="Material" />
+            <End Role="MaterialCategory_mapping" EntitySet="MaterialCategory_mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MaterialCategory_mapping_Product_category" Association="ChangepondProductModel.Store.FK_MaterialCategory_mapping_Product_category">
+            <End Role="Product_category" EntitySet="Product_category" />
+            <End Role="MaterialCategory_mapping" EntitySet="MaterialCategory_mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product_category" Association="ChangepondProductModel.Store.FK_Product_Product_category">
+            <End Role="Product_category" EntitySet="Product_category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product_type" Association="ChangepondProductModel.Store.FK_Product_Product_type">
+            <End Role="Product_type" EntitySet="Product_type" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductMaterial_Mapping_Material" Association="ChangepondProductModel.Store.FK_ProductMaterial_Mapping_Material">
+            <End Role="Material" EntitySet="Material" />
+            <End Role="ProductMaterial_Mapping" EntitySet="ProductMaterial_Mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductMaterial_Mapping_Product" Association="ChangepondProductModel.Store.FK_ProductMaterial_Mapping_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductMaterial_Mapping" EntitySet="ProductMaterial_Mapping" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Currency_value">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Material">
+          <Key>
+            <PropertyRef Name="MaterialId" />
+          </Key>
+          <Property Name="MaterialId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialCode" Type="varchar" MaxLength="50" />
+          <Property Name="MaterialName" Type="varchar" MaxLength="50" />
+          <Property Name="Amount" Type="numeric" Scale="2" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MaterialCategory_mapping">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" />
+          <Property Name="ProductType" Type="int" />
+          <Property Name="ProductCategory" Type="int" />
+        </EntityType>
+        <EntityType Name="Product_category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Product_type">
+          <Key>
+            <PropertyRef Name="Product_typeID" />
+          </Key>
+          <Property Name="Product_typeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProductMaterial_Mapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Product_Id" Type="int" Nullable="false" />
+          <Property Name="Material_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="SalesOrganization">
+          <Key>
+            <PropertyRef Name="SalesOrgCode" />
+          </Key>
+          <Property Name="SalesOrgCode" Type="int" Nullable="false" />
+          <Property Name="SalesOrgName" Type="varchar" MaxLength="50" />
+          <Property Name="ReferenceCustomerCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Territory">
+          <Key>
+            <PropertyRef Name="TerritoryCode" />
+          </Key>
+          <Property Name="TerritoryCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TerritoryName" Type="varchar" MaxLength="50" />
+          <Property Name="IsBoundedWarehouse" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Currency_value_Currency">
+          <End Role="Currency" Type="ChangepondProductModel.Store.Currency" Multiplicity="1" />
+          <End Role="Currency_value" Type="ChangepondProductModel.Store.Currency_value" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyId" />
+            </Principal>
+            <Dependent Role="Currency_value">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MaterialCategory_mapping_Material">
+          <End Role="Material" Type="ChangepondProductModel.Store.Material" Multiplicity="1" />
+          <End Role="MaterialCategory_mapping" Type="ChangepondProductModel.Store.MaterialCategory_mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Material">
+              <PropertyRef Name="MaterialId" />
+            </Principal>
+            <Dependent Role="MaterialCategory_mapping">
+              <PropertyRef Name="MaterialID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MaterialCategory_mapping_Product_category">
+          <End Role="Product_category" Type="ChangepondProductModel.Store.Product_category" Multiplicity="1" />
+          <End Role="MaterialCategory_mapping" Type="ChangepondProductModel.Store.MaterialCategory_mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="MaterialCategory_mapping">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product_category">
+          <End Role="Product_category" Type="ChangepondProductModel.Store.Product_category" Multiplicity="0..1" />
+          <End Role="Product" Type="ChangepondProductModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product_type">
+          <End Role="Product_type" Type="ChangepondProductModel.Store.Product_type" Multiplicity="0..1" />
+          <End Role="Product" Type="ChangepondProductModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_type">
+              <PropertyRef Name="Product_typeID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductMaterial_Mapping_Material">
+          <End Role="Material" Type="ChangepondProductModel.Store.Material" Multiplicity="1" />
+          <End Role="ProductMaterial_Mapping" Type="ChangepondProductModel.Store.ProductMaterial_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Material">
+              <PropertyRef Name="MaterialId" />
+            </Principal>
+            <Dependent Role="ProductMaterial_Mapping">
+              <PropertyRef Name="Material_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductMaterial_Mapping_Product">
+          <End Role="Product" Type="ChangepondProductModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductMaterial_Mapping" Type="ChangepondProductModel.Store.ProductMaterial_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductMaterial_Mapping">
+              <PropertyRef Name="Product_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="selectQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="quoteID" Type="int" Mode="In" />
+          <Parameter Name="quoteName" Type="varchar" Mode="In" />
+          <Parameter Name="salesOrg" Type="varchar" Mode="In" />
+          <Parameter Name="customerName" Type="varchar" Mode="In" />
+          <Parameter Name="prepareBy" Type="varchar" Mode="In" />
+          <Parameter Name="createDate" Type="date" Mode="In" />
+          <Parameter Name="requiredDate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ChangepondProductModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ChangepondProductEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Currencies" EntityType="ChangepondProductModel.Currency" />
+          <EntitySet Name="Currency_value" EntityType="ChangepondProductModel.Currency_value" />
+          <EntitySet Name="Materials" EntityType="ChangepondProductModel.Material" />
+          <EntitySet Name="MaterialCategory_mapping" EntityType="ChangepondProductModel.MaterialCategory_mapping" />
+          <EntitySet Name="Products" EntityType="ChangepondProductModel.Product" />
+          <EntitySet Name="Product_category" EntityType="ChangepondProductModel.Product_category" />
+          <EntitySet Name="Product_type" EntityType="ChangepondProductModel.Product_type" />
+          <EntitySet Name="ProductMaterial_Mapping" EntityType="ChangepondProductModel.ProductMaterial_Mapping" />
+          <EntitySet Name="Roles" EntityType="ChangepondProductModel.Role" />
+          <EntitySet Name="SalesOrganizations" EntityType="ChangepondProductModel.SalesOrganization" />
+          <EntitySet Name="Territories" EntityType="ChangepondProductModel.Territory" />
+          <AssociationSet Name="FK_Currency_value_Currency" Association="ChangepondProductModel.FK_Currency_value_Currency">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="Currency_value" EntitySet="Currency_value" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MaterialCategory_mapping_Material" Association="ChangepondProductModel.FK_MaterialCategory_mapping_Material">
+            <End Role="Material" EntitySet="Materials" />
+            <End Role="MaterialCategory_mapping" EntitySet="MaterialCategory_mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductMaterial_Mapping_Material" Association="ChangepondProductModel.FK_ProductMaterial_Mapping_Material">
+            <End Role="Material" EntitySet="Materials" />
+            <End Role="ProductMaterial_Mapping" EntitySet="ProductMaterial_Mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MaterialCategory_mapping_Product_category" Association="ChangepondProductModel.FK_MaterialCategory_mapping_Product_category">
+            <End Role="Product_category" EntitySet="Product_category" />
+            <End Role="MaterialCategory_mapping" EntitySet="MaterialCategory_mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product_category" Association="ChangepondProductModel.FK_Product_Product_category">
+            <End Role="Product_category" EntitySet="Product_category" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product_type" Association="ChangepondProductModel.FK_Product_Product_type">
+            <End Role="Product_type" EntitySet="Product_type" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductMaterial_Mapping_Product" Association="ChangepondProductModel.FK_ProductMaterial_Mapping_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductMaterial_Mapping" EntitySet="ProductMaterial_Mapping" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CurrencyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="Currency_value" Relationship="ChangepondProductModel.FK_Currency_value_Currency" FromRole="Currency" ToRole="Currency_value" />
+        </EntityType>
+        <EntityType Name="Currency_value">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="Currency" Relationship="ChangepondProductModel.FK_Currency_value_Currency" FromRole="Currency_value" ToRole="Currency" />
+        </EntityType>
+        <EntityType Name="Material">
+          <Key>
+            <PropertyRef Name="MaterialId" />
+          </Key>
+          <Property Name="MaterialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MaterialName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Discount" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MaterialCategory_mapping" Relationship="ChangepondProductModel.FK_MaterialCategory_mapping_Material" FromRole="Material" ToRole="MaterialCategory_mapping" />
+          <NavigationProperty Name="ProductMaterial_Mapping" Relationship="ChangepondProductModel.FK_ProductMaterial_Mapping_Material" FromRole="Material" ToRole="ProductMaterial_Mapping" />
+        </EntityType>
+        <EntityType Name="MaterialCategory_mapping">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Material" Relationship="ChangepondProductModel.FK_MaterialCategory_mapping_Material" FromRole="MaterialCategory_mapping" ToRole="Material" />
+          <NavigationProperty Name="Product_category" Relationship="ChangepondProductModel.FK_MaterialCategory_mapping_Product_category" FromRole="MaterialCategory_mapping" ToRole="Product_category" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProductType" Type="Int32" />
+          <Property Name="ProductCategory" Type="Int32" />
+          <NavigationProperty Name="Product_category" Relationship="ChangepondProductModel.FK_Product_Product_category" FromRole="Product" ToRole="Product_category" />
+          <NavigationProperty Name="Product_type" Relationship="ChangepondProductModel.FK_Product_Product_type" FromRole="Product" ToRole="Product_type" />
+          <NavigationProperty Name="ProductMaterial_Mapping" Relationship="ChangepondProductModel.FK_ProductMaterial_Mapping_Product" FromRole="Product" ToRole="ProductMaterial_Mapping" />
+        </EntityType>
+        <EntityType Name="Product_category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MaterialCategory_mapping" Relationship="ChangepondProductModel.FK_MaterialCategory_mapping_Product_category" FromRole="Product_category" ToRole="MaterialCategory_mapping" />
+          <NavigationProperty Name="Products" Relationship="ChangepondProductModel.FK_Product_Product_category" FromRole="Product_category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product_type">
+          <Key>
+            <PropertyRef Name="Product_typeID" />
+          </Key>
+          <Property Name="Product_typeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Products" Relationship="ChangepondProductModel.FK_Product_Product_type" FromRole="Product_type" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductMaterial_Mapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_Id" Type="Int32" Nullable="false" />
+          <Property Name="Material_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Material" Relationship="ChangepondProductModel.FK_ProductMaterial_Mapping_Material" FromRole="ProductMaterial_Mapping" ToRole="Material" />
+          <NavigationProperty Name="Product" Relationship="ChangepondProductModel.FK_ProductMaterial_Mapping_Product" FromRole="ProductMaterial_Mapping" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SalesOrganization">
+          <Key>
+            <PropertyRef Name="SalesOrgCode" />
+          </Key>
+          <Property Name="SalesOrgCode" Type="Int32" Nullable="false" />
+          <Property Name="SalesOrgName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ReferenceCustomerCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Territory">
+          <Key>
+            <PropertyRef Name="TerritoryCode" />
+          </Key>
+          <Property Name="TerritoryCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TerritoryName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsBoundedWarehouse" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_Currency_value_Currency">
+          <End Role="Currency" Type="ChangepondProductModel.Currency" Multiplicity="1" />
+          <End Role="Currency_value" Type="ChangepondProductModel.Currency_value" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyId" />
+            </Principal>
+            <Dependent Role="Currency_value">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MaterialCategory_mapping_Material">
+          <End Role="Material" Type="ChangepondProductModel.Material" Multiplicity="1" />
+          <End Role="MaterialCategory_mapping" Type="ChangepondProductModel.MaterialCategory_mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Material">
+              <PropertyRef Name="MaterialId" />
+            </Principal>
+            <Dependent Role="MaterialCategory_mapping">
+              <PropertyRef Name="MaterialID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductMaterial_Mapping_Material">
+          <End Role="Material" Type="ChangepondProductModel.Material" Multiplicity="1" />
+          <End Role="ProductMaterial_Mapping" Type="ChangepondProductModel.ProductMaterial_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Material">
+              <PropertyRef Name="MaterialId" />
+            </Principal>
+            <Dependent Role="ProductMaterial_Mapping">
+              <PropertyRef Name="Material_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MaterialCategory_mapping_Product_category">
+          <End Role="Product_category" Type="ChangepondProductModel.Product_category" Multiplicity="1" />
+          <End Role="MaterialCategory_mapping" Type="ChangepondProductModel.MaterialCategory_mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="MaterialCategory_mapping">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product_category">
+          <End Role="Product_category" Type="ChangepondProductModel.Product_category" Multiplicity="0..1" />
+          <End Role="Product" Type="ChangepondProductModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product_type">
+          <End Role="Product_type" Type="ChangepondProductModel.Product_type" Multiplicity="0..1" />
+          <End Role="Product" Type="ChangepondProductModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_type">
+              <PropertyRef Name="Product_typeID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductMaterial_Mapping_Product">
+          <End Role="Product" Type="ChangepondProductModel.Product" Multiplicity="1" />
+          <End Role="ProductMaterial_Mapping" Type="ChangepondProductModel.ProductMaterial_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductMaterial_Mapping">
+              <PropertyRef Name="Product_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ChangepondProductModelStoreContainer" CdmEntityContainer="ChangepondProductEntities">
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Currency">
+              <MappingFragment StoreEntitySet="Currency">
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currency_value">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Currency_value">
+              <MappingFragment StoreEntitySet="Currency_value">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Materials">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Material">
+              <MappingFragment StoreEntitySet="Material">
+                <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+                <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialCategory_mapping">
+            <EntityTypeMapping TypeName="ChangepondProductModel.MaterialCategory_mapping">
+              <MappingFragment StoreEntitySet="MaterialCategory_mapping">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="ProductCategory" ColumnName="ProductCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_category">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Product_category">
+              <MappingFragment StoreEntitySet="Product_category">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_type">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Product_type">
+              <MappingFragment StoreEntitySet="Product_type">
+                <ScalarProperty Name="Product_typeID" ColumnName="Product_typeID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductMaterial_Mapping">
+            <EntityTypeMapping TypeName="ChangepondProductModel.ProductMaterial_Mapping">
+              <MappingFragment StoreEntitySet="ProductMaterial_Mapping">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+                <ScalarProperty Name="Material_Id" ColumnName="Material_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalesOrganizations">
+            <EntityTypeMapping TypeName="ChangepondProductModel.SalesOrganization">
+              <MappingFragment StoreEntitySet="SalesOrganization">
+                <ScalarProperty Name="SalesOrgCode" ColumnName="SalesOrgCode" />
+                <ScalarProperty Name="SalesOrgName" ColumnName="SalesOrgName" />
+                <ScalarProperty Name="ReferenceCustomerCode" ColumnName="ReferenceCustomerCode" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Territories">
+            <EntityTypeMapping TypeName="ChangepondProductModel.Territory">
+              <MappingFragment StoreEntitySet="Territory">
+                <ScalarProperty Name="TerritoryCode" ColumnName="TerritoryCode" />
+                <ScalarProperty Name="TerritoryName" ColumnName="TerritoryName" />
+                <ScalarProperty Name="IsBoundedWarehouse" ColumnName="IsBoundedWarehouse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AgileQuoteAdminEntities">
+        <EntityTypeShape EntityType="ChangepondProductModel.Currency" Width="1.5" PointX="5.75" PointY="4.25" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Currency_value" Width="1.5" PointX="8" PointY="4.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Material" Width="1.5" PointX="3" PointY="7.375" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.MaterialCategory_mapping" Width="1.5" PointX="3" PointY="4" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Product" Width="1.5" PointX="3" PointY="0.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Product_category" Width="1.5" PointX="0.75" PointY="4" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Product_type" Width="1.5" PointX="0.75" PointY="1.25" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.ProductMaterial_Mapping" Width="1.5" PointX="5.25" PointY="1" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Role" Width="1.5" PointX="5.75" PointY="8" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.SalesOrganization" Width="1.5" PointX="7.75" PointY="7" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChangepondProductModel.Territory" Width="1.5" PointX="7.75" PointY="2" Height="1.5956835937500031" IsExpanded="true" />
+        <AssociationConnector Association="ChangepondProductModel.FK_Currency_value_Currency" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="5.2689925130208337" />
+          <ConnectorPoint PointX="8" PointY="5.2689925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChangepondProductModel.FK_MaterialCategory_mapping_Material" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="7.375" />
+          <ConnectorPoint PointX="3.75" PointY="5.9802864583333335" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChangepondProductModel.FK_ProductMaterial_Mapping_Material" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.65625" />
+          <ConnectorPoint PointX="5.46875" PointY="7.65625" />
+          <ConnectorPoint PointX="5.46875" PointY="2.9802864583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChangepondProductModel.FK_MaterialCategory_mapping_Product_category" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.8939925130208337" />
+          <ConnectorPoint PointX="3" PointY="4.8939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChangepondProductModel.FK_Product_Product_category" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4" />
+          <ConnectorPoint PointX="2.625" PointY="3.625" />
+          <ConnectorPoint PointX="2.625" PointY="1.9324446614583337" />
+          <ConnectorPoint PointX="3" PointY="1.9324446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChangepondProductModel.FK_Product_Product_type" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.4515641276041666" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="2.4515641276041662" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="2.4515641276041666" />
+          <ConnectorPoint PointX="3" PointY="2.4515641276041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChangepondProductModel.FK_ProductMaterial_Mapping_Product" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="1.9901432291666659" />
+          <ConnectorPoint PointX="5.25" PointY="1.9901432291666659" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

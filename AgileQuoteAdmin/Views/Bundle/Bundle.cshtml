@@ -1,0 +1,1078 @@
+﻿@{
+    ViewBag.Title = "Bundle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<script src="~/Scripts/jquery.jeditable.js"></script>
+<link href="~/Content/jquery.dataTables.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery.noty.js"></script>
+<script src="~/Scripts/center.js"></script>
+<script src="~/Scripts/default.js"></script>
+<script src="~/Scripts/top.js"></script>
+
+<link href="~/Content/buttons.css" rel="stylesheet" />
+
+<script type="text/javascript">
+    var notyAlert = null;
+    var oTable = [];
+    var anOpen = [];
+    var MaterialIDQuantityList = [];
+    var MaterialIDQuantityList_update = [];
+
+    $(document).ready(function () {
+        LoadBundleAccordian();
+        LoadMaterialAccordian('DynamicMaterialDataTable');
+
+        $('#DynamicMaterialDataTable_Update').html('');
+        LoadMaterialAccordian('DynamicMaterialDataTable_Update');
+
+        $('table td.control').live('click', function () {
+            var tableIndex = null;
+            var tableID = $(this).parents('table').attr('id');
+
+            for (var item = 0; item < oTable.length; item++) {
+                if (oTable[item].attr('id') === tableID) {
+                    tableIndex = item;
+                }
+            }
+
+            var bundleID = $(this).find('a').attr('id');
+            var nTr = this.parentNode;
+            var i = $.inArray(nTr, anOpen);
+            if (i === -1) {
+                $('img', this).attr('src', "/Content/images/minus.png");
+                var nDetailsRow = oTable[tableIndex].fnOpen(nTr, fnFormatDetails(oTable[tableIndex], nTr), 'details');
+                $('div.innerDetails', nDetailsRow).slideDown();
+                anOpen.push(nTr);
+            }
+            else {
+                $('img', this).attr('src', "/Content/images/plus.gif");
+                $('div.innerDetails', $(nTr).next()[0]).slideUp(function () {
+                    oTable[tableIndex].fnClose(nTr);
+                    anOpen.splice(i, 1);
+                });
+            }
+        });
+
+        function fnFormatDetails(oTable, nTr) {
+            var oData = oTable.fnGetData(nTr);
+            return BundleMappingMaterial(oData[1]);
+        }
+
+        $('#BundlePopup_close').click(function () {
+            $('#BundleRecordPopup').css('display', 'none');
+            $('#mask').css('display', 'none');
+        });
+
+        $('#createBundle').click(function () {
+            $('#BundleName').val('');
+            $('#BundleDescription').val('');
+            $('#BundleWarrenty').prop('selectedIndex', 0);
+            $('#DynamicMaterialDataTable table tr td').removeClass('EditableFieldBgColor');
+            CreateBundlePopup();
+        });
+
+        $('#BundleMaterialPopup_close').click(function () {
+            $('#mask').css('display', 'none');
+            $('#BundleMaterialPopup').css('display', 'none');
+        });
+
+        $('#MaterialPopup_close').click(function () {
+            $('#MaterialRecordPopup').css('display', 'none');
+            CreateBundlePopup();
+        });
+
+        $('#AddBundle').click(function () {
+            var bundleName = $('#BundleName').val();
+            if (bundleName === '') {
+                $('#BundleNameError').text('Please enter bundle name');
+            }
+            else {
+                $('#BundleNameError').text('*');
+                var tempMaterialIDlist = new Array();
+
+                $.each(MaterialIDQuantityList, function (i) {
+                    var CodeValue = MaterialIDQuantityList[i].ID + '_' + MaterialIDQuantityList[i].Quantity;
+                    tempMaterialIDlist.push(CodeValue);
+                });
+
+                $.ajax({
+                    url: '/Bundle/InsertBundleRecord?BundleName=' + bundleName + '&BundleDescription=' + $('#BundleDescription').val() + '&Warrenty=' + $('#BundleWarrenty').val() + '&MaterialQuantity=' + tempMaterialIDlist,
+                    type: 'post',
+                    dataType: 'json',
+                    success: function (result) {
+                        if (result.Redirect) {
+                            window.location.replace(result.RedirectAction);
+                        }
+                        else {
+                            if (result.Result === 'success') {
+                                $('#DynamicBundleDataTable').html('');
+                                LoadBundleAccordian();
+                                $('#mask').css('display', 'none');
+                                $('#BundleMaterialPopup').css('display', 'none');
+                            }
+                            else {
+                                $.noty.closeAll();
+                                notyAlert = noty({
+                                    text: result.Result,
+                                    type: 'error',
+                                    buttons: [{
+                                        addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                            $noty.close();
+                                        }
+                                    }]
+                                });
+                            }
+                        }
+                    },
+                    error: function (e) {
+                    },
+                    async: false
+                });
+
+            }
+        });
+
+        $('#_UpdateBundle').click(function () {
+            var tempMaterialIDlist = new Array();
+
+            $.each(MaterialIDQuantityList_update, function (i) {
+                var CodeValue = MaterialIDQuantityList_update[i].ID + '_' + MaterialIDQuantityList_update[i].Quantity;
+                tempMaterialIDlist.push(CodeValue);
+            });
+            MaterialIDQuantityList_update = [];
+
+            var BundleName = $('#BundleSingleName').text();
+            var BundleDescription = $('#BundleSingleDescription').text();
+            var BundleId = $('#BundleId').val();
+            var BundleDiscount = $('#BundleDiscount').val();
+            var warrenty = $('#BundleWarrenty_Update').val();
+
+            $.ajax({
+                url: '/Bundle/UpdateMaterialToBundle?BundleName=' + BundleName + '&BundleDescription=' + BundleDescription + '&Discount=' + BundleDiscount + '&MaterialQuantity=' + tempMaterialIDlist + '&BundleID=' + BundleId + '&Warrenty=' + warrenty,
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.Redirect) {
+                        window.location.replace(result.RedirectAction);
+                    }
+                    else {
+                        if (result.Result === 'success') {
+                            $('#BundleMaterialPopup_Update').css('display', 'none');
+                            BundleViewFunction(BundleId);
+                        }
+                        else {
+                            $.noty.closeAll();
+                            notyAlert = noty({
+                                text: result.Result,
+                                type: 'error',
+                                buttons: [{
+                                    addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                        $noty.close();
+                                    }
+                                }]
+                            });
+                        }
+                    }
+                },
+                error: function (e) {
+                },
+                async: false
+            });
+        });
+
+        $('#MaterialInsert').click(function () {
+            $('#BundleMappingMaterial table tbody tr').each(function () {
+                MaterialIDQuantityList_update.push({ ID: $(this).find('td:eq(0)').text(), Quantity: $(this).find('td:eq(4)').text() });
+            });
+            Material_updatePopup();
+        });
+
+        $('#BundleMaterialPopup_close_Update').click(function () {
+            $('#BundleMaterialPopup_Update').css('display', 'none');
+            $('#mask').css('display', 'none');
+            BundleViewFunction($('#BundleId_update').val());
+        });
+    });
+
+    function Material_updatePopup() {
+        $('#BundleRecordPopup').css('display', 'none');
+        var BundleType = $('#BundleType').val();
+
+        $("#CategoryMaterialAccordion_update").accordion({ 'active': $('#CategoryMaterial_' + BundleType + '_h3_update') });
+        $("#CategoryMaterialAccordion_update").css('height', '360px');
+        $("#CategoryMaterialAccordion_update > div").css('height', '330px');
+        $("#CategoryMaterialAccordion_update").find('input[type=checkbox]').attr('disabled', 'disabled');
+        var id = '#CategoryMaterial_' + BundleType + '_h3_update';
+        var checkremoveId = "CategoryMaterial_" + BundleType + "_update";
+        
+        $('#'+checkremoveId).find('input[type=checkbox]').removeAttr('disabled');
+        $('#CategoryMaterialAccordion_update h3').hide(300, function () {  // first hide all `.hide`
+            $(id).show(); // then show the element with id `#1`
+        });
+
+        //$("#CategoryMaterialAccordion_update h3").not(id).hide();​​​​
+        //$("#CategoryMaterialAccordion_update").accordion({ collapsible: false });
+
+        var popMargTop = ($('#BundleMaterialPopup_Update').height() + 24) / 2;
+        var popMargLeft = ($('#BundleMaterialPopup_Update').width() + 24) / 2;
+
+        //if (MaterialIDQuantityList_update.length === 0) {
+        //    $('#BundleMaterialPopup_Update').find('input[type=checkbox]:checked').removeAttr('checked');
+        //}
+
+        //$("#CategoryMaterialAccordion_update h3").removeClass('active-accord');                
+        //$('#CategoryMaterial_' + BundleType + '_h3_update').addClass('active-accord');
+        //$('#CategoryMaterial_' + BundleType + '_h3_update > div').show();
+
+        $('#BundleId_update').val($('#BundleId').val());
+
+        $('#BundleMaterialPopup_Update').css({
+            'margin-top': -popMargTop,
+            'margin-left': -popMargLeft
+        });
+
+        //Fade in the Popup
+        $('#BundleMaterialPopup_Update').fadeIn(300);
+    }
+
+    function getParentByTagName(obj, tag) {
+        var obj_parent = obj.parentNode;
+        if (!obj_parent) return false;
+        if (obj_parent.tagName.toLowerCase() == tag) return obj_parent;
+        else return getParentByTagName(obj_parent, tag);
+    }
+
+    function CheckDisableCheckbox(data, MaterialIDList, Id) {
+        if (MaterialIDList.length > 0) {
+            var table = getParentByTagName(data, 'table');
+            $('#' + Id + ' table').each(function () {
+                if ($(this).attr('id') !== table.id) {
+                    $(this).find('input[type="checkbox"]').attr('disabled', 'disabled');
+                }
+                else {
+                    $(this).find('input[type="checkbox"]').removeAttr('disabled');
+                }
+            });
+        }
+        else {
+            $('#DynamicMaterialDataTable table input[type="checkbox"]').removeAttr('disabled');
+        }
+    }
+
+    function BundleMappingMaterial(BundleID) {
+        var sample = '<div class="innerDetails">' +
+             '<table><thead><tr><th>Code</th><th>Name</th><th>Description</th><th>Quantity</th><th>Amount</th></tr></thead>' +
+             '<tbody>';
+        $.ajax({
+            url: '/Bundle/GetBundleMappingMaterial?BundleID=' + BundleID,
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                if (data.Redirect) {
+                    window.location.replace(data.RedirectAction);
+                }
+                else {
+
+
+                    for (var i = 0; i < data.Result.length; i++) {
+                        if (i % 2 === 0) {
+                            sample += '<tr class="odd"><td style="display:none;">' + data.Result[i].MaterialID + '</td>' +
+                                    '<td class="material_code">' + data.Result[i].MaterialCode + '</td>' +
+                                    '<td class="material_name">' + data.Result[i].MaterialName + '</td>' +
+                                    '<td class="material_desc">' + data.Result[i].MaterialDescription + '</td>' +
+                                    '<td class="material_act">' + data.Result[i].Quantity + '</td>' +
+                                    '<td class="material_amt">' + data.Result[i].MaterialAmount + '</td></tr>';
+                        }
+                        else {
+                            sample += '<tr><td style="display:none;">' + data.Result[i].MaterialID + '</td>' +
+                                    '<td class="material_code">' + data.Result[i].MaterialCode + '</td>' +
+                                    '<td class="material_name">' + data.Result[i].MaterialName + '</td>' +
+                                    '<td class="material_desc">' + data.Result[i].MaterialDescription + '</td>' +
+                                    '<td class="material_act">' + data.Result[i].Quantity + '</td>' +
+                                    '<td class="material_amt">' + data.Result[i].MaterialAmount + '</td></tr>';
+                        }
+                    }
+                    sample += '</tbody></table>';
+                }
+
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+        return sample;
+    }
+
+    function CreateBundlePopup() {
+        if ($('#MaterialPopup_close').hasClass('update')) {
+            $('#MaterialPopup_close').removeClass('update');
+            Material_updatePopup();
+        }
+        else {
+            $('#MaterialPopup_close').removeClass('none');
+            $("#CategoryMaterialAccordion").accordion();
+            $("#CategoryMaterialAccordion").css('height', '360px');
+            $("#CategoryMaterialAccordion > div").css('height', '330px');
+            var popMargTop = ($('#BundleMaterialPopup').height() + 24) / 2;
+            var popMargLeft = ($('#BundleMaterialPopup').width() + 24) / 2;
+
+            $('#BundleMaterialPopup').find('input[type=checkbox]:checked').removeAttr('checked');
+            $('#BundleMaterialPopup').find('input[type=checkbox]').removeAttr('disabled');
+
+            $('#BundleMaterialPopup').css({
+                'margin-top': -popMargTop,
+                'margin-left': -popMargLeft
+            });
+
+            // Add the mask to body
+            $('body').append('<div id="mask"></div>');
+            $('#mask').fadeIn(300);
+            //Fade in the Popup
+            $('#BundleMaterialPopup').fadeIn(300);
+        }
+    }
+
+    function LoadMaterialAccordian(id) {
+        /*Material Start*/
+        $('table').css('width', '100%');
+        /*Dynamic Accordion*/
+        if (id === 'DynamicMaterialDataTable_Update') {
+            $('#' + id).append('<div id="CategoryMaterialAccordion_update"></div><div class="clear"></div>');
+        }
+        else {
+            $('#' + id).append('<div id="CategoryMaterialAccordion"></div><div class="clear"></div>');
+        }
+        /*Dynamic Accordion close*/
+
+        $.ajax({
+            url: '/Bundle/GetCategoryNameList',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    if (id === 'DynamicMaterialDataTable_Update') {
+                        /*Dinamic Accordion h3 and div add*/
+                        $('#CategoryMaterialAccordion_update').append('<h3 class="active-accord" id="CategoryMaterial_' + data[i] + '_h3_update">' + data[i] + '</h3><div><p id="CategoryMaterial_' + data[i] + '_update"></p></div>');
+                        $('#CategoryMaterial_' + data[i] + '_update').append('<div class="quote_list"><table cellpadding="0" cellspacing="0" border="0" class="display" id="Material_' + data[i] + '_update"></table></div>');
+                        /*End*/
+
+                        /*Material Data table*/
+
+                        $('#Material_' + data[i] + '_update').dataTable({
+                            "aaData": [
+                /* Reduced data set */
+                ["Trident", "Internet Explorer 4.0", "Win 95+", 4, "X"],
+                ["Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"],
+                ["Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"],
+                ["Trident", "Internet Explorer 6.0", "Win 98+", 6, "A"],
+                ["Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"],
+                ["Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A"],
+                ["Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"],
+                ["Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"],
+                ["Webkit", "Safari 1.2", "OSX.3", 125.5, "A"],
+                ["Webkit", "Safari 1.3", "OSX.3", 312.8, "A"],
+                ["Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"],
+                ["Webkit", "Safari 3.0", "OSX.4+", 522.1, "A"]
+                            ],
+                            "bServerSide": true,
+                            "sAjaxSource": "/Bundle/GetMaterialList?Category=" + data[i],
+                            "bProcessing": true,
+                            "sPaginationType": "full_numbers",
+                            //"iDisplayLength": 1,
+                            "aoColumns": [
+                                        { "sName": "MaterialId", "bSearchable": false, "bSortable": false, "sClass": "DisplayNone" },
+                                        { "sTitle": "Material Code", "sName": "MaterialCode" },
+                                        { "sTitle": "Name", "sName": "MaterialName", "sClass": "DisplayName" },
+                                        { "sTitle": "Discount", "sName": "MaterialDiscount", "sClass": "Displayvalue" },
+                                        { "sTitle": "Quantity", "sName": "Quantity", "sClass": "Displayquantity" },
+                                        { "sTitle": "Cost", "sName": "MaterialAmount", "sClass": "DisplayCost" },
+                                        {
+                                            "sTitle": "View",
+                                            "sName": "MaterialId",
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "fnRender": function (obj) {
+                                                return '<a href="#" class="update" id=' + obj.aData[0] + ' onclick="javascript:MaterialViewFunction(this,' + 1 + ')" style="float:left"><img alt="EDIT" src="/Content/images/edit.png" title="Edit"></a>'
+                                            }
+                                        },
+                                         {
+                                             "sName": "MaterialId",
+                                             "bSearchable": false,
+                                             "bSortable": false,
+                                             "fnRender": function (obj) {
+                                                 return '<input type="checkbox" value=' + obj.aData[0] + ' onclick="javascript:MaterialAddFunction_update(this,' + 0 + ')"/>'
+                                             }
+                                         },
+
+                                        {
+                                            "sName": "Code",
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "fnRender": function (obj) {
+                                                var imgSrc = "http://172.17.0.147:8060/Content/Material/" + obj.aData[0] + "/icon.jpg";
+                                                return '<img src="' + imgSrc + '"/>';
+                                            }
+                                        }
+
+                            ]
+                        });
+
+                        /*Material data table end*/
+                    }
+                    else {
+                        /*Dinamic Accordion h3 and div add*/
+                        $('#CategoryMaterialAccordion').append('<h3 class="active-accord" id="CategoryMaterial_' + data[i] + '_h3" >' + data[i] + '</h3><div><p id="CategoryMaterial_' + data[i] + '"></p></div>');
+                        $('#CategoryMaterial_' + data[i]).append('<div class="quote_list"><table cellpadding="0" cellspacing="0" border="0" class="display" id="Material_' + data[i] + '"></table></div>');
+                        /*End*/
+
+                        /*Material Data table*/
+
+                        $('#Material_' + data[i]).dataTable({
+                            "aaData": [
+                /* Reduced data set */
+                ["Trident", "Internet Explorer 4.0", "Win 95+", 4, "X"],
+                ["Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"],
+                ["Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"],
+                ["Trident", "Internet Explorer 6.0", "Win 98+", 6, "A"],
+                ["Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"],
+                ["Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A"],
+                ["Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"],
+                ["Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"],
+                ["Webkit", "Safari 1.2", "OSX.3", 125.5, "A"],
+                ["Webkit", "Safari 1.3", "OSX.3", 312.8, "A"],
+                ["Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"],
+                ["Webkit", "Safari 3.0", "OSX.4+", 522.1, "A"]
+                            ],
+                            "bServerSide": true,
+                            "sAjaxSource": "/Bundle/GetMaterialList?Category=" + data[i],
+                            "bProcessing": true,
+                            "sPaginationType": "full_numbers",
+                            //"iDisplayLength": 1,
+                            "aoColumns": [
+                                        { "sName": "MaterialId", "bSearchable": false, "bSortable": false, "sClass": "DisplayNone" },
+                                        { "sTitle": "Material Code", "sName": "MaterialCode", "sClass": "Displaycode" },
+                                        { "sTitle": "Name", "sName": "MaterialName", "sClass": "DisplayName" },
+                                        { "sTitle": "Discount", "sName": "MaterialDiscount", "sClass": "DiscountEditableClass Displayvalue" },
+                                        { "sTitle": "Quantity", "sName": "Quantity", "sClass": "Displayquantity" },
+                                        { "sTitle": "Cost", "sName": "MaterialAmount", "sClass": "DisplayNone DisplayCost" },
+                                        {
+                                            "sTitle": "View",
+                                            "sName": "MaterialId",
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "fnRender": function (obj) {
+                                                return '<a href="#" class="none" id=' + obj.aData[0] + ' onclick="javascript:MaterialViewFunction(this)" style="float:left"><img alt="EDIT" src="/Content/images/edit.png" title="Edit"></a>'
+                                            }
+                                        },
+                                         {
+                                             "sName": "MaterialId",
+                                             "bSearchable": false,
+                                             "bSortable": false,
+                                             "fnRender": function (obj) {
+                                                 return '<input type="checkbox" value=' + obj.aData[0] + ' onclick="javascript:MaterialAddFunction(this)"/>'
+                                             }
+                                         },
+
+                                        {
+                                            "sName": "Code",
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "fnRender": function (obj) {
+                                                var imgSrc = "http://172.17.0.147:8060/Content/Material/" + obj.aData[0] + "/icon.jpg";
+                                                return '<img src="' + imgSrc + '"/>';
+                                            }
+                                        }
+
+                            ]
+                        });
+
+                        /*Material data table end*/
+                    }
+                }
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+
+        $('#Material_' + $('#').val() + '_update tbody tr').each(function () {
+            $.noty.closeAll();
+            notyAlert = noty({
+                text: $(this).find('td:eq(0)').text(),
+                type: 'error',
+                buttons: [{
+                    addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                        $noty.close();
+                    }
+                }]
+            });
+        });
+    }
+
+    function LoadBundleAccordian() {
+        $('table').css('width', '100%');
+        $('#DynamicBundleDataTable').append('<div id="CategoryBundleAccordion"></div><div class="clear"></div>');
+
+        $.ajax({
+            url: '/Bundle/GetCategoryNameList',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    /*Dynamic accordion h3 and div add*/
+                    $('#CategoryBundleAccordion').append('<h3 class="active-accord">' + data[i] + '</h3><div><p id="CategoryBundle_' + data[i] + '"></p></div>');
+                    $('#CategoryBundle_' + data[i]).append('<div class="quote_list"><table cellpadding="0" cellspacing="0" border="0" class="display" id="Bundle_' + data[i] + '"></table></div>');
+                    /*End*/
+
+                    oTable[i] = $('#Bundle_' + data[i]).dataTable({
+                        "aaData": [
+            /* Reduced data set */
+            ["Trident", "Internet Explorer 4.0", "Win 95+", 4, "X"],
+            ["Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"],
+            ["Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"],
+            ["Trident", "Internet Explorer 6.0", "Win 98+", 6, "A"],
+            ["Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"],
+            ["Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A"],
+            ["Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"],
+            ["Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"],
+            ["Webkit", "Safari 1.2", "OSX.3", 125.5, "A"],
+            ["Webkit", "Safari 1.3", "OSX.3", 312.8, "A"],
+            ["Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"],
+            ["Webkit", "Safari 3.0", "OSX.4+", 522.1, "A"]
+                        ],
+                        "bServerSide": true,
+                        "sAjaxSource": "/Bundle/GetBundleList?Category=" + data[i],
+                        "bProcessing": true,
+                        "sPaginationType": "full_numbers",
+                        //"iDisplayLength": 1,
+                        "aoColumns": [
+                                    {
+                                        "sTitle": "", "sName": "BundleId",
+                                        "bSearchable": false, "bSortable": false,
+                                        "sClass": "control",
+                                        "fnRender": function (obj) {
+                                            return '<img src="/Content/images/plus.gif"/>';
+                                        }
+                                    },
+                                    //{ "sTitle": "Discount", "sName": "BundleDiscount", "sClass": "Displayvalue" },
+                                    { "sTitle": "Code", "sName": "BundleId", "sClass": "DisplayUnit" },
+                                    { "sTitle": "Name", "sName": "BundleName", "sClass": "DisplayUnit" },
+                                    { "sTitle": "Description", "sName": "BundleDescription", "sClass": "DisplayView" },
+                                    { "sTitle": "Unit Price", "sName": "BundleUnitPrice", "sClass": "Displayvalue" },
+                                    { "sTitle": "Discount", "sName": "BundleDiscount", "sClass": "Displayvalue" },
+                                    { "sTitle": "Quantity", "sName": "Quantity", "sClass": "Displayquantity" },
+                                    { "sTitle": "Cost", "sName": "BundleNetPrice", "sClass": "DisplayCost" },
+                                    {
+                                        "sTitle": "View",
+                                        "sName": "BundleId",
+                                        "sClass": "Displayadd",
+                                        "bSearchable": false,
+                                        "bSortable": false,
+                                        "fnRender": function (obj) {
+                                            return '<a href="javascript:void(0)" id=' + obj.aData[1] + ' onclick="javascript:BundleViewFunction(' + obj.aData[1] + ')" style="float:left"><img alt="EDIT" src="/Content/images/edit.png" title="Edit"></a><a href="javascript:void(0)" id=' + obj.aData[1] + ' onclick="javascript:BundleDeleteFunction(this)" style="float:left"><img alt="EDIT" src="/Content/images/error.png" title="Edit"></a>'
+                                        }
+                                    },
+                                    //{
+                                    //    "sName": "BundleId",
+                                    //    "bSearchable": false,
+                                    //    "bSortable": false,
+                                    //    "fnRender": function (obj) {
+                                    //        return '<a href="#" id=' + obj.aData[1] + ' onclick="javascript:BundleDeleteFunction(this)" style="float:left"><img alt="EDIT" src="/Content/images/error.png" title="Edit"></a>'
+                                    //    }
+                                    //}
+
+                        ]
+                    });
+
+                    /*Bundle data table end*/
+                }
+                $('#CategoryBundleAccordion').accordion();
+                $("#CategoryBundleAccordion").css('height', '475px');
+                $("#CategoryBundleAccordion > div").css('height', '475px');
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+    }
+
+    function BundleViewFunction(data) {
+        $.ajax({
+            url: '/Bundle/GetBundleDetail?BundleID=' + data,
+            type: 'post',
+            dataType: 'json',
+            success: function (result) {
+                if (result.Redirect) {
+                    window.location.replace(result.RedirectAction);
+                }
+                else {
+                    var table = BundleMappingMaterial(data);
+                    $('#BundleSingleName').text(result.Result.BundleName);
+                    $('#BundleMappingMaterial').html(table);
+                    $('#BundleUnitprice').val(result.Result.BundleUnitPrice);
+                    $('#BundleDiscount').val(result.Result.BundleDiscount);
+                    $('#BundleNetprice').val(result.Result.BundleNetPrice);
+                    $('#BundleSingleDescription').text(result.Result.BundleDescription);
+                    $('#BundleId').val(data);
+                    $('#BundleType').val(result.Result.BundleType);
+                    $('#BundleWarrenty_Update').val(result.Result.BundleWarrenty);
+
+                    if ($('#BundleSingleDescription').text() === 'null') {
+                        $('#BundleSingleDescription').text('');
+                    }
+
+                    var popMargTop = ($('#BundleRecordPopup').height() + 24) / 2;
+                    var popMargLeft = ($('#BundleRecordPopup').width() + 24) / 2;
+
+                    $('#BundleRecordPopup').css({
+                        'margin-top': -popMargTop,
+                        'margin-left': -popMargLeft
+                    });
+                    // Add the mask to body
+                    $('body').append('<div id="mask"></div>');
+                    $('#mask').fadeIn(300);
+                    //Fade in the Popup
+                    $('#BundleRecordPopup').fadeIn(300);
+                }
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+        return false;
+    }
+
+    function BundleDeleteFunction(data) {
+        $.ajax({
+            url: '/Bundle/DeleteBundleRecord?BundleID=' + data.id,
+            type: 'post',
+            dataType: 'json',
+            success: function (result) {
+                if (result.Redirect) {
+                    window.location.replace(result.RedirectAction);
+                }
+                else {
+                    if (result.Result === 'success') {
+                        $('#DynamicBundleDataTable').html('');
+                        LoadBundleAccordian();
+                    }
+                    else {
+                        $.noty.closeAll();
+                        notyAlert = noty({
+                            text: result.Result,
+                            type: 'error',
+                            buttons: [{
+                                addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                    $noty.close();
+                                }
+                            }]
+                        });
+                    }
+                }
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+        return false;
+    }
+
+    function MaterialViewFunction(data, flag) {
+        $('#BundleMaterialPopup').css('display', 'none');
+        $('#BundleMaterialPopup_Update').css('display', 'none');
+        $.ajax({
+            url: '/Bundle/GetMaterialDetail?MaterialID=' + data.id,
+            type: 'post',
+            dataType: 'json',
+            success: function (result) {
+                if (!result.Redirect) {
+                    $('#MaterialName').text(result.Result.MaterialName);
+                    $('#MaterialImage').attr('src', 'http://172.17.0.147:8060/Content/Material/' + data.id + '/menu.jpg');
+                    $('#MaterialDiscount').val(result.Result.MaterialDiscount);
+                    $('#MaterialAmount').val(result.Result.MaterialAmount);
+                    $('#MaterialDescription').text(result.Result.MaterialDescription);
+
+                    if ($('#MaterialDescription').text() === 'null') {
+                        $('#MaterialDescription').text('');
+                    }
+
+                    var popMargTop = ($('#MaterialRecordPopup').height() + 24) / 2;
+                    var popMargLeft = ($('#MaterialRecordPopup').width() + 24) / 2;
+
+                    $('#MaterialRecordPopup').css({
+                        'margin-top': -popMargTop,
+                        'margin-left': -popMargLeft
+                    });
+
+                    if (flag === 1) {
+
+                        if ($('#MaterialPopup_close').hasClass('none')) {
+                            $('#MaterialPopup_close').removeClass('none');
+                        }
+
+                        $('#MaterialPopup_close').addClass('update');
+                    }
+                    else {
+
+                        if ($('#MaterialPopup_close').hasClass('update')) {
+                            $('#MaterialPopup_close').removeClass('update');
+                        }
+
+                        $('#MaterialPopup_close').addClass('none');
+
+                    }
+
+                    //Fade in the Popup
+                    $('#MaterialRecordPopup').fadeIn(300);
+                }
+                else {
+                    window.location.replace(result.RedirectAction);
+                }
+            },
+            error: function (e) { },
+            async: false
+        });
+    }
+
+    function MaterialAddFunction(data) {
+        if ($(data).prop('checked') === true) {
+            $(data).closest('tr').find('td:eq(4)').editable('enable');
+            $(data).closest('tr').find('td:eq(4)').addClass('EditableFieldBgColor');
+            $(data).closest('tr').find('td:eq(4)').editable(function (e) {
+                var Code = $(data).closest('tr').find('td:eq(0)').text();
+                if (!/^[0-9]+$/.test(e)) {
+                    $.noty.closeAll();
+                    notyAlert = noty({
+                        text: "Enter numbers only",
+                        type: 'error',
+                        buttons: [{
+                            addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                $noty.close();
+                            }
+                        }]
+                    });
+                    CheckDisableCheckbox(data, MaterialIDQuantityList, 'DynamicMaterialDataTable');
+                    return this.revert;
+                }
+                else {
+                    if (MaterialIDQuantityList.length > 0) {
+                        $.each(MaterialIDQuantityList, function (i) {
+                            if (MaterialIDQuantityList[i].ID === Code) {
+                                MaterialIDQuantityList[i].Quantity = e;
+                            }
+                        });
+                    }
+                    else {
+                        MaterialIDQuantityList.push({ ID: Code, Quantity: e });
+                    }
+                    CheckDisableCheckbox(data, MaterialIDQuantityList, 'DynamicMaterialDataTable');
+                    return e;
+                }
+            }, {
+                data: function (value, settings) {
+                    //return value.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '');
+                    return '';
+                },
+                tooltip: 'Click to edit',
+                type: 'text',
+            });
+
+
+
+            if (MaterialIDQuantityList.length > 0) {
+                $.each(MaterialIDQuantityList, function (i) {
+                    if (MaterialIDQuantityList[i].ID !== data.value) {
+                        MaterialIDQuantityList.push({ ID: data.value, Quantity: '1' });
+                        CheckDisableCheckbox(data, MaterialIDQuantityList, 'DynamicMaterialDataTable');
+                        return false;
+                    }
+                });
+            }
+            else {
+                MaterialIDQuantityList.push({ ID: data.value, Quantity: '1' });
+                CheckDisableCheckbox(data, MaterialIDQuantityList, 'DynamicMaterialDataTable');
+                return false;
+            }
+        }
+        else {
+            $(data).closest('tr').find('td:eq(4)').editable('disable');
+            $(data).closest('tr').find('td:eq(4)').removeClass('EditableFieldBgColor');
+            $(data).closest('tr').find('td:eq(4)').text('1');
+
+            if (MaterialIDQuantityList.length > 0) {
+                $.each(MaterialIDQuantityList, function (i) {
+                    if (MaterialIDQuantityList[i].ID === data.value) {
+                        MaterialIDQuantityList.splice(i, 1);
+                        CheckDisableCheckbox(data, MaterialIDQuantityList, 'DynamicMaterialDataTable');
+                        return false;
+                    }
+                });
+            }
+        }
+    }
+
+    function MaterialAddFunction_update(data) {
+
+        if ($(data).prop('checked') === true) {
+            $(data).closest('tr').find('td:eq(4)').editable('enable');
+            $(data).closest('tr').find('td:eq(4)').addClass('EditableFieldBgColor');
+            $(data).closest('tr').find('td:eq(4)').editable(function (e) {
+                var Code = $(data).closest('tr').find('td:eq(0)').text();
+                if (!/^[0-9]+$/.test(e)) {
+                    $.noty.closeAll();
+                    notyAlert = noty({
+                        text: "Enter numbers only",
+                        type: 'error',
+                        buttons: [{
+                            addClass: 'btn btn-primary', text: 'OK', onClick: function ($noty) {
+                                $noty.close();
+                            }
+                        }]
+                    });
+                    CheckDisableCheckbox(data, MaterialIDQuantityList_update, 'DynamicMaterialDataTable_Update');
+                    return this.revert;
+                }
+                else {
+                    if (MaterialIDQuantityList_update.length > 0) {
+                        $.each(MaterialIDQuantityList_update, function (i) {
+                            if (MaterialIDQuantityList_update[i].ID === Code) {
+                                MaterialIDQuantityList_update[i].Quantity = e;
+                            }
+                        });
+                    }
+                    else {
+                        MaterialIDQuantityList_update.push({ ID: Code, Quantity: e });
+                    }
+                    CheckDisableCheckbox(data, MaterialIDQuantityList_update, 'DynamicMaterialDataTable_Update');
+                    return e;
+                }
+            }, {
+                data: function (value, settings) {
+                    //return value.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '');
+                    return '';
+                },
+                tooltip: 'Click to edit',
+                type: 'text',
+            });
+
+
+
+            if (MaterialIDQuantityList_update.length > 0) {
+                $.each(MaterialIDQuantityList_update, function (i) {
+                    if (MaterialIDQuantityList_update[i].ID !== data.value) {
+                        MaterialIDQuantityList_update.push({ ID: data.value, Quantity: '1' });
+                        CheckDisableCheckbox(data, MaterialIDQuantityList_update, 'DynamicMaterialDataTable_Update');
+                        return false;
+                    }
+                });
+            }
+            else {
+                MaterialIDQuantityList_update.push({ ID: data.value, Quantity: '1' });
+                CheckDisableCheckbox(data, MaterialIDQuantityList_update, 'DynamicMaterialDataTable_Update');
+                return false;
+            }
+        }
+        else {
+            $(data).closest('tr').find('td:eq(4)').editable('disable');
+            $(data).closest('tr').find('td:eq(4)').removeClass('EditableFieldBgColor');
+            $(data).closest('tr').find('td:eq(4)').text('1');
+
+            if (MaterialIDQuantityList_update.length > 0) {
+                $.each(MaterialIDQuantityList_update, function (i) {
+                    if (MaterialIDQuantityList_update[i].ID === data.value) {
+                        MaterialIDQuantityList_update.splice(i, 1);
+                        CheckDisableCheckbox(data, MaterialIDQuantityList_update, 'DynamicMaterialDataTable_Update');
+                        return false;
+                    }
+                });
+            }
+        }
+
+    }
+
+</script>
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img alt="img1" src="../../Images/qoute-ion.png">
+        <p>Bundle List</p>
+    </div>
+</section>
+
+
+<div id="DynamicBundleDataTable">
+</div>
+
+<div class="submit_box submit-box-left">
+    <input type="button" value="Create Bundle" id="createBundle" />
+</div>
+
+
+<div class="light-popup" id="BundleMaterialPopup">
+    <a href="#" class="close" id="BundleMaterialPopup_close">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Create Bundle
+    </div>
+    <div id="MaterialBundleLightBox" class="popup-center">
+        <div class="create">
+            <div>
+                <ul>
+                    <li>
+                        <label>Bundle Name</label>
+                        <input type="text" id="BundleName" /><span id="BundleNameError">*</span>
+                    </li>
+                    <li>
+                        <label>Bundle Description</label>
+                        <input type="text" id="BundleDescription" />
+                    </li>
+                    <li>
+                        <label>Warrenty</label>
+                        <select id="BundleWarrenty">
+                            <option>--Warrenty--</option>
+                            <option>6</option>
+                            <option>12</option>
+                            <option>18</option>
+                            <option>24</option>
+                            <option>30</option>
+                            <option>36</option>
+                            <option>42</option>
+                            <option>48</option>
+                            <option>54</option>
+                            <option>60</option>
+                            <option>66</option>
+                            <option>72</option>
+                            <option>78</option>
+                            <option>84</option>
+                            <option>90</option>
+                            <option>96</option>
+                            <option>102</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="greay_box whitebox">
+                <div class="tab_content6" id="DynamicMaterialDataTable" style="display: block;">
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="accord_btns center">
+        <input type="button" id="AddBundle" value="Create Bundle" style="margin-top: 3%;" />
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="light-popup" id="BundleMaterialPopup_Update">
+    <a href="#" class="close" id="BundleMaterialPopup_close_Update">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Create Bundle
+    </div>
+    <div id="MaterialBundleLightBox_Update" class="popup-center">
+        <input type="hidden" id="BundleId_update" />
+        <div class="create">
+            <div class="greay_box whitebox">
+                <div class="tab_content6" id="DynamicMaterialDataTable_Update" style="display: block;">
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="accord_btns center">
+        <input type="button" id="_UpdateBundle" value="Add Material" style="margin-top: 3%;" />
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="MaterialRecordPopup" class="light-popup SingleRecordPopup">
+    <a id="MaterialPopup_close" class="close" href="#">
+        <img alt="Close" title="Close Window" class="btn_close" src="~/Content/images/fancy_close.png"></a>
+    <div class="Title">Material</div>
+    <p id="MaterialName" class="SubTitle"></p>
+    <img alt="" id="MaterialImage" class="Image">
+    <ul class="popup-data">
+        <li>
+            <label>Discount<span>:</span></label>
+            <input type="text" id="MaterialDiscount" disabled="disabled">
+        </li>
+
+        <li>
+            <label>Amount<span>:</span></label>
+            <input type="text" id="MaterialAmount" disabled="disabled">
+        </li>
+
+        <li>
+            <label>Description<span>:</span></label>
+            <p id="MaterialDescription"></p>
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+
+
+<div id="BundleRecordPopup" class="light-popup SingleRecordPopup" style="margin-top: -275px; margin-left: -263.5px; display: none;">
+    <a id="BundlePopup_close" class="close" href="#">
+        <img alt="Close" title="Close Window" class="btn_close" src="~/Content/images/fancy_close.png"></a>
+    <div class="Title">Bundle</div>
+    <p id="BundleSingleName" class="SubTitle"></p>
+    <div id="BundleMappingMaterial"></div>
+    <ul class="popup-data">
+        <li>
+            <input type="hidden" id="BundleId" />
+            <input type="hidden" id="BundleType" />
+            <label>Unit Price <span>:</span></label>
+            <input type="text" id="BundleUnitprice" disabled="disabled">
+        </li>
+
+        <li>
+            <label>Discount<span>:</span></label>
+            <input type="text" id="BundleDiscount" />
+        </li>
+
+        <li>
+            <label>Warrenty<span>:</span></label>
+            <select id="BundleWarrenty_Update">
+                <option>--Warrenty--</option>
+                <option>6</option>
+                <option>12</option>
+                <option>18</option>
+                <option>24</option>
+                <option>30</option>
+                <option>36</option>
+                <option>42</option>
+                <option>48</option>
+                <option>54</option>
+                <option>60</option>
+                <option>66</option>
+                <option>72</option>
+                <option>78</option>
+                <option>84</option>
+                <option>90</option>
+                <option>96</option>
+                <option>102</option>
+            </select>
+        </li>
+
+        <li>
+            <label>Net Price<span>:</span></label>
+            <input type="text" id="BundleNetprice" disabled="disabled">
+        </li>
+
+        <li>
+            <label>Description<span>:</span></label>
+            <p id="BundleSingleDescription"></p>
+        </li>
+    </ul>
+    <input type="button" id="MaterialInsert" value="Add Material" />
+    <div class="clear"></div>
+</div>

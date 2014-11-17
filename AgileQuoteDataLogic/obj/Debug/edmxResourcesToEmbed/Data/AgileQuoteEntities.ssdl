@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgileQuoteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AgileQuoteModelStoreContainer">
+    <EntitySet Name="tbBundle" EntityType="AgileQuoteModel.Store.tbBundle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbBundleMaterialMapping" EntityType="AgileQuoteModel.Store.tbBundleMaterialMapping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbBundleType" EntityType="AgileQuoteModel.Store.tbBundleType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbCategory" EntityType="AgileQuoteModel.Store.tbCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbCurrency" EntityType="AgileQuoteModel.Store.tbCurrency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbMaterial" EntityType="AgileQuoteModel.Store.tbMaterial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbSalesOrganization" EntityType="AgileQuoteModel.Store.tbSalesOrganization" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tbBundleMaterialMapping_tbBundle" Association="AgileQuoteModel.Store.FK_tbBundleMaterialMapping_tbBundle">
+      <End Role="tbBundle" EntitySet="tbBundle" />
+      <End Role="tbBundleMaterialMapping" EntitySet="tbBundleMaterialMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbBundleMaterialMapping_tbMaterial" Association="AgileQuoteModel.Store.FK_tbBundleMaterialMapping_tbMaterial">
+      <End Role="tbMaterial" EntitySet="tbMaterial" />
+      <End Role="tbBundleMaterialMapping" EntitySet="tbBundleMaterialMapping" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbBundle">
+    <Key>
+      <PropertyRef Name="BundleID" />
+    </Key>
+    <Property Name="BundleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BundleName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BundleType" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbBundleMaterialMapping">
+    <Key>
+      <PropertyRef Name="BundleMaterialMapID" />
+    </Key>
+    <Property Name="BundleMaterialMapID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BundleID" Type="int" Nullable="false" />
+    <Property Name="MaterialID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbBundleType">
+    <Key>
+      <PropertyRef Name="BundleTypeID" />
+    </Key>
+    <Property Name="BundleTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BundleType" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbCurrency">
+    <Key>
+      <PropertyRef Name="CurrencyId" />
+    </Key>
+    <Property Name="CurrencyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyCode" Type="varchar" MaxLength="50" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbMaterial">
+    <Key>
+      <PropertyRef Name="MaterialID" />
+    </Key>
+    <Property Name="MaterialID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MaterialName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Amount" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbSalesOrganization">
+    <Key>
+      <PropertyRef Name="SalesOrganizationCode" />
+    </Key>
+    <Property Name="SalesOrganizationCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrganizationName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReferenceCustomerCode" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbBundleMaterialMapping_tbBundle">
+    <End Role="tbBundle" Type="AgileQuoteModel.Store.tbBundle" Multiplicity="1" />
+    <End Role="tbBundleMaterialMapping" Type="AgileQuoteModel.Store.tbBundleMaterialMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbBundle">
+        <PropertyRef Name="BundleID" />
+      </Principal>
+      <Dependent Role="tbBundleMaterialMapping">
+        <PropertyRef Name="BundleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbBundleMaterialMapping_tbMaterial">
+    <End Role="tbMaterial" Type="AgileQuoteModel.Store.tbMaterial" Multiplicity="1" />
+    <End Role="tbBundleMaterialMapping" Type="AgileQuoteModel.Store.tbBundleMaterialMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbMaterial">
+        <PropertyRef Name="MaterialID" />
+      </Principal>
+      <Dependent Role="tbBundleMaterialMapping">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="CurrencySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="MaterialSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SalesOrgSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

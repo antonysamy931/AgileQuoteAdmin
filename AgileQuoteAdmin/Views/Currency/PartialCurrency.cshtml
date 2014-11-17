@@ -1,0 +1,138 @@
+﻿@model AgileQuoteAdminProperty.Property.CurrencyListProperty
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Currency";
+    WebGrid grid = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+    var data = Model.CurrencyList;
+    grid.Bind(data, rowCount: data.Count());
+}
+
+
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../../Scripts/CurrencyScript/CurrencyScript.js" type="text/javascript"></script>
+
+<link href="../../Content/themes/base/Popup.css" rel="stylesheet" type="text/css" />
+
+<script src="~/Scripts/jquery.noty.js"></script>
+<script src="~/Scripts/center.js"></script>
+<script src="~/Scripts/default.js"></script>
+<script src="~/Scripts/top.js"></script>
+
+<link href="~/Content/buttons.css" rel="stylesheet" />
+
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>Currency List</p>
+
+    </div>
+</section>
+@*<div class="light-popup" id="CurrencyPopUp">
+  <a href="#" class="close" id="CurrencyPopUp_close">
+        <img src="" class="btn_close" title="Close Window" alt="Close" /></a>*@
+<div class="quote_list">
+    @grid.GetHtml(
+tableStyle: "grid quote-table",
+fillEmptyRows: false,
+alternatingRowStyle: "odd",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{
+@*grid.Column(header:"",format:@<text><input type="checkbox" value="@item.CurrencyId"  onclick="javascript: RowSelect(this);" /></text>),*@
+grid.Column("CurrencyId","CURRENCY ID",canSort:true),
+grid.Column("CurrencyCode","CURRENCY CODE",canSort:true),
+grid.Column("CurrencyName","CURRENCY NAME",canSort:true),
+grid.Column("Amount","AMOUNT",canSort:true),
+//grid.Column("IsActive","ISACTIVE",canSort:true),
+//grid.Column("IsDelete","ISDELETE",canSort:true),
+grid.Column(header:"Actions",format:@<text><div class="edit" title="EDIT">
+    <a href="#">
+        <img src="../../Images/edit.png" alt="img1" id="@item.CurrencyId"  onclick="javascript:EditFunction(this)" /></a>
+    <a href="#">
+        <img src="../../Images/error.png" alt="img1" onclick="javascript:DeleteFunction(this)" id="@item.CurrencyId"/></a>
+    </div></text>),
+}
+)
+</div>
+<div class="submit_box submit-box-left">
+    <input type="submit" id="NewUser" value="Create Currency" onclick="javascript: NewUser(this)" />
+</div>
+
+<div class="light-popup create-company-lightbox" id="CurrencyPopUp_Create">
+    <a href="#" class="close" id="CurrencyPopUp_close_Create">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Create Currency
+    </div>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <label>Currency Code</label>
+                <input type="text" id="CurrencyCode_Create" />
+                <span id="errorMsg_Create" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Currency Name</label>
+                <input type="text" id="CurrencyName_Create" />
+                <span id="errorMsg1_Create" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Amount</label>
+                <input type="text" id="Amount_Create" />
+                <span id="errorMsg2_Create" style="color: Red"></span>
+            </li>            
+        </ul>
+
+        <div class="submit_box insert_company_btn">
+            <input id="CreateCurrency" type="button" value="Insert Currency" />
+        </div>
+    </div>
+    @* @Url.Action("EditCurrency", "Currency", new { CurrencyId= });*@
+</div>
+
+<div class="light-popup update-company-lightbox" id="CurrencyPopUp">
+    <a href="#" class="close" id="CurrencyPopUp_close">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Update Currency Details
+    </div>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <label>Currency ID</label>
+                <input type="text" id="CurrencyId" />
+
+            </li>
+            <li>
+                <label>Currency Code</label>
+                <input type="text" id="CurrencyCode" />
+                <span id="errorMsg" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Currency Name</label>
+                <input type="text" id="CurrencyName" />
+                <span id="errorMsg1" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Amount</label>
+                <input type="text" id="Amount" />
+                <span id="errorMsg2" style="color: Red"></span>
+            </li>
+            <li>
+                <label>Active</label>
+                <input type="checkbox" id="IsActive" />
+            </li>
+            <li>
+                <label>Delete</label>
+                <input type="checkbox" id="IsDelete" />
+            </li>
+        </ul>
+
+            <div class="submit_box upate-company-btn">
+        <div class="submit_box ">
+            <input id="UpdateCurrency" type="button" value="Update Currency" />
+        </div>
+    </div>
+    @* @Url.Action("EditCurrency", "Currency", new { CurrencyId= });*@
+</div>

@@ -1,0 +1,761 @@
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebGrease.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\LogWriter.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\AgileQuote New\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\WebGrease.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\AgileQuote New\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\AgileQuote New\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AgileQuote New\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\AgileQuote New\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebGrease.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\ImageResizer.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\ImageResizer.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\ImageResizer.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\ImageResizer.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\ImageResizer.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\IntegratedProjectImageUpdated\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\LogWriter.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebGrease.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdmin\bin\Recaptcha.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\EntityFramework.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\LogWriter.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Net.Http.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Http.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Razor.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\WebGrease.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\EntityFramework.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Net.Http.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Http.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.Razor.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.csprojResolveAssemblyReference.cache
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdmin.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdmin.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Antlr3.Runtime.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\EntityFramework.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\LogWriter.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.Infrastructure.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Newtonsoft.Json.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.Formatting.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Helpers.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.WebHost.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Mvc.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Optimization.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Razor.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebGrease.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.Data.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.WebData.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteDataLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\EntityFramework.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Newtonsoft.Json.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.Formatting.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Net.Http.WebRequest.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Helpers.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Http.WebHost.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Mvc.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.Razor.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Deployment.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\System.Web.WebPages.Razor.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.Data.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\WebMatrix.WebData.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.AspNet.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.Core.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OAuth.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.csprojResolveAssemblyReference.cache
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdmin\obj\Debug\AgileQuoteAdmin.pdb

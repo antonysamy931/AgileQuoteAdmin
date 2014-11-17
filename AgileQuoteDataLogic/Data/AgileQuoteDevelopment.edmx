@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="SugectionMaterialMapping" EntityType="Model.Store.SugectionMaterialMapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbApproverRules" EntityType="Model.Store.tbApproverRules" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbBundle" EntityType="Model.Store.tbBundle" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbBundleMaterialMapping" EntityType="Model.Store.tbBundleMaterialMapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbBundleType" EntityType="Model.Store.tbBundleType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbCategory" EntityType="Model.Store.tbCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbCurrency" EntityType="Model.Store.tbCurrency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbMaterial" EntityType="Model.Store.tbMaterial" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbOfferedMaterialMapping" EntityType="Model.Store.tbOfferedMaterialMapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbRentalProducts" EntityType="Model.Store.tbRentalProducts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbRentalSpars" EntityType="Model.Store.tbRentalSpars" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbSalesOrganization" EntityType="Model.Store.tbSalesOrganization" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="SugectionMaterialMapping">
+          <Key>
+            <PropertyRef Name="SugectionId" />
+          </Key>
+          <Property Name="SugectionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialId" Type="int" Nullable="false" />
+          <Property Name="MappringMaterialId" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbApproverRules">
+          <Key>
+            <PropertyRef Name="RuleId" />
+          </Key>
+          <Property Name="RuleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MinimumAmount" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="MaximumAmount" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="MinimumDiscount" Type="int" Nullable="false" />
+          <Property Name="MaximumDiscount" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="varchar(max)" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbBundle">
+          <Key>
+            <PropertyRef Name="BundleID" />
+          </Key>
+          <Property Name="BundleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BundleName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BundleDescription" Type="varchar(max)" />
+          <Property Name="BundleType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BundleCategory" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="Warrenty" Type="decimal" Scale="2" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="NetPrice" Type="money" />
+          <Property Name="Installation" Type="decimal" Scale="2" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbBundleMaterialMapping">
+          <Key>
+            <PropertyRef Name="BundleMaterialMapID" />
+          </Key>
+          <Property Name="BundleMaterialMapID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BundleID" Type="int" Nullable="false" />
+          <Property Name="MaterialID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbBundleType">
+          <Key>
+            <PropertyRef Name="BundleTypeID" />
+          </Key>
+          <Property Name="BundleTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BundleType" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCurrency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyCode" Type="varchar" MaxLength="50" />
+          <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbMaterial">
+          <Key>
+            <PropertyRef Name="MaterialID" />
+          </Key>
+          <Property Name="MaterialID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MaterialName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="MaterialDescription" Type="varchar(max)" />
+          <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Warranty" Type="decimal" Scale="2" />
+          <Property Name="Amount" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="Installation" Type="decimal" Scale="2" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbOfferedMaterialMapping">
+          <Key>
+            <PropertyRef Name="OfferedMaterialId" />
+          </Key>
+          <Property Name="OfferedMaterialId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialId" Type="int" Nullable="false" />
+          <Property Name="MappingMaterialId" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbRentalProducts">
+          <Key>
+            <PropertyRef Name="RentalProductsID" />
+          </Key>
+          <Property Name="RentalProductsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RentalProductsName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Warrenty" Type="decimal" Scale="2" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="NetPrice" Type="money" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="DeleteDate" Type="date" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbRentalSpars">
+          <Key>
+            <PropertyRef Name="RentalSparsID" />
+          </Key>
+          <Property Name="RentalSparsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RentalSparsName" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Warrenty" Type="decimal" Scale="2" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="NetPrice" Type="money" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="DeletedDate" Type="date" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbSalesOrganization">
+          <Key>
+            <PropertyRef Name="SalesOrganizationCode" />
+          </Key>
+          <Property Name="SalesOrganizationCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SalesOrganizationName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReferenceCustomerCode" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="CurrencySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="MaterialSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="RentalProductSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RentalProductID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="RentalSparsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RentalSparsID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SalesOrgSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spBundleCategoryBaseSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spBundleSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BundleID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spMaterialCategoryBaseSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spRentalProductSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="QuoteID" Type="int" Mode="In" />
+          <Parameter Name="RentalProductID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spRentalSparsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="QuoteID" Type="int" Mode="In" />
+          <Parameter Name="RentalSparsID" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AgileQuoteDevelopmentEntitiesV" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbBundles" EntityType="Model.tbBundle" />
+          <EntitySet Name="tbBundleMaterialMappings" EntityType="Model.tbBundleMaterialMapping" />
+          <EntitySet Name="tbBundleTypes" EntityType="Model.tbBundleType" />
+          <EntitySet Name="tbCategories" EntityType="Model.tbCategory" />
+          <EntitySet Name="tbCurrencies" EntityType="Model.tbCurrency" />
+          <EntitySet Name="tbMaterials" EntityType="Model.tbMaterial" />
+          <EntitySet Name="tbRentalProducts" EntityType="Model.tbRentalProduct" />
+          <EntitySet Name="tbRentalSpars" EntityType="Model.tbRentalSpar" />
+          <EntitySet Name="tbSalesOrganizations" EntityType="Model.tbSalesOrganization" />
+          <FunctionImport Name="CurrencySelect" ReturnType="Collection(Model.CurrencySelect_Result)">
+          <Parameter Name="value" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SalesOrgSelect" ReturnType="Collection(Model.SalesOrgSelect_Result)">
+          <Parameter Name="value" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spBundleCategoryBaseSelect" ReturnType="Collection(Model.spBundleCategoryBaseSelect_Result)">
+          <Parameter Name="categoryName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spBundleSelect" ReturnType="Collection(Model.spBundleSelect_Result)">
+          <Parameter Name="BundleID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spRentalProductSelect" ReturnType="Collection(Model.spRentalProductSelect_Result)">
+            <Parameter Name="QuoteID" Mode="In" Type="Int32" />
+            <Parameter Name="RentalProductID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spRentalSparsSelect" ReturnType="Collection(Model.spRentalSparsSelect_Result)">
+            <Parameter Name="QuoteID" Mode="In" Type="Int32" />
+            <Parameter Name="RentalSparsID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spMaterialCategoryBaseSelect" ReturnType="Collection(Model.spMaterialCategoryBaseSelect_Result)">
+          <Parameter Name="categoryName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RentalProductSelect" ReturnType="Collection(Model.RentalProductSelect_Result)">
+          <Parameter Name="RentalProductID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RentalSparsSelect" ReturnType="Collection(Model.RentalSparsSelect_Result)">
+          <Parameter Name="RentalSparsID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MaterialSelect" ReturnType="Collection(Model.MaterialSelect_Result)">
+          <Parameter Name="value" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="tbApproverRules" EntityType="Model.tbApproverRule" />
+          <EntitySet Name="SugectionMaterialMappings" EntityType="Model.SugectionMaterialMapping" />
+          <EntitySet Name="tbOfferedMaterialMappings" EntityType="Model.tbOfferedMaterialMapping" />
+        </EntityContainer>
+        <EntityType Name="tbBundle">
+          <Key>
+            <PropertyRef Name="BundleID" />
+          </Key>
+          <Property Name="BundleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BundleName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BundleDescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="BundleType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BundleCategory" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="Warrenty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Discount" Type="Int32" />
+          <Property Name="NetPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <Property Type="Decimal" Name="Installation" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="tbBundleMaterialMapping">
+          <Key>
+            <PropertyRef Name="BundleMaterialMapID" />
+          </Key>
+          <Property Name="BundleMaterialMapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BundleID" Type="Int32" Nullable="false" />
+          <Property Name="MaterialID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbBundleType">
+          <Key>
+            <PropertyRef Name="BundleTypeID" />
+          </Key>
+          <Property Name="BundleTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BundleType" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCurrency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrencyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbMaterial">
+          <Key>
+            <PropertyRef Name="MaterialID" />
+          </Key>
+          <Property Name="MaterialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="MaterialName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="MaterialDescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Warranty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Discount" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <Property Type="Decimal" Name="Installation" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="tbRentalProduct">
+          <Key>
+            <PropertyRef Name="RentalProductsID" />
+          </Key>
+          <Property Name="RentalProductsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RentalProductsName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Warrenty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Discount" Type="Int32" />
+          <Property Name="NetPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="DeleteDate" Type="DateTime" Precision="0" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbRentalSpar">
+          <Key>
+            <PropertyRef Name="RentalSparsID" />
+          </Key>
+          <Property Name="RentalSparsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RentalSparsName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Warrenty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Discount" Type="Int32" />
+          <Property Name="NetPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbSalesOrganization">
+          <Key>
+            <PropertyRef Name="SalesOrganizationCode" />
+          </Key>
+          <Property Name="SalesOrganizationCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalesOrganizationName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ReferenceCustomerCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="CurrencySelect_Result">
+          <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="CurrencyId" Nullable="false" />
+          <Property Type="String" Name="CurrencyName" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SalesOrgSelect_Result">
+          <Property Type="Int32" Name="SalesOrganizationCode" Nullable="false" />
+          <Property Type="String" Name="SalesOrganizationName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ReferenceCustomerCode" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spBundleCategoryBaseSelect_Result">
+          <Property Type="Int32" Name="BundleID" Nullable="false" />
+          <Property Type="String" Name="BundleName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BundleDescription" Nullable="true" />
+          <Property Type="String" Name="BundleType" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BundleCategory" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+          <Property Type="Decimal" Name="Warrenty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="NetPrice" Nullable="true" Precision="19" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spBundleSelect_Result">
+          <Property Type="Int32" Name="BundleID" Nullable="false" />
+          <Property Type="String" Name="BundleName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BundleDescription" Nullable="true" />
+          <Property Type="String" Name="BundleType" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BundleCategory" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+          <Property Type="Decimal" Name="Warrenty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="NetPrice" Nullable="true" Precision="19" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spRentalProductSelect_Result">
+          <Property Type="Int32" Name="RentalProductsID" Nullable="false" />
+          <Property Type="String" Name="RentalProductsName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Int32" Name="Quantity" Nullable="true" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="NetPrice" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Warrenty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OverrideWarrenty" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="spRentalSparsSelect_Result">
+          <Property Type="Int32" Name="RentalSparsID" Nullable="false" />
+          <Property Type="String" Name="RentalSparsName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Int32" Name="Quantity" Nullable="true" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="NetPrice" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Warrenty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OverrideWarrenty" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="spMaterialCategoryBaseSelect_Result">
+          <Property Type="Int32" Name="MaterialID" Nullable="false" />
+          <Property Type="String" Name="MaterialCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="MaterialName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="MaterialDescription" Nullable="true" />
+          <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="Warranty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="RentalProductSelect_Result">
+          <Property Type="Int32" Name="RentalProductsID" Nullable="false" />
+          <Property Type="String" Name="RentalProductsName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Decimal" Name="Warrenty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="NetPrice" Nullable="true" Precision="19" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="true" />
+          <Property Type="DateTime" Name="DeleteDate" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="RentalSparsSelect_Result">
+          <Property Type="Int32" Name="RentalSparsID" Nullable="false" />
+          <Property Type="String" Name="RentalSparsName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Decimal" Name="Warrenty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="NetPrice" Nullable="true" Precision="19" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="DeletedDate" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="MaterialSelect_Result">
+          <Property Type="Int32" Name="MaterialID" Nullable="false" />
+          <Property Type="String" Name="MaterialCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="MaterialName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="MaterialDescription" Nullable="true" />
+          <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="Warranty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Discount" Nullable="true" />
+          <Property Type="Decimal" Name="Installation" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="tbApproverRule">
+          <Key>
+            <PropertyRef Name="RuleId" />
+          </Key>
+          <Property Type="Int32" Name="RuleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="MinimumAmount" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="MaximumAmount" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="MinimumDiscount" Nullable="false" />
+          <Property Type="Int32" Name="MaximumDiscount" Nullable="false" />
+          <Property Type="String" Name="RoleId" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SugectionMaterialMapping">
+          <Key>
+            <PropertyRef Name="SugectionId" />
+          </Key>
+          <Property Type="Int32" Name="SugectionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MaterialId" Nullable="false" />
+          <Property Type="Int32" Name="MappringMaterialId" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbOfferedMaterialMapping">
+          <Key>
+            <PropertyRef Name="OfferedMaterialId" />
+          </Key>
+          <Property Type="Int32" Name="OfferedMaterialId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MaterialId" Nullable="false" />
+          <Property Type="Int32" Name="MappingMaterialId" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AgileQuoteDevelopmentEntitiesV">
+          <EntitySetMapping Name="tbBundles"><EntityTypeMapping TypeName="Model.tbBundle"><MappingFragment StoreEntitySet="tbBundle">
+            <ScalarProperty Name="Installation" ColumnName="Installation" />
+                <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+            <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+            <ScalarProperty Name="BundleDescription" ColumnName="BundleDescription" />
+            <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+            <ScalarProperty Name="BundleCategory" ColumnName="BundleCategory" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+            <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+            <ScalarProperty Name="Discount" ColumnName="Discount" />
+            <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbBundleMaterialMappings"><EntityTypeMapping TypeName="Model.tbBundleMaterialMapping"><MappingFragment StoreEntitySet="tbBundleMaterialMapping">
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="BundleMaterialMapID" ColumnName="BundleMaterialMapID" />
+            <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+            <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbBundleTypes"><EntityTypeMapping TypeName="Model.tbBundleType"><MappingFragment StoreEntitySet="tbBundleType">
+            <ScalarProperty Name="BundleTypeID" ColumnName="BundleTypeID" />
+            <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbCategories"><EntityTypeMapping TypeName="Model.tbCategory"><MappingFragment StoreEntitySet="tbCategory">
+            <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbCurrencies"><EntityTypeMapping TypeName="Model.tbCurrency"><MappingFragment StoreEntitySet="tbCurrency">
+            <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+            <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+            <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMaterials"><EntityTypeMapping TypeName="Model.tbMaterial"><MappingFragment StoreEntitySet="tbMaterial">
+            <ScalarProperty Name="Installation" ColumnName="Installation" />
+                <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+            <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+            <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+            <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+            <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+            <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="Discount" ColumnName="Discount" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbRentalProducts"><EntityTypeMapping TypeName="Model.tbRentalProduct"><MappingFragment StoreEntitySet="tbRentalProducts">
+            <ScalarProperty Name="RentalProductsID" ColumnName="RentalProductsID" />
+            <ScalarProperty Name="RentalProductsName" ColumnName="RentalProductsName" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+            <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+            <ScalarProperty Name="Discount" ColumnName="Discount" />
+            <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbRentalSpars"><EntityTypeMapping TypeName="Model.tbRentalSpar"><MappingFragment StoreEntitySet="tbRentalSpars">
+            <ScalarProperty Name="RentalSparsID" ColumnName="RentalSparsID" />
+            <ScalarProperty Name="RentalSparsName" ColumnName="RentalSparsName" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+            <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+            <ScalarProperty Name="Discount" ColumnName="Discount" />
+            <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbSalesOrganizations"><EntityTypeMapping TypeName="Model.tbSalesOrganization"><MappingFragment StoreEntitySet="tbSalesOrganization">
+            <ScalarProperty Name="SalesOrganizationCode" ColumnName="SalesOrganizationCode" />
+            <ScalarProperty Name="SalesOrganizationName" ColumnName="SalesOrganizationName" />
+            <ScalarProperty Name="ReferenceCustomerCode" ColumnName="ReferenceCustomerCode" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CurrencySelect" FunctionName="Model.Store.CurrencySelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.CurrencySelect_Result">
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SalesOrgSelect" FunctionName="Model.Store.SalesOrgSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.SalesOrgSelect_Result">
+                <ScalarProperty Name="SalesOrganizationCode" ColumnName="SalesOrganizationCode" />
+                <ScalarProperty Name="SalesOrganizationName" ColumnName="SalesOrganizationName" />
+                <ScalarProperty Name="ReferenceCustomerCode" ColumnName="ReferenceCustomerCode" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spBundleCategoryBaseSelect" FunctionName="Model.Store.spBundleCategoryBaseSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.spBundleCategoryBaseSelect_Result">
+                <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+                <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+                <ScalarProperty Name="BundleDescription" ColumnName="BundleDescription" />
+                <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+                <ScalarProperty Name="BundleCategory" ColumnName="BundleCategory" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spBundleSelect" FunctionName="Model.Store.spBundleSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.spBundleSelect_Result">
+                <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+                <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+                <ScalarProperty Name="BundleDescription" ColumnName="BundleDescription" />
+                <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+                <ScalarProperty Name="BundleCategory" ColumnName="BundleCategory" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spRentalProductSelect" FunctionName="Model.Store.spRentalProductSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.spRentalProductSelect_Result">
+                <ScalarProperty Name="RentalProductsID" ColumnName="RentalProductsID" />
+                <ScalarProperty Name="RentalProductsName" ColumnName="RentalProductsName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+                <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+                <ScalarProperty Name="OverrideWarrenty" ColumnName="OverrideWarrenty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spRentalSparsSelect" FunctionName="Model.Store.spRentalSparsSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.spRentalSparsSelect_Result">
+                <ScalarProperty Name="RentalSparsID" ColumnName="RentalSparsID" />
+                <ScalarProperty Name="RentalSparsName" ColumnName="RentalSparsName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+                <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+                <ScalarProperty Name="OverrideWarrenty" ColumnName="OverrideWarrenty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spMaterialCategoryBaseSelect" FunctionName="Model.Store.spMaterialCategoryBaseSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.spMaterialCategoryBaseSelect_Result">
+                <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+                <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RentalProductSelect" FunctionName="Model.Store.RentalProductSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.RentalProductSelect_Result">
+                <ScalarProperty Name="RentalProductsID" ColumnName="RentalProductsID" />
+                <ScalarProperty Name="RentalProductsName" ColumnName="RentalProductsName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RentalSparsSelect" FunctionName="Model.Store.RentalSparsSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.RentalSparsSelect_Result">
+                <ScalarProperty Name="RentalSparsID" ColumnName="RentalSparsID" />
+                <ScalarProperty Name="RentalSparsName" ColumnName="RentalSparsName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MaterialSelect" FunctionName="Model.Store.MaterialSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.MaterialSelect_Result">
+                <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+                <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Installation" ColumnName="Installation" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tbApproverRules">
+            <EntityTypeMapping TypeName="Model.tbApproverRule">
+              <MappingFragment StoreEntitySet="tbApproverRules">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="MaximumDiscount" ColumnName="MaximumDiscount" />
+                <ScalarProperty Name="MinimumDiscount" ColumnName="MinimumDiscount" />
+                <ScalarProperty Name="MaximumAmount" ColumnName="MaximumAmount" />
+                <ScalarProperty Name="MinimumAmount" ColumnName="MinimumAmount" />
+                <ScalarProperty Name="RuleId" ColumnName="RuleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SugectionMaterialMappings">
+            <EntityTypeMapping TypeName="Model.SugectionMaterialMapping">
+              <MappingFragment StoreEntitySet="SugectionMaterialMapping">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="MappringMaterialId" ColumnName="MappringMaterialId" />
+                <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+                <ScalarProperty Name="SugectionId" ColumnName="SugectionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbOfferedMaterialMappings">
+            <EntityTypeMapping TypeName="Model.tbOfferedMaterialMapping">
+              <MappingFragment StoreEntitySet="tbOfferedMaterialMapping">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="MappingMaterialId" ColumnName="MappingMaterialId" />
+                <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+                <ScalarProperty Name="OfferedMaterialId" ColumnName="OfferedMaterialId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AgileQuoteDevelopment">
+        <EntityTypeShape EntityType="Model.tbBundle" Width="1.5" PointX="0.75" PointY="0.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbBundleMaterialMapping" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbBundleType" Width="1.5" PointX="2.75" PointY="3.75" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbCategory" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbCurrency" Width="1.5" PointX="4.75" PointY="3.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbMaterial" Width="1.5" PointX="6.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbRentalProduct" Width="1.5" PointX="0.75" PointY="6.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbRentalSpar" Width="1.5" PointX="2.75" PointY="6.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbSalesOrganization" Width="1.5" PointX="6.75" PointY="4.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tbApproverRule" Width="1.5" PointX="11.725618935993696" PointY="28.177876202472429" />
+        <EntityTypeShape EntityType="Model.SugectionMaterialMapping" Width="1.5" PointX="5.7031533260378771" PointY="19.749859744566429" />
+        <EntityTypeShape EntityType="Model.tbOfferedMaterialMapping" Width="1.5" PointX="10.834498358347686" PointY="4.8701594941644739" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

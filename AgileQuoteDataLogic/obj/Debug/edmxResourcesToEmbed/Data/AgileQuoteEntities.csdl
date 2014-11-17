@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgileQuoteModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AgileQuoteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbBundles" EntityType="AgileQuoteModel.tbBundle" />
+    <EntitySet Name="tbBundleMaterialMappings" EntityType="AgileQuoteModel.tbBundleMaterialMapping" />
+    <EntitySet Name="tbBundleTypes" EntityType="AgileQuoteModel.tbBundleType" />
+    <EntitySet Name="tbCategories" EntityType="AgileQuoteModel.tbCategory" />
+    <EntitySet Name="tbCurrencies" EntityType="AgileQuoteModel.tbCurrency" />
+    <EntitySet Name="tbMaterials" EntityType="AgileQuoteModel.tbMaterial" />
+    <EntitySet Name="tbSalesOrganizations" EntityType="AgileQuoteModel.tbSalesOrganization" />
+    <AssociationSet Name="FK_tbBundleMaterialMapping_tbBundle" Association="AgileQuoteModel.FK_tbBundleMaterialMapping_tbBundle">
+      <End Role="tbBundle" EntitySet="tbBundles" />
+      <End Role="tbBundleMaterialMapping" EntitySet="tbBundleMaterialMappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbBundleMaterialMapping_tbMaterial" Association="AgileQuoteModel.FK_tbBundleMaterialMapping_tbMaterial">
+      <End Role="tbMaterial" EntitySet="tbMaterials" />
+      <End Role="tbBundleMaterialMapping" EntitySet="tbBundleMaterialMappings" />
+    </AssociationSet>
+    <FunctionImport Name="CurrencySelect" ReturnType="Collection(AgileQuoteModel.CurrencySelect_Result)">
+      <Parameter Name="value" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="tbBundle">
+    <Key>
+      <PropertyRef Name="BundleID" />
+    </Key>
+    <Property Name="BundleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BundleName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BundleType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbBundleMaterialMappings" Relationship="AgileQuoteModel.FK_tbBundleMaterialMapping_tbBundle" FromRole="tbBundle" ToRole="tbBundleMaterialMapping" />
+  </EntityType>
+  <EntityType Name="tbBundleMaterialMapping">
+    <Key>
+      <PropertyRef Name="BundleMaterialMapID" />
+    </Key>
+    <Property Name="BundleMaterialMapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BundleID" Type="Int32" Nullable="false" />
+    <Property Name="MaterialID" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbBundle" Relationship="AgileQuoteModel.FK_tbBundleMaterialMapping_tbBundle" FromRole="tbBundleMaterialMapping" ToRole="tbBundle" />
+    <NavigationProperty Name="tbMaterial" Relationship="AgileQuoteModel.FK_tbBundleMaterialMapping_tbMaterial" FromRole="tbBundleMaterialMapping" ToRole="tbMaterial" />
+  </EntityType>
+  <EntityType Name="tbBundleType">
+    <Key>
+      <PropertyRef Name="BundleTypeID" />
+    </Key>
+    <Property Name="BundleTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BundleType" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbCurrency">
+    <Key>
+      <PropertyRef Name="CurrencyId" />
+    </Key>
+    <Property Name="CurrencyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CurrencyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbMaterial">
+    <Key>
+      <PropertyRef Name="MaterialID" />
+    </Key>
+    <Property Name="MaterialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MaterialName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbBundleMaterialMappings" Relationship="AgileQuoteModel.FK_tbBundleMaterialMapping_tbMaterial" FromRole="tbMaterial" ToRole="tbBundleMaterialMapping" />
+  </EntityType>
+  <EntityType Name="tbSalesOrganization">
+    <Key>
+      <PropertyRef Name="SalesOrganizationCode" />
+    </Key>
+    <Property Name="SalesOrganizationCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrganizationName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReferenceCustomerCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbBundleMaterialMapping_tbBundle">
+    <End Role="tbBundle" Type="AgileQuoteModel.tbBundle" Multiplicity="1" />
+    <End Role="tbBundleMaterialMapping" Type="AgileQuoteModel.tbBundleMaterialMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbBundle">
+        <PropertyRef Name="BundleID" />
+      </Principal>
+      <Dependent Role="tbBundleMaterialMapping">
+        <PropertyRef Name="BundleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbBundleMaterialMapping_tbMaterial">
+    <End Role="tbMaterial" Type="AgileQuoteModel.tbMaterial" Multiplicity="1" />
+    <End Role="tbBundleMaterialMapping" Type="AgileQuoteModel.tbBundleMaterialMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbMaterial">
+        <PropertyRef Name="MaterialID" />
+      </Principal>
+      <Dependent Role="tbBundleMaterialMapping">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="CurrencySelect_Result">
+    <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CurrencyId" Nullable="false" />
+    <Property Type="String" Name="CurrencyName" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="19" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,424 @@
+﻿@{
+    ViewBag.Title = "Material";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<script src="~/Scripts/jquery.jeditable.js"></script>
+<link href="~/Content/jquery.dataTables.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<script type="text/javascript">
+    var oTable = [];
+    var anOpen = [];
+    var materialCollection = [];
+    var tableIndex = null;
+    var nTr = null;
+
+    $(document).ready(function () {
+        LoadMaterialAccordian();        
+
+        $('table td.control').live('click', function () {
+            var tableID = $(this).parents('table').attr('id');
+
+            for (var item = 0; item < oTable.length; item++) {
+                if (oTable[item].attr('id') === tableID) {
+                    tableIndex = item;
+                }
+            }
+
+            var bundleID = $(this).find('a').attr('id');
+            nTr = this.parentNode;
+            var i = $.inArray(nTr, anOpen);
+            if (i === -1) {
+                $('img', this).attr('src', "/Content/images/minus.png");
+                var nDetailsRow = oTable[tableIndex].fnOpen(nTr, fnFormatDetails(oTable[tableIndex], nTr), 'details');
+                $('div.innerDetails', nDetailsRow).slideDown();
+                anOpen.push(nTr);
+            }
+            else {
+                $('img', this).attr('src', "/Content/images/plus.gif");
+                $('div.innerDetails', $(nTr).next()[0]).slideUp(function () {
+                    oTable[tableIndex].fnClose(nTr);
+                    anOpen.splice(i, 1);
+                });
+            }
+        });
+
+        function fnFormatDetails(oTable, nTr) {
+            var oData = oTable.fnGetData(nTr);
+            return BundleMappingMaterial(oData[1]);
+        }
+
+        function BundleMappingMaterial(MaterialID) {
+            var sample = '<div class="innerDetails">' +
+                 '<table><thead><tr><th>Code</th><th>Name</th><th>Description</th><th>Amount</th><th>Action</th></tr></thead>' +
+                 '<tbody>';
+            $.ajax({
+                url: '/Material/OfferedMappingMaterial?MaterialId=' + MaterialID,
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.Redirect) {
+                        window.location.replace(data.RedirectAction);
+                    }
+                    else {
+                        if (data.Result.length > 0) {
+                            for (var i = 0; i < data.Result.length; i++) {
+                                if (i % 2 === 0) {
+                                    sample += '<tr class="odd"><td style="display:none;">' + data.Result[i].MaterialID + '</td>' +
+                                            '<td class="material_code">' + data.Result[i].MaterialCode + '</td>' +
+                                            '<td class="material_name">' + data.Result[i].MaterialName + '</td>' +
+                                            '<td class="material_desc">' + data.Result[i].MaterialDescription + '</td>' +
+                                            '<td class="material_amt">' + data.Result[i].MaterialAmount + '</td>' +
+                                            '<td class="material_act"><a href="#" materialid=' + MaterialID + ' id=' + data.Result[i].MaterialID + '_' + MaterialID + ' onclick="javascript:DeleteFunction(this)" style="float:left"><img alt="DELETE" src="/Content/images/error.png" title="Edit"></a></td></tr>';
+                                }
+                                else {
+                                    sample += '<tr><td style="display:none;">' + data.Result[i].MaterialID + '</td>' +
+                                            '<td class="material_code">' + data.Result[i].MaterialCode + '</td>' +
+                                            '<td class="material_name">' + data.Result[i].MaterialName + '</td>' +
+                                            '<td class="material_desc">' + data.Result[i].MaterialDescription + '</td>' +
+                                            '<td class="material_amt">' + data.Result[i].MaterialAmount + '</td>' +
+                                            '<td class="material_act"><a href="#" materialId=' + MaterialID + ' id=' + data.Result[i].MaterialID + '_' + MaterialID + ' onclick="javascript:DeleteFunction(this)" style="float:left"><img alt="DELETE" src="/Content/images/error.png" title="Edit"></a></td></tr>';
+                                }
+                            }
+                        }
+                        else {
+                            sample += '<tr class="odd"><td colspan="5">Records not found</td></tr>';
+                        }
+                    }
+                },
+                error: function (e) {
+                },
+                async: false
+            });
+            sample += '</tbody></table>';
+            return sample;
+        }
+
+        $('#MappingMaterialPopup_close').click(function () {
+            $('#mask').css('display', 'none');
+            $('#MappingMaterialPopup').css('display', 'none');
+        });
+
+        $('#AddOffered').click(function () {
+            var MaterialId = $('#MaterialID').val();
+            if (materialCollection.length > 0) {
+                for (var i = 0; i < materialCollection.length; i++) {
+                    if (materialCollection[i] === MaterialId) {
+                        materialCollection.splice(i, 1);
+                    }
+                }
+            }
+            $.ajax({
+                url: '/Material/InsertOfferedMaterial?materialList=' + materialCollection + '&MaterialId=' + MaterialId,
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    materialCollection = [];
+                    if (result.Redirect) {
+                        window.location.replace(result.RedirectAction);
+                    }
+                    else {
+                        if (result.Result === 'Success') {
+                            $('#mask').css('display', 'none');
+                            $('#MappingMaterialPopup').css('display', 'none');
+                        }
+                    }
+                },
+                error: function (e) {
+                },
+                async: false
+            });
+        });
+    });
+
+    function LoadMaterialAccordian() {
+        /*Material Start*/
+        $('table').css('width', '100%');
+        /*Dynamic Accordion*/
+        $('#DynamicDataTableOffer').append('<div id="MaterialAccordion"></div><div class="clear"></div>');
+        /*Dynamic Accordion close*/
+
+        $.ajax({
+            url: '/Bundle/GetCategoryNameList',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+
+                    /*Dinamic Accordion h3 and div add*/
+                    $('#MaterialAccordion').append('<h3 class="active-accord" id="Material_' + data[i] + '_h3" >' + data[i] + '</h3><div><p id="Material_' + data[i] + '"></p></div>');
+                    $('#Material_' + data[i]).append('<div class="quote_list"><table cellpadding="0" cellspacing="0" border="0" class="display" id="Material_' + data[i] + '_datatable"></table></div>');
+                    /*End*/
+
+                    /*Material Data table*/
+
+                    oTable[i] = $('#Material_' + data[i] + '_datatable').dataTable({
+                        "aaData": [
+            /* Reduced data set */
+            ["Trident", "Internet Explorer 4.0", "Win 95+", 4, "X"],
+            ["Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"],
+            ["Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"],
+            ["Trident", "Internet Explorer 6.0", "Win 98+", 6, "A"],
+            ["Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"],
+            ["Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A"],
+            ["Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"],
+            ["Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"],
+            ["Webkit", "Safari 1.2", "OSX.3", 125.5, "A"],
+            ["Webkit", "Safari 1.3", "OSX.3", 312.8, "A"],
+            ["Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"],
+            ["Webkit", "Safari 3.0", "OSX.4+", 522.1, "A"]
+                        ],
+                        "bServerSide": true,
+                        "sAjaxSource": "/Material/GetMaterialList?Category=" + data[i],
+                        "bProcessing": true,
+                        "sPaginationType": "full_numbers",
+                        //"iDisplayLength": 1,
+                        "aoColumns": [
+                                    {
+                                        "sTitle": "", "sName": "MaterialId",
+                                        "bSearchable": false, "bSortable": false,
+                                        "sClass": "control",
+                                        "fnRender": function (obj) {
+                                            return '<img src="/Content/images/plus.gif"/>';
+                                        }
+                                    },
+                                    { "sName": "MaterialId", "bSearchable": false, "bSortable": false, "sClass": "DisplayNone" },
+                                    { "sTitle": "Material Code", "sName": "MaterialCode" },
+                                    { "sTitle": "Name", "sName": "MaterialName", "sClass": "DisplayName" },
+                                    { "sTitle": "Discount", "sName": "MaterialDiscount", "sClass": "Displayvalue" },
+                                    { "sTitle": "Quantity", "sName": "Quantity", "sClass": "Displayquantity" },
+                                    { "sTitle": "Cost", "sName": "MaterialAmount", "sClass": "DisplayCost" },
+                                    {
+                                        "sTitle": "View",
+                                        "sName": "Category",
+                                        "sClass": "DisplayView",
+                                        "bSearchable": false,
+                                        "bSortable": false,
+                                        "fnRender": function (obj) {
+                                            return '<a id="' + obj.aData[1] + '_' + obj.aData[7] + '" href="#" onclick="javascript:MaterialViewFunctionOffer(this)"><img alt="EDIT" src="/Content/images/edit.png" title="Edit"></a>'
+                                        }
+                                    },
+                                    {
+                                        "sName": "Code",
+                                        "bSearchable": false,
+                                        "bSortable": false,
+                                        "fnRender": function (obj) {
+                                            var imgSrc = "http://172.17.0.147:8060/Content/Material/" + obj.aData[1] + "/icon.jpg";
+                                            return '<img src="' + imgSrc + '"/>';
+                                        }
+                                    }
+
+                        ]
+                    });
+
+                    /*Material data table end*/
+                }
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+
+        $("#MaterialAccordion").accordion();
+        $("#MaterialAccordion").css('height', '360px');
+        $("#MaterialAccordion > div").css('height', '475px');
+    }
+
+    function MaterialViewFunctionOffer(data) {
+        var MaterialIdCategory = data.id;
+        var MaterialSplit = MaterialIdCategory.split('_');
+        var Category = MaterialSplit[1];
+        var MaterialId = MaterialSplit[0];
+        $('#MaterialID').val(MaterialId);
+        $('#MaterialDT').html('');
+        LoadMaterialBasedOnCategory(Category, MaterialId);
+
+        var popMargTop = ($('#MappingMaterialPopup').height() + 24) / 2;
+        var popMargLeft = ($('#MappingMaterialPopup').width() + 24) / 2;
+        $('#MappingMaterialPopup').css({
+            'margin-top': '-310.5px',
+            'margin-left': '-352.5px'
+        });
+
+        // Add the mask to body
+        $('body').append('<div id="mask"></div>');
+        $('#mask').fadeIn(300);
+
+        //Fade in the Popup
+        $('#MappingMaterialPopup').fadeIn(300);
+    }
+
+    function LoadMaterialBasedOnCategory(category, MaterialId) {
+        /*Material Start*/
+        $('table').css('width', '100%');
+        $('#MaterialDT').append('<div class="quote_list"><table id="' + category + '"></table></div>');
+        $('#' + category).dataTable({
+            "aaData": [
+/* Reduced data set */
+["Trident", "Internet Explorer 4.0", "Win 95+", 4, "X"],
+["Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"],
+["Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"],
+["Trident", "Internet Explorer 6.0", "Win 98+", 6, "A"],
+["Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"],
+["Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A"],
+["Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"],
+["Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"],
+["Webkit", "Safari 1.2", "OSX.3", 125.5, "A"],
+["Webkit", "Safari 1.3", "OSX.3", 312.8, "A"],
+["Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"],
+["Webkit", "Safari 3.0", "OSX.4+", 522.1, "A"]
+            ],
+            "bServerSide": true,
+            "sAjaxSource": "/Material/GetMaterialListBasedOnId?MaterialID=" + MaterialId,
+            "bProcessing": true,
+            "sPaginationType": "full_numbers",
+            //"iDisplayLength": 1,
+            "aoColumns": [
+                        { "sName": "MaterialId", "bSearchable": false, "bSortable": false, "sClass": "DisplayNone" },
+                        { "sTitle": "Material Code", "sName": "MaterialCode", "sClass": "Displaycode" },
+                        { "sTitle": "Name", "sName": "MaterialName", "sClass": "DisplayName" },
+                        { "sTitle": "Discount", "sName": "MaterialDiscount", "sClass": "DiscountEditableClass Displayvalue" },
+                        { "sTitle": "Quantity", "sName": "Quantity", "sClass": "Displayquantity" },
+                        { "sTitle": "Cost", "sName": "MaterialAmount", "sClass": "DisplayNone DisplayCost" },
+                        {
+                            "sTitle": "Add",
+                            "sName": "Category",
+                            "sClass": "DisplayView",
+                            "bSearchable": false,
+                            "bSortable": false,
+                            "fnRender": function (obj) {
+                                return '<a href="#"><input id="' + obj.aData[0] + '" onclick="javascript:MappingMaterialAddFunction(this)" type="checkbox" /></a>'
+                            }
+                        },
+                        {
+                            "sName": "Code",
+                            "bSearchable": false,
+                            "bSortable": false,
+                            "fnRender": function (obj) {
+                                var imgSrc = "http://172.17.0.147:8060/Content/Material/" + obj.aData[1] + "/icon.jpg";
+                                return '<img src="' + imgSrc + '"/>';
+                            }
+                        }
+
+            ]
+        });
+
+        /*Material data table end*/
+    }
+
+    function MappingMaterialAddFunction(data) {
+        if ($(data).prop('checked') === true) {            
+            materialCollection.push(data.id);
+            return;
+        }
+        else {
+            for (var i = 0; i < materialCollection.length; i++) {
+                if (materialCollection[i] === data.id) {
+                    materialCollection.splice(i, 1);
+                }
+            }
+            return;
+        }
+    }
+
+    function DeleteFunction(data) {
+        var material = data.id;
+        var ids = material.split('_');
+        var sample = '';
+        var tBody = $(data).closest('tbody');
+        $.ajax({
+            url: '/Material/DeleteOfferedMappingMaterial?MaterialID=' + ids[1] + '&MappingMaterial=' + ids[0],
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                if (data.Redirect) {
+                    window.location.replace(data.RedirectAction);
+                }
+                else {
+                    if (data.Result === 'Success') {
+                        tBody.html('');
+                        $.ajax({
+                            url: '/material/OfferedMappingMaterial?materialid=' + ids[1],
+                            type: 'post',
+                            datatype: 'json',
+                            success: function (data) {
+                                if (data.redirect) {
+                                    window.location.replace(data.redirectaction);
+                                }
+                                else {
+                                    if (data.Result.length > 0) {
+                                        for (var i = 0; i < data.Result.length; i++) {
+                                            if (i % 2 === 0) {
+                                                sample += '<tr class="odd"><td style="display:none;">' + data.Result[i].MaterialID + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialCode + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialName + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialDescription + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialAmount + '</td>' +
+                                                        '<td><a href="#" id=' + data.Result[i].MaterialID + ' onclick="javascript:deletefunction(this)" style="float:left"><img alt="delete" src="/content/images/error.png" title="edit"></a></td></tr>';
+                                            }
+                                            else {
+                                                sample += '<tr><td style="display:none;">' + data.Result[i].MaterialID + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialCode + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialName + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialDescription + '</td>' +
+                                                        '<td>' + data.Result[i].MaterialAmount + '</td>' +
+                                                        '<td><a href="#" id=' + data.Result[i].MaterialID + ' onclick="javascript:deletefunction(this)" style="float:left"><img alt="delete" src="/content/images/error.png" title="edit"></a></td></tr>';
+                                            }
+                                        }
+                                        tBody.html(sample);
+                                    }
+                                    else {
+                                        sample += '<tr class="odd"><td colspan="5">records not found</td></tr>';
+                                        tBody.html(sample);
+                                    }
+                                }
+                            },
+                            error: function (e) {
+                            },
+                            async: false
+                        });
+                    }
+                }
+            },
+            error: function (e) {
+            },
+            async: false
+        });
+    }
+
+</script>
+
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img alt="img1" src="../../Images/qoute-ion.png">
+        <p>Offered Material List</p>
+    </div>
+</section>
+<div class="clear"></div>
+<div id="DynamicDataTableOffer">
+</div>
+
+<div class="light-popup" id="MappingMaterialPopup">
+    <a href="#" class="close" id="MappingMaterialPopup_close">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Mapping offered Material
+    </div>
+    <div id="MaterialBundleLightBox" class="popup-center">
+        <div class="create">
+            <div class="greay_box whitebox">
+                <input type="hidden" id="MaterialID" />
+                <div id="MaterialDT"></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="accord_btns center">
+            <input type="button" id="AddOffered" value="Insert" style="margin-top: 3%;" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

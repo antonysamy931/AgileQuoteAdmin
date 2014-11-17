@@ -1,0 +1,67 @@
+﻿@model AgileQuoteAdminProperty.Property.RoleProperty
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+    <script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Scripts/RoleScript/RoleJScript1.js"></script>
+    <title>Agile Quote</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="Shortcut Icon" type="image/ico"/>
+    <link rel="stylesheet" type="text/css" href="../../Content/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/style.css" />
+    
+    <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->     
+</head>
+<body>
+<section class="c12 main-title">
+           		<div class="c6 quote">
+                	<img src="../../Images/qoute-ion.png" alt="img1" />
+                	<p>Role Form</p>
+                    
+                     
+                </div>
+            </section>
+            
+@using (Html.BeginForm("RoleList", "Role", FormMethod.Post))
+{
+    <section>
+     <div class="greay_box">
+    <ul>
+       <li>
+        @Html.LabelFor(x => x.RoleName)
+        @Html.TextBoxFor(x => x.RoleName)
+        @Html.ValidationMessageFor(x => x.RoleName)
+       </li>
+       
+    
+        <li>
+        @Html.LabelFor(x => x.Priority)
+        @Html.TextBoxFor(x => x.Priority)
+        @Html.ValidationMessageFor(x => x.Priority)
+        </li>
+     </ul>     
+        </div>
+        </section>
+        @Html.ValidationSummary(true)
+        <div class="submit_box">
+       <input type="submit" value="Create" class="Button" />
+        </div>
+    }
+   
+  
+   
+
+</body>
+</html>

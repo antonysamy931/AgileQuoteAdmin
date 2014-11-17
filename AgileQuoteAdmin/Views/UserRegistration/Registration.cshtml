@@ -1,0 +1,119 @@
+﻿@model AgileQuoteAdminProperty.Property.UserRegistration
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Registraion";
+}
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>User Registration</p>
+
+
+    </div>
+</section>
+<section>
+    <div class="greay_box">
+        @using (Html.BeginForm("Registration", "UserRegistration", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <ul>
+                <li>
+                    @Html.LabelFor(x => x.FirstName)
+                    @Html.TextBoxFor(x => x.FirstName)
+                    @Html.ValidationMessageFor(x => x.FirstName)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.LastName)
+                    @Html.TextBoxFor(x => x.LastName)
+                    @Html.ValidationMessageFor(x => x.LastName)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.CompanyName)
+                    @Html.DropDownListFor(x => x.CompanyName, new SelectList(Model.CompanyList, "Code", "Name", Model.DefaultCompany), "Select", new { @id = "CompanyName", @class = "TextBox" })
+                    @Html.ValidationMessageFor(x => x.CompanyName)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.EmailId)
+                    @Html.TextBoxFor(x => x.EmailId)
+                    @Html.ValidationMessageFor(x => x.EmailId)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.Password)
+                    @Html.PasswordFor(x => x.Password)
+                    @Html.ValidationMessageFor(x => x.Password)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.RePassword)
+                    @Html.PasswordFor(x => x.RePassword)
+                    @Html.ValidationMessageFor(x => x.RePassword)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.RoleName, new { @class = "Label" })
+                    @Html.DropDownListFor(x => x.RoleName, new SelectList(Model.RoleList, "RoleName", "RoleName", Model.DefaultRole), "Select", new { @id = "RoleName", @class = "TextBox" })
+                    @Html.ValidationMessageFor(x => x.RoleName)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.PhoneNumber)
+                    @Html.TextBoxFor(x => x.PhoneNumber)
+                    @Html.ValidationMessageFor(x => x.PhoneNumber)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.MobileNumber)
+                    @Html.TextBoxFor(x => x.MobileNumber)
+                    @Html.ValidationMessageFor(x => x.MobileNumber)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.AddressOne)
+                    @Html.TextBoxFor(x => x.AddressOne, new { @class = "TextArea" })
+                    @Html.ValidationMessageFor(x => x.AddressOne)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.AddressTwo)
+                    @Html.TextBoxFor(x => x.AddressTwo, new { @class = "TextArea" })
+                    @Html.ValidationMessageFor(x => x.AddressTwo)
+                </li>
+
+                <li>
+                    @Html.LabelFor(x => x.City)
+                    @Html.TextBoxFor(x => x.City)
+                    @Html.ValidationMessageFor(x => x.City)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.State)
+                    @Html.TextBoxFor(x => x.State)
+                    @Html.ValidationMessageFor(x => x.State)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.PostalCode)
+                    @Html.TextBoxFor(x => x.PostalCode)
+                    @Html.ValidationMessageFor(x => x.PostalCode)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.Country)
+                    @Html.TextBoxFor(x => x.Country)
+                    @Html.ValidationMessageFor(x => x.Country)
+                </li>
+
+                <li>
+                    <label>Secret Image</label>
+                    <input type="file" name="image" />
+                </li>
+
+                <li>
+                    <label>Secret Text</label>
+                    <input type="text" name="name" />
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.isAdminUser)
+                    @Html.CheckBoxFor(x => x.isAdminUser)
+                </li>
+            </ul>
+            @Html.ValidationSummary(true)
+
+            
+            <div class="submit_box submit-box-create update-button">
+                <input type="submit" value="Create" class="Button" />
+                <a href="@Url.Action("PartialUser", "UserRegistration")">Back To List</a>
+            </div>
+        }
+    </div>
+</section>

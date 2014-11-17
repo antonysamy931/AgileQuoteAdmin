@@ -1,0 +1,127 @@
+D:\AgileQuote New\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\AgileQuote New\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\AgileQuote New\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\AgileQuote New\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\Bhuvana-29-8\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\ImageResizeing\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\IntegratedProject2-9\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\IntegratedProject2-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\IntegratedProject4-9-updated\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\IntegratedProjectImageUpdatedsep5\AgileQuoteAdmin1\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+C:\Documents and Settings\mahalakshmi.p\Desktop\Agilel_quote\AgileQuoteAdminNew\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.csprojResolveAssemblyReference.cache
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\LogWriter.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminService.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\LogWriter.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminBusinessLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\bin\AgileQuoteDataLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.csprojResolveAssemblyReference.cache
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminService\obj\Debug\AgileQuoteAdminService.pdb

@@ -1,0 +1,9 @@
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\bin\Release\AgileQuoteDataLogic.dll.config
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\bin\Release\AgileQuoteDataLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\bin\Release\AgileQuoteDataLogic.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\bin\Release\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\bin\Release\LogWriter.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\bin\Release\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\obj\Release\AgileQuoteDataLogic.csprojResolveAssemblyReference.cache
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\obj\Release\AgileQuoteDataLogic.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteDataLogic\obj\Release\AgileQuoteDataLogic.pdb

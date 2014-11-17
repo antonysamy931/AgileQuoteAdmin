@@ -1,0 +1,84 @@
+﻿@model AgileQuoteAdminProperty.Property.LoginProperty
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+@using Recaptcha
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn</title>
+
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+    <link href="~/Content/css/icons.css" rel="stylesheet" />
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#secNumber').val('');
+        });
+
+    </script>
+</head>
+<body>
+    @using (Html.BeginForm("LogIn", "LogIn", FormMethod.Post))
+    {
+        <div class="g1140">
+            <div id="login-page">
+                <div class="login-head">
+                    <div class="logo">
+                        <img src="~/Content/images/Agile-logo.png" alt="img1" />
+                        <p><span>Agile </span>Quote</p>
+                    </div>
+                </div>
+                <div class="login-cont">
+                    <section>
+                        <div>
+
+
+                            <ul>
+                                <li>
+                                    @Html.LabelFor(x => x.CompanyName)
+                                    @Html.DropDownListFor(x => x.CompanyName, new SelectList(Model.CompanyNameList, "Name", "Name", Model.DefaultCompany), "Select Company Name", new { @id = "CompanyName" })
+                                </li>
+                                <li>
+                                    @Html.LabelFor(x => x.UserName)
+                                    @Html.TextBoxFor(x => x.UserName)
+                                </li>
+                                <li>
+                                    @Html.LabelFor(x => x.PassWord)
+                                    @Html.PasswordFor(x => x.PassWord)
+                                </li>
+                                <li>
+                                    <label></label>
+                                    <input type="submit" value="LogIn" class="Button" />
+                                </li>
+                                @*<li>
+                                    <label>&nbsp;</label>
+                                    @Html.Raw(Html.GenerateCaptcha("captcha", "Black"))
+                                </li>
+
+                                <li class="hidden">
+                                    @Html.LabelFor(x => x.SecretNumber)
+                                    <input type="text" class="sec-num" name="random" value="@ViewBag.RandomNumber" disabled="disabled" />
+                                    @Html.TextBoxFor(x => x.SecretNumber, new { @class = "sec-num",@id="secNumber" })
+                                    @Html.ValidationMessageFor(x => x.SecretNumber)
+                                </li>
+                                <li>                                    
+                                </li>*@                                
+                                <li>
+                                    @Html.ValidationSummary(true)
+                                </li>
+                            </ul>
+
+                        </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    }
+</body>
+</html>

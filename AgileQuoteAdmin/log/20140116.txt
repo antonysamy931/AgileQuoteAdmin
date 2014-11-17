@@ -1,0 +1,15 @@
+1/16/2014 11:08:56 AM|(AgileQuoteAdmin.dll->AgileQuoteAdmin.Controllers.LogInController->LogIn)|
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ValidateRequestReplyResponse(HttpWebRequest request, HttpWebResponse response, HttpChannelFactory`1 factory, WebException responseException, ChannelBinding channelBinding)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at AgileQuoteAdmin.CurrencyReference.IService1.CompanyNameService()
+   at AgileQuoteAdmin.CurrencyReference.Service1Client.CompanyNameService() in D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\Service References\CurrencyReference\Reference.cs:line 235
+   at AgileQuoteAdmin.Controllers.LogInController.LogIn() in D:\AgileQuote\trunk\AgileQuoteAdmin\AgileQuoteAdmin\Controllers\LogInController.cs:line 30

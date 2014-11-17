@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{180FDA9F-2887-435E-B42A-74A667B038D8}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgileQuoteAdmin</RootNamespace>
+    <AssemblyName>AgileQuoteAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImageResizer">
+      <HintPath>..\..\..\Image\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="LogWriter">
+      <HintPath>..\AgileQuoteAdminService\bin\LogWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Recaptcha">
+      <HintPath>..\..\..\captcha\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BundleController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\CurrencyController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
+    <Compile Include="Controllers\MaterialController.cs" />
+    <Compile Include="Controllers\RentalProductsController.cs" />
+    <Compile Include="Controllers\RentalSparsController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\RulesController.cs" />
+    <Compile Include="Controllers\SalesOrganizationController.cs" />
+    <Compile Include="Controllers\UserRegistrationController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ImageResizeMaterial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AgileAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Bundle.css" />
+    <Content Include="Content\buttons.css" />
+    <Content Include="Content\css\grid.css" />
+    <Content Include="Content\css\icons.css" />
+    <Content Include="Content\css\reset.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\Agile-logo.png" />
+    <Content Include="Content\images\agile-quote-logo.png" />
+    <Content Include="Content\images\back_disabled.jpg" />
+    <Content Include="Content\images\back_enabled.jpg" />
+    <Content Include="Content\images\check-box.png" />
+    <Content Include="Content\images\close-button.png" />
+    <Content Include="Content\images\date--picker.png" />
+    <Content Include="Content\images\dia.png" />
+    <Content Include="Content\images\Down.png" />
+    <Content Include="Content\images\edit-delete-icon.png" />
+    <Content Include="Content\images\edit-disable.png" />
+    <Content Include="Content\images\edit.png" />
+    <Content Include="Content\images\error-disable.png" />
+    <Content Include="Content\images\error.png" />
+    <Content Include="Content\images\fancy_close.png" />
+    <Content Include="Content\images\first.jpg" />
+    <Content Include="Content\images\footer-line.png" />
+    <Content Include="Content\images\forward_disabled.jpg" />
+    <Content Include="Content\images\forward_enabled.jpg" />
+    <Content Include="Content\images\last.jpg" />
+    <Content Include="Content\images\Lens3.png" />
+    <Content Include="Content\images\line.jpg" />
+    <Content Include="Content\images\minus.png" />
+    <Content Include="Content\images\next.jpg" />
+    <Content Include="Content\images\plus.gif" />
+    <Content Include="Content\images\prv.jpg" />
+    <Content Include="Content\images\qoute-ion.png" />
+    <Content Include="Content\images\sample.jpg" />
+    <Content Include="Content\images\search_icon.png" />
+    <Content Include="Content\images\settings.png" />
+    <Content Include="Content\images\sort_asc.png" />
+    <Content Include="Content\images\sort_asc_disabled.png" />
+    <Content Include="Content\images\sort_both.png" />
+    <Content Include="Content\images\sort_desc.png" />
+    <Content Include="Content\images\sort_desc_disabled.png" />
+    <Content Include="Content\images\star-1.png" />
+    <Content Include="Content\images\star-2.png" />
+    <Content Include="Content\images\star-3.png" />
+    <Content Include="Content\images\star.png" />
+    <Content Include="Content\images\tick-disable.png" />
+    <Content Include="Content\images\tick.png" />
+    <Content Include="Content\images\Up.png" />
+    <Content Include="Content\jquery.dataTables.css" />
+    <Content Include="Content\RentalSpares.css" />
+    <Content Include="Content\Material.css" />
+    <Content Include="Content\RentalProducts.css" />
+    <Content Include="Content\Role.css" />
+    <Content Include="Content\SalesOrganization.css" />
+    <Content Include="Content\themes\base\Accordion.css" />
+    <Content Include="Content\themes\base\demo_table_jui.css" />
+    <Content Include="Content\themes\base\images\Agile-logo.png" />
+    <Content Include="Content\themes\base\images\check-box.png" />
+    <Content Include="Content\themes\base\images\close-button.png" />
+    <Content Include="Content\themes\base\images\date--picker.png" />
+    <Content Include="Content\themes\base\images\edit-delete-icon.png" />
+    <Content Include="Content\themes\base\images\edit.png" />
+    <Content Include="Content\themes\base\images\error.png" />
+    <Content Include="Content\themes\base\images\footer-line.png" />
+    <Content Include="Content\themes\base\images\line.jpg" />
+    <Content Include="Content\themes\base\images\qoute-ion.png" />
+    <Content Include="Content\themes\base\images\search_icon.png" />
+    <Content Include="Content\themes\base\images\settings.png" />
+    <Content Include="Content\themes\base\images\tick.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.dataTables.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\Popup.css" />
+    <Content Include="Content\themes\CurrencyStyle.css" />
+    <Content Include="Content\themes\Registration.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\candara\candara-webfont.svg" />
+    <Content Include="fonts\century-gothic\Centurygothic.svg" />
+    <Content Include="fonts\HelveticaNeueLTStd-BdCn\HelveticaNeueLTStd-BdCn.svg" />
+    <Content Include="fonts\HelveticaNeueLTStd77CnBold\helveticaneueltstd-bdcn-webfont.svg" />
+    <Content Include="fonts\HelveticaNeueLTStd77CnBold\new.html" />
+    <Content Include="fonts\old\glyphicons\glyphicons-regular.svg" />
+    <Content Include="fonts\old\museo-sans-500\generator_config.txt" />
+    <Content Include="fonts\old\museo-sans-500\museo-sans-500-demo.html" />
+    <Content Include="fonts\old\museo-sans-500\museo-sans-500.svg" />
+    <Content Include="fonts\old\museo-sans-500\specimen_files\easytabs.js" />
+    <Content Include="fonts\old\museo-sans-500\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\old\museo-sans-500\specimen_files\museo-sans-500-cleartype.png" />
+    <Content Include="fonts\old\museo-sans-500\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\old\museo-sans-500\stylesheet.css" />
+    <Content Include="fonts\old\open-sans-regular\generator_config.txt" />
+    <Content Include="fonts\old\open-sans-regular\open-sans-regular-demo.html" />
+    <Content Include="fonts\old\open-sans-regular\open-sans-regular.svg" />
+    <Content Include="fonts\old\open-sans-regular\specimen_files\easytabs.js" />
+    <Content Include="fonts\old\open-sans-regular\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\old\open-sans-regular\specimen_files\open-sans-regular-cleartype.png" />
+    <Content Include="fonts\old\open-sans-regular\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\old\open-sans-regular\stylesheet.css" />
+    <Content Include="fonts\old\teamwork-regular\teamwork-regular-webfont.svg" />
+    <Content Include="fonts\proximanova\proximanova-light-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Agile-logo.png" />
+    <Content Include="Images\check-box.png" />
+    <Content Include="Images\close-button.png" />
+    <Content Include="Images\date--picker.png" />
+    <Content Include="Images\edit-delete-icon.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\footer-line.png" />
+    <Content Include="Images\line.jpg" />
+    <Content Include="Images\qoute-ion.png" />
+    <Content Include="Images\search_icon.png" />
+    <Content Include="Images\settings.png" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Scripts\accordion.js" />
+    <Content Include="Scripts\BundleScript\Bundle.js" />
+    <Content Include="Scripts\center.js" />
+    <Content Include="Scripts\Company\CompanyScript.js" />
+    <Content Include="Scripts\CurrencyScript\CurrencyScript.js" />
+    <Content Include="Scripts\default.js" />
+    <Content Include="Scripts\html5.js" />
+    <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.jeditable.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.noty.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\MaterialScript\Material.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Content\images\Thumbs.db" />
+    <None Include="Content\themes\base\images\Thumbs.db" />
+    <None Include="fonts\candara\candara-webfont.eot" />
+    <None Include="fonts\candara\candara-webfont.ttf" />
+    <None Include="fonts\candara\candara-webfont.woff" />
+    <None Include="fonts\century-gothic\Centurygothic.eot" />
+    <None Include="fonts\century-gothic\Centurygothic.ttf" />
+    <None Include="fonts\century-gothic\Centurygothic.woff" />
+    <Content Include="fonts\HelveticaNeueLTStd-BdCn\HelveticaNeueLTStd-BdCn.eot" />
+    <Content Include="fonts\HelveticaNeueLTStd-BdCn\HelveticaNeueLTStd-BdCn.otf" />
+    <Content Include="fonts\HelveticaNeueLTStd-BdCn\HelveticaNeueLTStd-BdCn.ttf" />
+    <Content Include="fonts\HelveticaNeueLTStd-BdCn\HelveticaNeueLTStd-BdCn.woff" />
+    <Content Include="fonts\HelveticaNeueLTStd77CnBold\helveticaneueltstd-bdcn-webfont.eot" />
+    <Content Include="fonts\HelveticaNeueLTStd77CnBold\helveticaneueltstd-bdcn-webfont.ttf" />
+    <Content Include="fonts\HelveticaNeueLTStd77CnBold\helveticaneueltstd-bdcn-webfont.woff" />
+    <None Include="fonts\old\glyphicons\glyphicons-regular.eot" />
+    <None Include="fonts\old\glyphicons\glyphicons-regular.ttf" />
+    <None Include="fonts\old\glyphicons\glyphicons-regular.woff" />
+    <None Include="fonts\old\museo-sans-500\museo-sans-500.eot" />
+    <None Include="fonts\old\museo-sans-500\museo-sans-500.ttf" />
+    <None Include="fonts\old\museo-sans-500\museo-sans-500.woff" />
+    <None Include="fonts\old\open-sans-regular\open-sans-regular.eot" />
+    <None Include="fonts\old\open-sans-regular\open-sans-regular.ttf" />
+    <None Include="fonts\old\open-sans-regular\open-sans-regular.woff" />
+    <None Include="fonts\old\teamwork-regular\teamwork-regular-webfont.eot" />
+    <None Include="fonts\old\teamwork-regular\teamwork-regular-webfont.otf" />
+    <None Include="fonts\old\teamwork-regular\teamwork-regular-webfont.ttf" />
+    <None Include="fonts\old\teamwork-regular\teamwork-regular-webfont.woff" />
+    <Content Include="fonts\proximanova\proximanova-light-webfont.eot" />
+    <Content Include="fonts\proximanova\proximanova-light-webfont.ttf" />
+    <Content Include="fonts\proximanova\proximanova-light-webfont.woff" />
+    <None Include="Images\Thumbs.db" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.BundleProperty.datasource" />
+    <Content Include="Properties\DataSources\AgileQuoteAdminProperty.Property.CategoryProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.CompanyProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.CompanyValues.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.CurrencyListProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.CurrencyProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.ImageProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.MaterialProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.RegistrationGrid.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.RentalProductsProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.RentalSparsProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.RoleListProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.RoleProperty.datasource" />
+    <Content Include="Properties\DataSources\AgileQuoteAdminProperty.Property.RulesProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.SalesOrganizationProperty.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.UserRegistration.datasource" />
+    <None Include="Properties\DataSources\AgileQuoteAdminProperty.Property.UserRoleList.datasource" />
+    <Content Include="Scripts\RegisterScript\Register.js" />
+    <Content Include="Scripts\RentalProduct\RentalProducts.js" />
+    <Content Include="Scripts\RentalScript\RentalScript.js" />
+    <Content Include="Scripts\RoleScript\RoleJScript1.js" />
+    <Content Include="Scripts\SalesScript\SalesOrganizationJs.js" />
+    <Content Include="Scripts\tabs.js" />
+    <None Include="Service References\AgileAdminService\Service1.disco" />
+    <None Include="Service References\AgileAdminService\configuration91.svcinfo" />
+    <None Include="Service References\AgileAdminService\configuration.svcinfo" />
+    <None Include="Service References\AgileAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\top.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Currency\PartialCurrency.cshtml" />
+    <Content Include="Views\Currency\Currency.cshtml" />
+    <Content Include="Views\Currency\EditCurrency.cshtml" />
+    <Content Include="Views\UserRegistration\Registration.cshtml" />
+    <Content Include="Views\UserRegistration\EditUser.cshtml" />
+    <Content Include="Views\UserRegistration\PartialUser.cshtml" />
+    <Content Include="Views\Material\EditMaterial.cshtml" />
+    <Content Include="Views\Material\MaterialGrid.cshtml" />
+    <Content Include="Views\Material\Material.cshtml" />
+    <Content Include="Views\SalesOrganization\EditRecordSales.cshtml" />
+    <Content Include="Views\SalesOrganization\SalesOrganization.cshtml" />
+    <Content Include="Views\SalesOrganization\SalesOrganizationPartial.cshtml" />
+    <Content Include="Views\RentalSpars\RentalSpars.cshtml" />
+    <Content Include="Views\RentalSpars\PartialRentalSpars.cshtml" />
+    <Content Include="Views\RentalSpars\EditRentalSpars.cshtml" />
+    <Content Include="Views\Role\RoleList.cshtml" />
+    <Content Include="Views\Role\RoleListPartial.cshtml" />
+    <Content Include="Views\Role\RoleEdit.cshtml" />
+    <Content Include="Views\RentalProducts\EditRentalProducts.cshtml" />
+    <Content Include="Views\RentalProducts\RentalProducts.cshtml" />
+    <Content Include="Views\RentalProducts\RentalProductDataTable.cshtml" />
+    <Content Include="Views\Company\Company.cshtml" />
+    <Content Include="Views\Company\PartialCompany.cshtml" />
+    <Content Include="Views\LogIn\LogIn.cshtml" />
+    <None Include="Service References\AgileAdminService\Service1.wsdl" />
+    <None Include="Service References\AgileAdminService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgileAdminService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgileAdminService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgileAdminService\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Views\Rules\Rule.cshtml" />
+    <Content Include="Views\Bundle\Bundle.cshtml" />
+    <Content Include="Views\Material\SugectionMaterial.cshtml" />
+    <Content Include="Views\Material\OfferedMaterials.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileQuoteAdminBusinessLogic\AgileQuoteAdminBusinessLogic.csproj">
+      <Project>{6B3CB419-A202-4C20-9F17-144576923CFC}</Project>
+      <Name>AgileQuoteAdminBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AgileQuoteAdminProperty\AgileQuoteAdminProperty.csproj">
+      <Project>{29860835-7129-4E7C-9C16-E5113A48FBA7}</Project>
+      <Name>AgileQuoteAdminProperty</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AgileAdminService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3921</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

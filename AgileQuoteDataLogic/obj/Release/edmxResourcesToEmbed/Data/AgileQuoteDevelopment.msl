@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AgileQuoteDevelopmentEntitiesV">
+    <EntitySetMapping Name="tbBundles">
+      <EntityTypeMapping TypeName="Model.tbBundle">
+        <MappingFragment StoreEntitySet="tbBundle">
+          <ScalarProperty Name="Installation" ColumnName="Installation" />
+          <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="BundleDescription" ColumnName="BundleDescription" />
+          <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+          <ScalarProperty Name="BundleCategory" ColumnName="BundleCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBundleMaterialMappings">
+      <EntityTypeMapping TypeName="Model.tbBundleMaterialMapping">
+        <MappingFragment StoreEntitySet="tbBundleMaterialMapping">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="BundleMaterialMapID" ColumnName="BundleMaterialMapID" />
+          <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBundleTypes">
+      <EntityTypeMapping TypeName="Model.tbBundleType">
+        <MappingFragment StoreEntitySet="tbBundleType">
+          <ScalarProperty Name="BundleTypeID" ColumnName="BundleTypeID" />
+          <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCategories">
+      <EntityTypeMapping TypeName="Model.tbCategory">
+        <MappingFragment StoreEntitySet="tbCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCurrencies">
+      <EntityTypeMapping TypeName="Model.tbCurrency">
+        <MappingFragment StoreEntitySet="tbCurrency">
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbMaterials">
+      <EntityTypeMapping TypeName="Model.tbMaterial">
+        <MappingFragment StoreEntitySet="tbMaterial">
+          <ScalarProperty Name="Installation" ColumnName="Installation" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRentalProducts">
+      <EntityTypeMapping TypeName="Model.tbRentalProduct">
+        <MappingFragment StoreEntitySet="tbRentalProducts">
+          <ScalarProperty Name="RentalProductsID" ColumnName="RentalProductsID" />
+          <ScalarProperty Name="RentalProductsName" ColumnName="RentalProductsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRentalSpars">
+      <EntityTypeMapping TypeName="Model.tbRentalSpar">
+        <MappingFragment StoreEntitySet="tbRentalSpars">
+          <ScalarProperty Name="RentalSparsID" ColumnName="RentalSparsID" />
+          <ScalarProperty Name="RentalSparsName" ColumnName="RentalSparsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSalesOrganizations">
+      <EntityTypeMapping TypeName="Model.tbSalesOrganization">
+        <MappingFragment StoreEntitySet="tbSalesOrganization">
+          <ScalarProperty Name="SalesOrganizationCode" ColumnName="SalesOrganizationCode" />
+          <ScalarProperty Name="SalesOrganizationName" ColumnName="SalesOrganizationName" />
+          <ScalarProperty Name="ReferenceCustomerCode" ColumnName="ReferenceCustomerCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CurrencySelect" FunctionName="Model.Store.CurrencySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.CurrencySelect_Result">
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SalesOrgSelect" FunctionName="Model.Store.SalesOrgSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.SalesOrgSelect_Result">
+          <ScalarProperty Name="SalesOrganizationCode" ColumnName="SalesOrganizationCode" />
+          <ScalarProperty Name="SalesOrganizationName" ColumnName="SalesOrganizationName" />
+          <ScalarProperty Name="ReferenceCustomerCode" ColumnName="ReferenceCustomerCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spBundleCategoryBaseSelect" FunctionName="Model.Store.spBundleCategoryBaseSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.spBundleCategoryBaseSelect_Result">
+          <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="BundleDescription" ColumnName="BundleDescription" />
+          <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+          <ScalarProperty Name="BundleCategory" ColumnName="BundleCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spBundleSelect" FunctionName="Model.Store.spBundleSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.spBundleSelect_Result">
+          <ScalarProperty Name="BundleID" ColumnName="BundleID" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="BundleDescription" ColumnName="BundleDescription" />
+          <ScalarProperty Name="BundleType" ColumnName="BundleType" />
+          <ScalarProperty Name="BundleCategory" ColumnName="BundleCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRentalProductSelect" FunctionName="Model.Store.spRentalProductSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.spRentalProductSelect_Result">
+          <ScalarProperty Name="RentalProductsID" ColumnName="RentalProductsID" />
+          <ScalarProperty Name="RentalProductsName" ColumnName="RentalProductsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="OverrideWarrenty" ColumnName="OverrideWarrenty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRentalSparsSelect" FunctionName="Model.Store.spRentalSparsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.spRentalSparsSelect_Result">
+          <ScalarProperty Name="RentalSparsID" ColumnName="RentalSparsID" />
+          <ScalarProperty Name="RentalSparsName" ColumnName="RentalSparsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="OverrideWarrenty" ColumnName="OverrideWarrenty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spMaterialCategoryBaseSelect" FunctionName="Model.Store.spMaterialCategoryBaseSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.spMaterialCategoryBaseSelect_Result">
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RentalProductSelect" FunctionName="Model.Store.RentalProductSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.RentalProductSelect_Result">
+          <ScalarProperty Name="RentalProductsID" ColumnName="RentalProductsID" />
+          <ScalarProperty Name="RentalProductsName" ColumnName="RentalProductsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RentalSparsSelect" FunctionName="Model.Store.RentalSparsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.RentalSparsSelect_Result">
+          <ScalarProperty Name="RentalSparsID" ColumnName="RentalSparsID" />
+          <ScalarProperty Name="RentalSparsName" ColumnName="RentalSparsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Warrenty" ColumnName="Warrenty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MaterialSelect" FunctionName="Model.Store.MaterialSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.MaterialSelect_Result">
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Installation" ColumnName="Installation" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbApproverRules">
+      <EntityTypeMapping TypeName="Model.tbApproverRule">
+        <MappingFragment StoreEntitySet="tbApproverRules">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="MaximumDiscount" ColumnName="MaximumDiscount" />
+          <ScalarProperty Name="MinimumDiscount" ColumnName="MinimumDiscount" />
+          <ScalarProperty Name="MaximumAmount" ColumnName="MaximumAmount" />
+          <ScalarProperty Name="MinimumAmount" ColumnName="MinimumAmount" />
+          <ScalarProperty Name="RuleId" ColumnName="RuleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

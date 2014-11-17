@@ -1,0 +1,5 @@
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Release\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\bin\Release\AgileQuoteAdminProperty.pdb
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Release\AgileQuoteAdminProperty.csprojResolveAssemblyReference.cache
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Release\AgileQuoteAdminProperty.dll
+D:\AgileQuoteNew\trunk\AgileQuoteAdmin\AgileQuoteAdminProperty\obj\Release\AgileQuoteAdminProperty.pdb

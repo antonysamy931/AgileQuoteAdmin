@@ -1,0 +1,122 @@
+﻿@model AgileQuoteAdminProperty.Property.RoleListProperty
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Role";
+    WebGrid grid = new WebGrid();
+    var data = Model.RoleList;
+    grid.Bind(data);
+    
+}
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../../Scripts/RoleScript/RoleJScript1.js" type="text/javascript"></script>
+
+<script src="~/Scripts/jquery.noty.js"></script>
+<script src="~/Scripts/center.js"></script>
+<script src="~/Scripts/default.js"></script>
+<script src="~/Scripts/top.js"></script>
+
+<link href="~/Content/buttons.css" rel="stylesheet" />
+
+<link rel="Stylesheet" type="text/css" href="../../Content/themes/base/Popup.css" />
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>
+            Role List
+        </p>
+    </div>
+</section>
+
+<div class="quote_list">
+    @grid.GetHtml(
+tableStyle: "grid quote-table",
+fillEmptyRows: false,
+alternatingRowStyle: "odd",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{
+   @*grid.Column(header:"",format:@<text><input type="checkbox" value="@item.RoleID" onclick="javascript: RoleIDSelect(this);" /></text>),*@
+   grid.Column("RoleID","Role ID",canSort:true),
+   grid.Column("RoleName","Role Name",canSort:true),
+   grid.Column("Priority","Priority",canSort:true),
+   grid.Column("IsVisible","Isvisible",canSort:true),
+   grid.Column("IsDelete","Isdelete",canSort:true),
+   grid.Column(header:"Actions",format:@<text><div class="edit" title="EDIT">
+       <a href="#">
+           <img src="../../Images/edit.png" id="@item.RoleID" onclick="javascript:RoleEditFunction(this);" alt="img1" /></a><a
+               href="#"><img src="../../Images/error.png" onclick="javascript:RoleDeleteFunction(this);"  id="@item.RoleID" alt="img1" /></a>
+    </div></text>),
+   
+}
+)
+    <div class="submit_box">
+        <input type="submit" id="NewUser" value="Create Role" onclick="javascript: NewUser(this)" />
+    </div>
+</div>
+
+<div class="light-popup create-company-lightbox" id="RolePopUp_Create">
+    <a href="#" class="close" id="RolePopUp_close_Create">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Create Role
+    </div>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <label>
+                    RoleName</label>
+                <input type="text" id="RoleName_Create" />
+                <span id="ErrorMsg_Create" style="color: Red"></span></li>
+            <li>
+                <label>
+                    Priority</label>
+                <input type="text" id="Priority_Create" />
+                <span id="ErrorMsg1_Create" style="color: Red"></span></li>
+        </ul>
+        <div class="submit_box insert_company_btn">
+            <input type="button" value="Insert" class="Button" id="InsertRole" />
+        </div>
+    </div>
+</div>
+
+
+<div class="light-popup update-company-lightbox" id="RolePopUp">
+    <a href="#" class="close" id="RolePopUp_close">
+        <img src="~/Content/images/fancy_close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <div class="Title">
+        Update Role Details
+    </div>
+    <div class="greay_box">
+        <ul>
+            <li>
+                <label>
+                    RoleID</label>
+                <input type="text" id="RoleID" readonly="true" />
+            </li>
+            <li>
+                <label>
+                    RoleName</label>
+                <input type="text" id="RoleName" />
+                <span id="ErrorMsg" style="color: Red"></span></li>
+            <li>
+                <label>
+                    Priority</label>
+                <input type="text" id="Priority" />
+                <span id="ErrorMsg1" style="color: Red"></span></li>
+            <li>
+                <label>
+                    IsActive</label>
+                <input type="checkbox" id="IsActive" />
+            </li>
+            <li>
+                <label>
+                    IsDelete</label>
+                <input type="checkbox" id="IsDelete" />
+            </li>
+        </ul>
+        <div class="submit_box upate-company-btn">
+            <input type="button" value="Update" class="Button" id="EditButton" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@model AgileQuoteAdminProperty.Property.MaterialListProperty
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Material";
+    var qList = ViewData.Model.MaterialList;
+    WebGrid grid = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+    grid.Bind(qList, rowCount: qList.Count());    
+}
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="../../Scripts/MaterialScript/Material.js" type="text/javascript"></script>
+
+
+<section class="c12 main-title">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>Material List</p>
+
+
+    </div>
+</section>
+
+<div class="quote_list material_list">
+    @grid.GetHtml(
+tableStyle: "grid quote-table",
+fillEmptyRows: false,
+alternatingRowStyle: "odd",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+ firstText: "First",
+        lastText: "Last",
+        nextText: "Next",
+        previousText: "Prev",
+columns: new[]{
+     @*grid.Column(header:"MATERIAL",format:@<text><input type="checkbox" value="@item.MaterialID" onclick="javascript: RowSelect(this);"/></text>),*@
+grid.Column("MaterialId","MATERIAL ID",canSort:true),
+grid.Column("MaterialCode","MATERIAL CODE",canSort:true),
+grid.Column("MaterialName","MATERIAL NAME",canSort:true),
+grid.Column("MaterialAmount","MATERIAL AMOUNT",canSort:true),
+grid.Column("MaterialDiscount","DISCOUNT",canSort:true),
+grid.Column("MaterialDescription","DESCRIPTION",canSort:true),
+grid.Column("Warrenty","WARRENTY",canSort:true),
+grid.Column("InstallFee","INSTALLATION",canSort:true),
+   grid.Column(header:"Actions",format:@<text><div class="edit" title="EDIT">
+       <a href="#">
+           <img src="../../Images/edit.png" alt="img1" id="@item.MaterialID" onclick="javascript:EditFunction(this)" /></a>
+       <a href="#">
+           <img src="../../Images/error.png" alt="img1" onclick="javascript:DeleteFuction(this)" id="@item.MaterialID"/></a>
+   </div></text>),
+    //grid.Column(header:"Delete",format:@<text><div class="delete" id="@item.MaterialID" onclick="javascript:DeleteFuction(this)" title="DELETE">Delete</div></text>)
+    
+}
+)
+</div>
+
+<div class="submit_box submit-box-left">
+    <input type="submit" id="NewUser" value="New Material" onclick="javascript: NewUser(this)" />
+</div>

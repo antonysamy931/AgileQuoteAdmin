@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4611/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4611/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" />
+      <xsd:import schemaLocation="http://localhost:4611/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4611/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_DeleteRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalSparsService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q1:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalSparsService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q2:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRentalSparsService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q3:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RentalSparsListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RentalSparsListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RentalSparsListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RentalSparsListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RentalSparsListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q4:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalSparsService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalSparsService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalSparsService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalSparsServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalSparsService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q5:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q6:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRoleRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRoleRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRoleRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRoleRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRoleRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q7:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRoleRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoleRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRoleRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoleRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRoleRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q8:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRoleService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRoleService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRoleService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q9:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoleService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoleService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRoleService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q10:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q11:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCurrencyRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCurrencyRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCurrencyRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCurrencyRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCurrencyRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q12:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCurrencyRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCurrencyRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCurrencyRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCurrencyRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCurrencyRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q13:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCurrencyService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrencyService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCurrencyService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrencyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCurrencyService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q14:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCurrrencyService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCurrrencyService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCurrrencyService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCurrrencyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCurrrencyService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q15:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q16:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrganizationRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSalesOrganizationRecord_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q17:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q18:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q19:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRecordService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRecordService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRecordService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q20:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q21:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListByID_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q22:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q23:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q24:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q25:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CategoryList_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q26:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SugectionMaterialMapping_InputMessage">
+    <wsdl:part name="parameters" element="tns:SugectionMaterialMapping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SugectionMaterialMapping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SugectionMaterialMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SugectionMaterialMapping_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q27:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialMappingSugectionMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialMappingSugectionMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialMappingSugectionMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialMappingSugectionMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialMappingSugectionMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q28:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteSugectionMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSugectionMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteSugectionMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSugectionMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteSugectionMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q29:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OfferedMaterialMapping_InputMessage">
+    <wsdl:part name="parameters" element="tns:OfferedMaterialMapping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OfferedMaterialMapping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OfferedMaterialMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OfferedMaterialMapping_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q30:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialMappingOfferedMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialMappingOfferedMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialMappingOfferedMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialMappingOfferedMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialMappingOfferedMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q31:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteOfferedMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOfferedMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteOfferedMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOfferedMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteOfferedMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q32:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q33:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalProductsListByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRentalProductsListByID_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q34:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRentalProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRentalProducts_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q35:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRentalProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRentalProducts_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q36:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRentalProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRentalProducts_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q37:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialBundleMapping_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialBundleMapping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialBundleMapping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialBundleMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialBundleMapping_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q38:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleListBasedOnCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleListBasedOnCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleListBasedOnCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleListBasedOnCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleListBasedOnCategory_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q39:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleMappingMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleMappingMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleMappingMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleMappingMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleMappingMaterial_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q40:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategoryNameList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategoryNameList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCategoryNameList_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q41:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListBasedOnCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListBasedOnCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListBasedOnCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialListBasedOnCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaterialListBasedOnCategory_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q42:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleSingleRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleSingleRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleSingleRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleSingleRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBundleSingleRecord_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q43:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterialMappingToBundle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMaterialMappingToBundle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterialMappingToBundle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMaterialMappingToBundleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMaterialMappingToBundle_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q44:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBundleMaterialRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBundleMaterialRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBundleMaterialRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBundleMaterialRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBundleMaterialRecord_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q45:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBundle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBundle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBundle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBundleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBundle_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q46:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistrationService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q47:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompanyNameService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q48:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrationListService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationListService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrationListService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrationListService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q49:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RoleNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RoleNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RoleNameService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q50:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SingleRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SingleRegistrationService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q51:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegistrationService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q52:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegistrationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegistrationService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegistrationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegistrationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegistrationService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q53:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q54:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyNameService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q55:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyName_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q56:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCompanyNameService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q57:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCompanyNameService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q58:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompanyNameService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyNameService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompanyNameService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompanyNameService_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q59:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckAuthentication_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q60:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserImage_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q61:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q62:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRulesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRulesList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRulesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRulesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRulesList_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q63:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRule" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleRule_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q64:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRule" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertRule_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q65:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRule" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRule_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q66:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRule" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRule_ExceptionClassFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" name="detail" element="q67:ExceptionClass" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="DeleteRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRentalSparsService" message="tns:IService1_DeleteRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRentalSparsServiceResponse" message="tns:IService1_DeleteRentalSparsService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteRentalSparsServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteRentalSparsService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRentalSparsService" message="tns:IService1_UpdateRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRentalSparsServiceResponse" message="tns:IService1_UpdateRentalSparsService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateRentalSparsServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateRentalSparsService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SingleRentalSparsService" message="tns:IService1_SingleRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SingleRentalSparsServiceResponse" message="tns:IService1_SingleRentalSparsService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/SingleRentalSparsServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_SingleRentalSparsService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RentalSparsListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RentalSparsListService" message="tns:IService1_RentalSparsListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RentalSparsListServiceResponse" message="tns:IService1_RentalSparsListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RentalSparsListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_RentalSparsListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalSparsService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRentalSparsService" message="tns:IService1_InsertRentalSparsService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRentalSparsServiceResponse" message="tns:IService1_InsertRentalSparsService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertRentalSparsServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertRentalSparsService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleListService" message="tns:IService1_GetRoleListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleListServiceResponse" message="tns:IService1_GetRoleListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetRoleListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetRoleListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRoleRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleRoleRecordService" message="tns:IService1_GetSingleRoleRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleRoleRecordServiceResponse" message="tns:IService1_GetSingleRoleRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSingleRoleRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSingleRoleRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoleRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRoleRecordService" message="tns:IService1_InsertRoleRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRoleRecordServiceResponse" message="tns:IService1_InsertRoleRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertRoleRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertRoleRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoleService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRoleService" message="tns:IService1_UpdateRoleService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRoleServiceResponse" message="tns:IService1_UpdateRoleService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateRoleServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateRoleService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRoleService" message="tns:IService1_DeleteRoleService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRoleServiceResponse" message="tns:IService1_DeleteRoleService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteRoleServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteRoleService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCurrencyListService" message="tns:IService1_GetCurrencyListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCurrencyListServiceResponse" message="tns:IService1_GetCurrencyListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetCurrencyListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetCurrencyListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCurrencyRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleCurrencyRecordService" message="tns:IService1_GetSingleCurrencyRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleCurrencyRecordServiceResponse" message="tns:IService1_GetSingleCurrencyRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSingleCurrencyRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSingleCurrencyRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCurrencyRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCurrencyRecordService" message="tns:IService1_InsertCurrencyRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertCurrencyRecordServiceResponse" message="tns:IService1_InsertCurrencyRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertCurrencyRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertCurrencyRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrencyService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCurrencyService" message="tns:IService1_UpdateCurrencyService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCurrencyServiceResponse" message="tns:IService1_UpdateCurrencyService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateCurrencyServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateCurrencyService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCurrrencyService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCurrrencyService" message="tns:IService1_DeleteCurrrencyService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCurrrencyServiceResponse" message="tns:IService1_DeleteCurrrencyService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteCurrrencyServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteCurrrencyService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationListService" message="tns:IService1_GetSalesOrganizationListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationListServiceResponse" message="tns:IService1_GetSalesOrganizationListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSalesOrganizationListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationRecord" message="tns:IService1_GetSalesOrganizationRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationRecordResponse" message="tns:IService1_GetSalesOrganizationRecord_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSalesOrganizationRecordExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSalesOrganizationRecord_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRecordService" message="tns:IService1_InsertRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRecordServiceResponse" message="tns:IService1_InsertRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRecordService" message="tns:IService1_UpdateRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRecordServiceResponse" message="tns:IService1_UpdateRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRecordService" message="tns:IService1_DeleteRecordService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRecordServiceResponse" message="tns:IService1_DeleteRecordService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteRecordServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteRecordService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialListService" message="tns:IService1_GetMaterialListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialListServiceResponse" message="tns:IService1_GetMaterialListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMaterialListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetMaterialListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialListByID" message="tns:IService1_GetMaterialListByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialListByIDResponse" message="tns:IService1_GetMaterialListByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMaterialListByIDExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetMaterialListByID_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertMaterial" message="tns:IService1_InsertMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertMaterialResponse" message="tns:IService1_InsertMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateMaterial" message="tns:IService1_UpdateMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateMaterialResponse" message="tns:IService1_UpdateMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMaterial" message="tns:IService1_DeleteMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMaterialResponse" message="tns:IService1_DeleteMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CategoryList" message="tns:IService1_CategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CategoryListResponse" message="tns:IService1_CategoryList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/CategoryListExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_CategoryList_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SugectionMaterialMapping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SugectionMaterialMapping" message="tns:IService1_SugectionMaterialMapping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SugectionMaterialMappingResponse" message="tns:IService1_SugectionMaterialMapping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/SugectionMaterialMappingExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_SugectionMaterialMapping_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialMappingSugectionMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialMappingSugectionMaterial" message="tns:IService1_GetMaterialMappingSugectionMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialMappingSugectionMaterialResponse" message="tns:IService1_GetMaterialMappingSugectionMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMaterialMappingSugectionMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetMaterialMappingSugectionMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSugectionMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteSugectionMaterial" message="tns:IService1_DeleteSugectionMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteSugectionMaterialResponse" message="tns:IService1_DeleteSugectionMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteSugectionMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteSugectionMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OfferedMaterialMapping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OfferedMaterialMapping" message="tns:IService1_OfferedMaterialMapping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OfferedMaterialMappingResponse" message="tns:IService1_OfferedMaterialMapping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/OfferedMaterialMappingExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_OfferedMaterialMapping_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialMappingOfferedMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialMappingOfferedMaterial" message="tns:IService1_GetMaterialMappingOfferedMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialMappingOfferedMaterialResponse" message="tns:IService1_GetMaterialMappingOfferedMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMaterialMappingOfferedMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetMaterialMappingOfferedMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOfferedMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteOfferedMaterial" message="tns:IService1_DeleteOfferedMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteOfferedMaterialResponse" message="tns:IService1_DeleteOfferedMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteOfferedMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteOfferedMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListService" message="tns:IService1_GetRentalProductsListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListServiceResponse" message="tns:IService1_GetRentalProductsListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetRentalProductsListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListByID" message="tns:IService1_GetRentalProductsListByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListByIDResponse" message="tns:IService1_GetRentalProductsListByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetRentalProductsListByIDExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetRentalProductsListByID_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRentalProducts" message="tns:IService1_InsertRentalProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRentalProductsResponse" message="tns:IService1_InsertRentalProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertRentalProductsExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertRentalProducts_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRentalProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRentalProducts" message="tns:IService1_UpdateRentalProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRentalProductsResponse" message="tns:IService1_UpdateRentalProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateRentalProductsExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateRentalProducts_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRentalProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRentalProducts" message="tns:IService1_DeleteRentalProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRentalProductsResponse" message="tns:IService1_DeleteRentalProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteRentalProductsExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteRentalProducts_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialBundleMapping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialBundleMapping" message="tns:IService1_GetMaterialBundleMapping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialBundleMappingResponse" message="tns:IService1_GetMaterialBundleMapping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMaterialBundleMappingExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetMaterialBundleMapping_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleListBasedOnCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBundleListBasedOnCategory" message="tns:IService1_GetBundleListBasedOnCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBundleListBasedOnCategoryResponse" message="tns:IService1_GetBundleListBasedOnCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetBundleListBasedOnCategoryExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetBundleListBasedOnCategory_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleMappingMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBundleMappingMaterial" message="tns:IService1_GetBundleMappingMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBundleMappingMaterialResponse" message="tns:IService1_GetBundleMappingMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetBundleMappingMaterialExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetBundleMappingMaterial_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryNameList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCategoryNameList" message="tns:IService1_GetCategoryNameList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCategoryNameListResponse" message="tns:IService1_GetCategoryNameList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetCategoryNameListExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetCategoryNameList_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListBasedOnCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaterialListBasedOnCategory" message="tns:IService1_GetMaterialListBasedOnCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaterialListBasedOnCategoryResponse" message="tns:IService1_GetMaterialListBasedOnCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMaterialListBasedOnCategoryExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetMaterialListBasedOnCategory_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleSingleRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBundleSingleRecord" message="tns:IService1_GetBundleSingleRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBundleSingleRecordResponse" message="tns:IService1_GetBundleSingleRecord_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetBundleSingleRecordExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetBundleSingleRecord_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaterialMappingToBundle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertMaterialMappingToBundle" message="tns:IService1_InsertMaterialMappingToBundle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertMaterialMappingToBundleResponse" message="tns:IService1_InsertMaterialMappingToBundle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertMaterialMappingToBundleExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertMaterialMappingToBundle_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBundleMaterialRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteBundleMaterialRecord" message="tns:IService1_DeleteBundleMaterialRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteBundleMaterialRecordResponse" message="tns:IService1_DeleteBundleMaterialRecord_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteBundleMaterialRecordExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteBundleMaterialRecord_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBundle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateBundle" message="tns:IService1_UpdateBundle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateBundleResponse" message="tns:IService1_UpdateBundle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateBundleExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateBundle_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UserRegistrationService" message="tns:IService1_UserRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UserRegistrationServiceResponse" message="tns:IService1_UserRegistrationService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UserRegistrationServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UserRegistrationService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CompanyNameService" message="tns:IService1_CompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CompanyNameServiceResponse" message="tns:IService1_CompanyNameService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/CompanyNameServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_CompanyNameService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationListService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegistrationListService" message="tns:IService1_RegistrationListService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegistrationListServiceResponse" message="tns:IService1_RegistrationListService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RegistrationListServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_RegistrationListService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RoleNameService" message="tns:IService1_RoleNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RoleNameServiceResponse" message="tns:IService1_RoleNameService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RoleNameServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_RoleNameService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SingleRegistrationService" message="tns:IService1_SingleRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SingleRegistrationServiceResponse" message="tns:IService1_SingleRegistrationService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/SingleRegistrationServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_SingleRegistrationService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRegistrationService" message="tns:IService1_UpdateRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRegistrationServiceResponse" message="tns:IService1_UpdateRegistrationService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateRegistrationServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateRegistrationService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegistrationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRegistrationService" message="tns:IService1_DeleteRegistrationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRegistrationServiceResponse" message="tns:IService1_DeleteRegistrationService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteRegistrationServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteRegistrationService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetImageService" message="tns:IService1_GetImageService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetImageServiceResponse" message="tns:IService1_GetImageService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetImageServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetImageService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompanyNameService" message="tns:IService1_GetCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyNameServiceResponse" message="tns:IService1_GetCompanyNameService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetCompanyNameServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetCompanyNameService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyName" message="tns:IService1_GetSingleCompanyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyNameResponse" message="tns:IService1_GetSingleCompanyName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyNameExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSingleCompanyName_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCompanyNameService" message="tns:IService1_InsertCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertCompanyNameServiceResponse" message="tns:IService1_InsertCompanyNameService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertCompanyNameServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertCompanyNameService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCompanyNameService" message="tns:IService1_UpdateCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCompanyNameServiceResponse" message="tns:IService1_UpdateCompanyNameService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateCompanyNameServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateCompanyNameService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyNameService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCompanyNameService" message="tns:IService1_DeleteCompanyNameService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCompanyNameServiceResponse" message="tns:IService1_DeleteCompanyNameService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteCompanyNameServiceExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteCompanyNameService_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckAuthentication" message="tns:IService1_CheckAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckAuthenticationResponse" message="tns:IService1_CheckAuthentication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/CheckAuthenticationExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_CheckAuthentication_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserImage" message="tns:IService1_GetUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserImageResponse" message="tns:IService1_GetUserImage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetUserImageExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetUserImage_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserName" message="tns:IService1_GetUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserNameResponse" message="tns:IService1_GetUserName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetUserNameExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetUserName_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRulesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRulesList" message="tns:IService1_GetRulesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRulesListResponse" message="tns:IService1_GetRulesList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetRulesListExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetRulesList_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleRule" message="tns:IService1_GetSingleRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleRuleResponse" message="tns:IService1_GetSingleRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetSingleRuleExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_GetSingleRule_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertRule" message="tns:IService1_InsertRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertRuleResponse" message="tns:IService1_InsertRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsertRuleExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_InsertRule_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRule" message="tns:IService1_UpdateRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRuleResponse" message="tns:IService1_UpdateRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/UpdateRuleExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_UpdateRule_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRule" message="tns:IService1_DeleteRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRuleResponse" message="tns:IService1_DeleteRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/DeleteRuleExceptionClassFault" name="ExceptionClassFault" message="tns:IService1_DeleteRule_ExceptionClassFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SingleRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/SingleRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RentalSparsListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/RentalSparsListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalSparsService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRentalSparsService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRoleRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleRoleRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoleRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRoleRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoleService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRoleService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRoleService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCurrencyListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCurrencyRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleCurrencyRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCurrencyRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCurrencyRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrencyService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCurrencyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCurrrencyService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCurrrencyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSalesOrganizationListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrganizationRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSalesOrganizationRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRecordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialListByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CategoryList">
+      <soap:operation soapAction="http://tempuri.org/IService1/CategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SugectionMaterialMapping">
+      <soap:operation soapAction="http://tempuri.org/IService1/SugectionMaterialMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialMappingSugectionMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialMappingSugectionMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSugectionMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteSugectionMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OfferedMaterialMapping">
+      <soap:operation soapAction="http://tempuri.org/IService1/OfferedMaterialMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialMappingOfferedMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialMappingOfferedMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOfferedMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteOfferedMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRentalProductsListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRentalProductsListByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRentalProductsListByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRentalProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRentalProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRentalProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRentalProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRentalProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRentalProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialBundleMapping">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialBundleMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleListBasedOnCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBundleListBasedOnCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleMappingMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBundleMappingMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryNameList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCategoryNameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialListBasedOnCategory">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMaterialListBasedOnCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleSingleRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBundleSingleRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaterialMappingToBundle">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertMaterialMappingToBundle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBundleMaterialRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteBundleMaterialRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBundle">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateBundle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UserRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/CompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationListService">
+      <soap:operation soapAction="http://tempuri.org/IService1/RegistrationListService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RoleNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/RoleNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SingleRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/SingleRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegistrationService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRegistrationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetImageService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleCompanyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyNameService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCompanyNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <soap:operation soapAction="http://tempuri.org/IService1/CheckAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRulesList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRulesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRule">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRule">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRule">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRule">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionClassFault">
+        <soap:fault use="literal" name="ExceptionClassFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:4611/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

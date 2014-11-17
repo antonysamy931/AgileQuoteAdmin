@@ -1,0 +1,74 @@
+﻿@model AgileQuoteAdminProperty.Property.SalesOrganizationProperty
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>  
+    
+    <title>Agile Quote</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/ico" href=""/>
+    <link rel="stylesheet" type="text/css" href="../../Content/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/style.css" />
+    <script src="../../Scripts/SalesScript/SalesOrganizationJs.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+ 
+</head>
+
+
+
+<body>
+<section class="c12 main-title">
+           		<div class="c6 quote">
+                	<img src="../../Images/qoute-ion.png" alt="img1" />
+                	<p>Edit SalesOrganization</p>
+                    
+                     
+                </div>
+            </section>
+          @using (Html.BeginForm("EditRecordSales", "SalesOrganization", FormMethod.Post)) 
+              {
+            	<div class="greay_box">
+                	<ul>
+                    	<li>
+                        	  @Html.LabelFor(x => x.SalesOrgCode, new { @class = "Label" })
+                              @Html.TextBoxFor(x => x.SalesOrgCode, new { @ReadOnly = "readonly" })
+                             
+                        </li>
+                        <li>
+                        	  @Html.LabelFor(x => x.SalesOrgName, new { @class = "Label" })
+                              @Html.TextBoxFor(x => x.SalesOrgName, new { @class = "TextBox" })
+                               @Html.ValidationMessageFor(x => x.SalesOrgName)
+                        </li>
+						<li>
+                        	  @Html.LabelFor(x => x.ReferenceCustomerCode, new { @class = "Label" })
+                              @Html.TextBoxFor(x => x.ReferenceCustomerCode, new { @class = "TextBox" })
+                              @Html.ValidationMessageFor(x => x.ReferenceCustomerCode)
+                        </li>                        
+                         
+                        <li>
+                           @Html.LabelFor(x => x.IsActive, new { @class = "Label" })
+                           @Html.CheckBoxFor(x => x.IsActive)
+                        </li>
+                        <li>
+                          @Html.LabelFor(x => x.IsDelete, new { @class = "Label" })
+                          @Html.CheckBoxFor(x => x.IsDelete) 
+                        </li>	
+                        @Html.ValidationSummary(true)					                      
+                        </ul>
+                      </div>                       
+                       
+                    
+                 <div class="submit_box">
+            	<input type="submit" value="UPDATE SALES" />
+                </div>               
+                }
+              
+</body>
+</html>

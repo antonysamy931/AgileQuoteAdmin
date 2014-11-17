@@ -1,0 +1,45 @@
+﻿@model AgileQuoteAdminProperty.Property.MaterialBundleProperty
+
+ @{ var qList = ViewData.Model.oMaterialList.MaterialList;
+            WebGrid grid = new WebGrid(rowsPerPage: 10, ajaxUpdateContainerId: "grid");
+            grid.Bind(qList, rowCount: qList.Count());     
+  }
+      
+    @using (Html.BeginForm("Bundle", "Bundle", FormMethod.Post))
+    {     
+ 
+        @Html.LabelFor(x => x.oBundle.BundleName)
+        @Html.TextBoxFor(x => x.oBundle.BundleName, new { @id = "BundleName" })
+        @Html.ValidationMessageFor(x => x.oBundle.BundleName)
+
+          <div id="webgrid">       
+
+            @grid.GetHtml(
+tableStyle: "grid",
+fillEmptyRows: false,
+alternatingRowStyle: "alternativeRow",
+headerStyle: "header",
+footerStyle: "footer",
+mode: WebGridPagerModes.All,
+columns: new[]{
+     grid.Column(header:"MATERIAL",style:"MaterialCheckClass", format:@<text><input type="checkbox" value="@item.MaterialID" /></text>),
+grid.Column("MaterialId","MATERIAL ID",canSort:true,style:"MaterialIDclass"),
+grid.Column("MaterialCode","MATERIAL hari CODE",canSort:true),
+grid.Column("MaterialName","MATERIAL NAME",canSort:true),
+grid.Column("MaterialAmount","MATERIAL AMOUNT",canSort:true),
+grid.Column("MaterialDiscount","DISCOUNT",canSort:true),
+//grid.Column("MaterialIsActive","ISACTIVE",canSort:true),
+//grid.Column("MaterialIsDelete","ISDELETE",canSort:true)
+   grid.Column(header:"Edit",format:@<text><div class="edit" title="EDIT" id="@item.MaterialID" onclick="javascript:EditFunction(grid)">
+       Edit</div></text>),
+    grid.Column(header:"Delete",format:@<text><div class="delete" id="@item.MaterialID" onclick="javascript:DeleteFuction(this)" title="DELETE">
+        Delete</div></text>)
+   
+}
+)
+</div>
+        @Html.ValidationSummary(true)
+        <br />
+      
+         <input type="button" value="grid" id="CreateBundle" />
+    }

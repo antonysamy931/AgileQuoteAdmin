@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AgileQuoteAdminProperty.Property" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RentalProductsProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Discount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NetPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RentalProductsID" type="xs:int" />
+      <xs:element minOccurs="0" name="RentalProductsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Warrenty" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RentalProductsProperty" nillable="true" type="tns:RentalProductsProperty" />
+  <xs:complexType name="ArrayOfBundleProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BundleProperty" nillable="true" type="tns:BundleProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBundleProperty" nillable="true" type="tns:ArrayOfBundleProperty" />
+  <xs:complexType name="BundleProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundleCatagory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BundleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BundleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BundleType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="Discount" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NetPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BundleProperty" nillable="true" type="tns:BundleProperty" />
+  <xs:complexType name="UserRegistration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyCode" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyList" nillable="true" type="tns:ArrayOfCompanyValues" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultRole" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RePassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleList" nillable="true" type="tns:ArrayOfUserRoleList" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRegistration" nillable="true" type="tns:UserRegistration" />
+  <xs:complexType name="ArrayOfCompanyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyValues" nillable="true" type="tns:CompanyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyValues" nillable="true" type="tns:ArrayOfCompanyValues" />
+  <xs:complexType name="CompanyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyValues" nillable="true" type="tns:CompanyValues" />
+  <xs:complexType name="ArrayOfUserRoleList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserRoleList" nillable="true" type="tns:UserRoleList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserRoleList" nillable="true" type="tns:ArrayOfUserRoleList" />
+  <xs:complexType name="UserRoleList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRoleList" nillable="true" type="tns:UserRoleList" />
+  <xs:complexType name="ArrayOfRegistrationGrid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegistrationGrid" nillable="true" type="tns:RegistrationGrid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegistrationGrid" nillable="true" type="tns:ArrayOfRegistrationGrid" />
+  <xs:complexType name="RegistrationGrid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyCode" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyList" nillable="true" type="tns:ArrayOfCompanyValues" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultRole" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleList" nillable="true" type="tns:ArrayOfUserRoleList" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrationGrid" nillable="true" type="tns:RegistrationGrid" />
+  <xs:complexType name="ArrayOfImageProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageProperty" nillable="true" type="tns:ImageProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImageProperty" nillable="true" type="tns:ArrayOfImageProperty" />
+  <xs:complexType name="ImageProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageProperty" nillable="true" type="tns:ImageProperty" />
+  <xs:complexType name="ArrayOfCompanyProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyProperty" nillable="true" type="tns:CompanyProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyProperty" nillable="true" type="tns:ArrayOfCompanyProperty" />
+  <xs:complexType name="CompanyProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyCode" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyProperty" nillable="true" type="tns:CompanyProperty" />
+  <xs:complexType name="LoginProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyNameList" nillable="true" type="tns:ArrayOfCompanyValues" />
+      <xs:element minOccurs="0" name="DefaultCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassWord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecretNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginProperty" nillable="true" type="tns:LoginProperty" />
+  <xs:complexType name="RentalSparsProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Discount" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NetPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RentalSparsId" type="xs:int" />
+      <xs:element minOccurs="0" name="RentalSparsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Warrenty" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RentalSparsProperty" nillable="true" type="tns:RentalSparsProperty" />
+  <xs:complexType name="ArrayOfRentalSparsProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RentalSparsProperty" nillable="true" type="tns:RentalSparsProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRentalSparsProperty" nillable="true" type="tns:ArrayOfRentalSparsProperty" />
+  <xs:complexType name="ArrayOfRoleProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleProperty" nillable="true" type="tns:RoleProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleProperty" nillable="true" type="tns:ArrayOfRoleProperty" />
+  <xs:complexType name="RoleProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleProperty" nillable="true" type="tns:RoleProperty" />
+  <xs:complexType name="ExceptionClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionClass" nillable="true" type="tns:ExceptionClass" />
+  <xs:complexType name="ArrayOfCurrencyProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CurrencyProperty" nillable="true" type="tns:CurrencyProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurrencyProperty" nillable="true" type="tns:ArrayOfCurrencyProperty" />
+  <xs:complexType name="CurrencyProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrencyProperty" nillable="true" type="tns:CurrencyProperty" />
+  <xs:complexType name="ArrayOfSalesOrganizationProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrganizationProperty" nillable="true" type="tns:SalesOrganizationProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrganizationProperty" nillable="true" type="tns:ArrayOfSalesOrganizationProperty" />
+  <xs:complexType name="SalesOrganizationProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReferenceCustomerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesOrgCode" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesOrgName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalesOrganizationProperty" nillable="true" type="tns:SalesOrganizationProperty" />
+  <xs:complexType name="ArrayOfMaterialProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaterialProperty" nillable="true" type="tns:MaterialProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaterialProperty" nillable="true" type="tns:ArrayOfMaterialProperty" />
+  <xs:complexType name="MaterialProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaterialAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaterialCatagory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaterialCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaterialDiscount" type="xs:int" />
+      <xs:element minOccurs="0" name="MaterialID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaterialIsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaterialIsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaterialName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaterialProperty" nillable="true" type="tns:MaterialProperty" />
+  <xs:complexType name="ArrayOfRentalProductsProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RentalProductsProperty" nillable="true" type="tns:RentalProductsProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRentalProductsProperty" nillable="true" type="tns:ArrayOfRentalProductsProperty" />
+</xs:schema>

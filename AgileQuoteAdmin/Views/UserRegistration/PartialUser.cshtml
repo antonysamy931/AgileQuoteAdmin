@@ -1,0 +1,57 @@
+﻿@model AgileQuoteAdminProperty.Property.UserRegistrationList
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Registraion";
+    WebGrid grid = new WebGrid();
+    var data = Model.RegistrationList;
+    grid.Bind(data);
+}
+
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../../Scripts/RegisterScript/Register.js" type="text/javascript"></script>
+
+<section class="c12 main-title" style="margin-top: 30px;">
+    <div class="c6 quote">
+        <img src="../../Images/qoute-ion.png" alt="img1" />
+        <p>Users List</p>
+
+
+    </div>
+</section>
+<div class="quote_list">
+    @grid.GetHtml(
+    tableStyle: "grid quote-table",
+    fillEmptyRows: false,
+    alternatingRowStyle: "odd",
+    headerStyle: "header",
+    footerStyle: "footer",
+    mode: WebGridPagerModes.All,
+     firstText: "First",
+        lastText: "Last",
+        nextText: "Next",
+        previousText: "Prev",
+    columns: new[]{
+     @*grid.Column(header:"",format:@<text><input type="checkbox" value="@item.UserId+@item.CompanyCode"  onclick="javascript: RoleSelect(this);" /></text>),*@
+     grid.Column("UserName","UserName",canSort:true),     
+     grid.Column("RoleName","RoleName",canSort:true),  
+     grid.Column("EmailId","EmailId",canSort:true), 
+     grid.Column("MobileNumber","MobileNumber",canSort:true),
+     grid.Column("State","State",canSort:true),
+     grid.Column("Country","Country",canSort:true),
+     grid.Column(header:"",format:@<text><div class="edit" title=""><a href="#">
+         <img src="../../Images/edit.png" alt="img1" id="@item.UserId+@item.CompanyCode"  onclick="javascript:RoleEdit(this)" /></a><a href="#"><img src="../../Images/error.png" alt="img1" id="@item.UserId"  onclick="javascript:RoleDelete(this)" /></a></div></text>)
+     
+    }
+    )
+
+
+    <div class="submit_box">
+        <input type="submit" id="NewUser" value="NewUser" onclick="javascript: NewUser(this)" />
+    </div>
+</div>
+
+
+
+
+
